@@ -723,6 +723,10 @@
     [
       "66043bca-a260-4915-9fce-8a51d324c687",
       "Root"
+    ],
+    [
+      "90b4483d-6b39-4313-b183-b0f1c023a5be",
+      "Linear Constant‐Current LED Driver x4"
     ]
   ],
   "text_variables": {}
