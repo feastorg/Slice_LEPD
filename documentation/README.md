@@ -7,7 +7,20 @@
   - IR: INL-5AMIR15
   - from: https://forum.pioreactor.com/t/od600-or-900-what-is-the-part-number-for-the-ir-led-and-photodiode/375
 
-## Subcomponents
+- Connectors
+  - Molex pico blade: https://www.digikey.ca/en/products/detail/molex/0530480210/242864?s=N4IgTCBcDaIKwGYAMAWAHEsBGJIC6AvkA
+
+- LED driver sense resistor
+  - https://www.digikey.ca/en/products/detail/stackpole-electronics-inc/RMCF1210FT10R0/1758534
+  - 1/2W 1% 1210 (3225 Metric)
+
+## LED Driver
+
+Goal: drive an LED at a set constant current via a PWM signal to produce a consistent light level.
+
+Purpose: we want the LED to emit a set light level with high accuracy (known) and precision (low noise).
+
+### Subcomponents
 
 1. **PWM-to-DAC Filter (Lower Left)**
 
@@ -58,7 +71,7 @@
 
 ---
 
-## 2) Overall Function and How It Works
+### Function and Theory of Operation
 
 1. **PWM Filtering to Create a DAC:**  
    A low-pass RC filter converts a PWM signal into a stable DC voltage. This voltage represents the desired setpoint for the LED current or voltage.
@@ -82,3 +95,10 @@
 
 **In summary:**  
 The circuit converts a PWM signal to a DC level that serves as a setpoint for LED current. The op amp and MOSFET form a linear regulator that adjusts the LED current, while the comparator and PNP transistor provide threshold-based switching or clamping for additional control and protection.
+
+## Photodiode Transimpedance amplifier
+
+Goal: transduce the light level at the photodiode into a steady proportional current and transform this current into a proportional voltage that can be read.
+
+Purpose: read the effective light level
+

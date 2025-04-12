@@ -3684,17 +3684,6 @@
 	)
 	(wire
 		(pts
-			(xy 373.38 325.12) (xy 373.38 322.58)
-		)
-		(stroke
-			(width 0.2032)
-			(type default)
-			(color 128 77 0 1)
-		)
-		(uuid "2d9f3168-2d1f-40e0-ab30-806a5cf0dd5c")
-	)
-	(wire
-		(pts
 			(xy 184.15 307.34) (xy 189.23 307.34)
 		)
 		(stroke
@@ -5188,17 +5177,6 @@
 			(color 194 0 0 1)
 		)
 		(uuid "855eab1e-43bb-4f4f-b253-5464c116cd5a")
-	)
-	(wire
-		(pts
-			(xy 373.38 304.8) (xy 373.38 307.34)
-		)
-		(stroke
-			(width 0.2032)
-			(type default)
-			(color 194 0 0 1)
-		)
-		(uuid "856f10b0-4858-485f-b85b-083ae74434c3")
 	)
 	(wire
 		(pts
@@ -6762,7 +6740,7 @@
 		)
 		(uuid "ffc5f165-58df-4357-9269-5b5b9393df84")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 143.51 187.96 0)
 		(effects
 			(font
@@ -6772,7 +6750,7 @@
 		)
 		(uuid "0673863a-2bdb-442a-8e4b-c9f555373842")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 125.73 187.96 0)
 		(effects
 			(font
@@ -6782,7 +6760,7 @@
 		)
 		(uuid "089aa75b-824c-482c-8a9c-ad2ca83d5997")
 	)
-	(label "+5VA"
+	(label "+5V"
 		(at 198.12 243.84 0)
 		(effects
 			(font
@@ -6792,7 +6770,7 @@
 		)
 		(uuid "1342c8e9-e1f9-4eed-8114-8da334478a7d")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 143.51 163.83 0)
 		(effects
 			(font
@@ -6802,7 +6780,7 @@
 		)
 		(uuid "149bef74-4bd3-4641-a89f-e263a5fe32ec")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 236.22 187.96 0)
 		(effects
 			(font
@@ -6832,7 +6810,7 @@
 		)
 		(uuid "27e61f07-ecf3-4391-a0ed-118a4b662aaa")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 372.11 130.81 0)
 		(effects
 			(font
@@ -6862,7 +6840,7 @@
 		)
 		(uuid "33db8b25-cc54-4c51-94be-9e96fd8b54d3")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 384.81 130.81 0)
 		(effects
 			(font
@@ -6872,17 +6850,7 @@
 		)
 		(uuid "36029885-436b-4e68-b0c8-f370cbcc0ee7")
 	)
-	(label "+5VA"
-		(at 143.51 143.51 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "391adc84-85a9-4850-a231-1d0320421f42")
-	)
-	(label "+5VA"
+	(label "+5V"
 		(at 427.99 90.17 0)
 		(effects
 			(font
@@ -6891,16 +6859,6 @@
 			(justify left bottom)
 		)
 		(uuid "3c7d1fe3-735c-4309-b0a0-32b10c56a219")
-	)
-	(label "+5VA"
-		(at 373.38 151.13 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3e4c562a-c0ae-4569-aa39-f7071f187019")
 	)
 	(label "COMP_OUT_1"
 		(at 189.23 102.87 180)
@@ -6952,7 +6910,7 @@
 		)
 		(uuid "54ed4e60-59b4-4018-82c2-9502c21a0964")
 	)
-	(label "DAC_1"
+	(label "DAC_3"
 		(at 364.49 132.08 180)
 		(effects
 			(font
@@ -6962,7 +6920,7 @@
 		)
 		(uuid "59cb7a0e-a1c5-44e9-8e7d-74ad902e1651")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 154.94 284.48 0)
 		(effects
 			(font
@@ -6972,7 +6930,7 @@
 		)
 		(uuid "6c00b7d5-84b3-46a9-b565-b8359a7761bf")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 257.81 187.96 0)
 		(effects
 			(font
@@ -6992,7 +6950,7 @@
 		)
 		(uuid "72914259-d161-4c07-aa80-1ffe6b1988ac")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 257.81 341.63 0)
 		(effects
 			(font
@@ -7002,7 +6960,7 @@
 		)
 		(uuid "7299c1a1-b871-4dce-82f2-7346e9d0026c")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 142.24 130.81 0)
 		(effects
 			(font
@@ -7022,16 +6980,6 @@
 		)
 		(uuid "7c74ab07-b8b3-4be4-8524-405798c1cd8b")
 	)
-	(label "+5VA"
-		(at 373.38 304.8 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7f648c8f-e6a4-4a79-b9cc-b44bad05a7f4")
-	)
 	(label "PNPBJT_BASE_1"
 		(at 224.79 107.95 180)
 		(effects
@@ -7042,7 +6990,7 @@
 		)
 		(uuid "875f41b6-297b-456f-a39e-5d06ab485d76")
 	)
-	(label "+5VA"
+	(label "+5V"
 		(at 198.12 90.17 0)
 		(effects
 			(font
@@ -7062,7 +7010,7 @@
 		)
 		(uuid "8b4ed839-c141-4105-90f6-9fa667803379")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 384.81 284.48 0)
 		(effects
 			(font
@@ -7072,7 +7020,7 @@
 		)
 		(uuid "8b62856d-a672-4b44-abb0-71073187c06a")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 487.68 341.63 0)
 		(effects
 			(font
@@ -7082,7 +7030,7 @@
 		)
 		(uuid "a19b5be4-4e48-4ba7-afb5-f69319db6b86")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 466.09 341.63 0)
 		(effects
 			(font
@@ -7092,7 +7040,7 @@
 		)
 		(uuid "a4201b81-1620-404d-adc6-f4d1edc04a7f")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 142.24 284.48 0)
 		(effects
 			(font
@@ -7102,7 +7050,7 @@
 		)
 		(uuid "a6683cfc-3be1-490c-8daa-df7917ec2184")
 	)
-	(label "DAC_1"
+	(label "DAC_4"
 		(at 364.49 285.75 180)
 		(effects
 			(font
@@ -7112,7 +7060,7 @@
 		)
 		(uuid "a7355abf-3832-4ba5-b6e5-14ad0eb75c06")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 154.94 130.81 0)
 		(effects
 			(font
@@ -7132,7 +7080,7 @@
 		)
 		(uuid "aa74353e-3c05-4b6e-a689-51416cb68f51")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 466.09 187.96 0)
 		(effects
 			(font
@@ -7182,7 +7130,17 @@
 		)
 		(uuid "c151bf6b-a864-4617-b40c-38464d080ec8")
 	)
-	(label "GNDA"
+	(label "+5V"
+		(at 373.38 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c383f218-3435-48bf-865e-0d4437435ee1")
+	)
+	(label "GND"
 		(at 125.73 341.63 0)
 		(effects
 			(font
@@ -7192,7 +7150,7 @@
 		)
 		(uuid "c76a6c06-805a-44dd-b6c7-fcd020c95992")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 355.6 187.96 0)
 		(effects
 			(font
@@ -7212,7 +7170,7 @@
 		)
 		(uuid "ca76fbd4-8914-4b0c-8eef-c123d0d64e50")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 236.22 341.63 0)
 		(effects
 			(font
@@ -7222,7 +7180,17 @@
 		)
 		(uuid "ca8de308-d0f2-4472-b6cc-eb11c23b434c")
 	)
-	(label "GNDA"
+	(label "+5V"
+		(at 143.51 167.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cccd9593-bc06-46ba-9114-51f4b31494c2")
+	)
+	(label "GND"
 		(at 372.11 284.48 0)
 		(effects
 			(font
@@ -7232,7 +7200,17 @@
 		)
 		(uuid "d45e63ee-d1d3-4639-aa00-21099dc22ff5")
 	)
-	(label "GNDA"
+	(label "+5V"
+		(at 143.51 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d557844a-c3d3-4a18-83b7-89bc963ff9b9")
+	)
+	(label "GND"
 		(at 487.68 187.96 0)
 		(effects
 			(font
@@ -7262,16 +7240,6 @@
 		)
 		(uuid "de0a0b3b-2444-4f64-9000-a89dbabecde3")
 	)
-	(label "GNDA"
-		(at 373.38 325.12 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "dea0fa2f-a65c-43b9-a555-cd614675fc6e")
-	)
 	(label "NFET_GATE_2"
 		(at 224.79 294.64 180)
 		(effects
@@ -7282,7 +7250,7 @@
 		)
 		(uuid "e0c63dc3-dfa1-4221-9867-4702819ede26")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 355.6 341.63 0)
 		(effects
 			(font
@@ -7302,17 +7270,7 @@
 		)
 		(uuid "e8bd8d4d-fb70-46fd-89b6-0f51df38da93")
 	)
-	(label "+5VA"
-		(at 143.51 167.64 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e946db0d-1847-49d7-b136-10c086d45f55")
-	)
-	(label "+5VA"
+	(label "+5V"
 		(at 427.99 243.84 0)
 		(effects
 			(font
@@ -7342,7 +7300,7 @@
 		)
 		(uuid "fce4e2cb-afca-4cff-b98a-fc60d1b295ba")
 	)
-	(label "GNDA"
+	(label "GND"
 		(at 373.38 171.45 0)
 		(effects
 			(font
@@ -7373,7 +7331,7 @@
 		)
 		(uuid "02aa2639-aeff-4aad-ac03-4ab8e05171c2")
 	)
-	(hierarchical_label "GNDA"
+	(hierarchical_label "GND"
 		(shape input)
 		(at 314.96 321.31 180)
 		(effects
@@ -7406,7 +7364,7 @@
 		)
 		(uuid "41968436-3e1a-4c67-ab0a-030ae2d782df")
 	)
-	(hierarchical_label "+5VA"
+	(hierarchical_label "+5V"
 		(shape input)
 		(at 82.55 82.55 180)
 		(effects
@@ -7417,7 +7375,7 @@
 		)
 		(uuid "480c013b-e6e8-43a4-8fac-8de90bfd4427")
 	)
-	(hierarchical_label "GNDA"
+	(hierarchical_label "GND"
 		(shape input)
 		(at 85.09 167.64 180)
 		(effects
@@ -7461,7 +7419,7 @@
 		)
 		(uuid "6b22b922-3f29-4165-ac8b-6d42246a4006")
 	)
-	(hierarchical_label "GNDA"
+	(hierarchical_label "GND"
 		(shape input)
 		(at 85.09 321.31 180)
 		(effects
@@ -7472,7 +7430,7 @@
 		)
 		(uuid "90864bf7-12b9-444c-8dce-73762d66e412")
 	)
-	(hierarchical_label "GNDA"
+	(hierarchical_label "GND"
 		(shape input)
 		(at 314.96 167.64 180)
 		(effects
@@ -7494,7 +7452,7 @@
 		)
 		(uuid "b762958a-d629-4f70-ba53-e5ad6a2be43b")
 	)
-	(hierarchical_label "+5VA"
+	(hierarchical_label "+5V"
 		(shape input)
 		(at 82.55 248.92 180)
 		(effects
@@ -7505,7 +7463,7 @@
 		)
 		(uuid "b964c611-1f51-4906-8aa8-f64032068a5b")
 	)
-	(hierarchical_label "+5VA"
+	(hierarchical_label "+5V"
 		(shape input)
 		(at 312.42 248.92 180)
 		(effects
@@ -7571,7 +7529,7 @@
 		)
 		(uuid "ee0a62d8-e683-4f9e-9438-768de34d0eee")
 	)
-	(hierarchical_label "+5VA"
+	(hierarchical_label "+5V"
 		(shape input)
 		(at 312.42 95.25 180)
 		(effects
@@ -7591,7 +7549,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0494ffad-4b0f-4c71-ba18-5b8dfaddfcaa")
-		(property "Reference" "C8"
+		(property "Reference" "C6"
 			(at 118.872 299.72 0)
 			(effects
 				(font
@@ -7609,7 +7567,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 116.5352 304.8 0)
 			(effects
 				(font
@@ -7645,7 +7603,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "C8")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -7660,7 +7618,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0528f2b6-db5e-46a1-90cc-2396abbaf12b")
-		(property "Reference" "R2"
+		(property "Reference" "R6"
 			(at 143.764 116.84 0)
 			(effects
 				(font
@@ -7678,7 +7636,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 140.462 118.11 90)
 			(effects
 				(font
@@ -7714,7 +7672,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R2")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -7746,7 +7704,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 394.97 104.14 0)
 			(effects
 				(font
@@ -7794,7 +7752,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0a6bb425-3d77-4fc8-abe9-d3b068273083")
-		(property "Reference" "TP19"
+		(property "Reference" "TP20"
 			(at 416.56 144.018 90)
 			(effects
 				(font
@@ -7811,7 +7769,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 419.1 140.97 0)
 			(effects
 				(font
@@ -7844,7 +7802,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP19")
+					(reference "TP20")
 					(unit 1)
 				)
 			)
@@ -7859,7 +7817,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0c43ba7e-f591-4ab4-9f96-fe1f38113a18")
-		(property "Reference" "TP12"
+		(property "Reference" "TP8"
 			(at 188.976 312.42 0)
 			(effects
 				(font
@@ -7876,7 +7834,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 194.31 317.5 0)
 			(effects
 				(font
@@ -7909,7 +7867,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP12")
+					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -7925,7 +7883,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0cb24c78-e7aa-4e04-8857-39ddcaf7f3a0")
-		(property "Reference" "D2"
+		(property "Reference" "D8"
 			(at 253.492 155.956 90)
 			(effects
 				(font
@@ -7943,7 +7901,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SOD-923_TOS"
+		(property "Footprint" "Diode_SMD:D_SOD-923"
 			(at 257.81 154.94 0)
 			(effects
 				(font
@@ -7981,7 +7939,7 @@
 		(instances
 			(project ""
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "D2")
+					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -7996,7 +7954,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0ecc9e9e-19f9-4a4e-bc06-6e159d9b964f")
-		(property "Reference" "R21"
+		(property "Reference" "R25"
 			(at 407.67 127 90)
 			(effects
 				(font
@@ -8012,7 +7970,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 407.67 133.858 90)
 			(effects
 				(font
@@ -8048,7 +8006,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R21")
+					(reference "R25")
 					(unit 1)
 				)
 			)
@@ -8081,7 +8039,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 385.7752 275.59 0)
 			(effects
 				(font
@@ -8132,7 +8090,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1788a8b2-c63c-4f33-8024-ae61a22289fe")
-		(property "Reference" "TP25"
+		(property "Reference" "TP18"
 			(at 392.43 260.858 90)
 			(effects
 				(font
@@ -8149,7 +8107,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 394.97 257.81 0)
 			(effects
 				(font
@@ -8182,7 +8140,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP25")
+					(reference "TP18")
 					(unit 1)
 				)
 			)
@@ -8197,7 +8155,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1b8e3d70-e4bc-4be7-92b5-e3a72d6ec3ea")
-		(property "Reference" "TP26"
+		(property "Reference" "TP22"
 			(at 416.56 260.858 90)
 			(effects
 				(font
@@ -8214,7 +8172,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 419.1 257.81 0)
 			(effects
 				(font
@@ -8247,7 +8205,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP26")
+					(reference "TP22")
 					(unit 1)
 				)
 			)
@@ -8281,7 +8239,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder"
 			(at 467.868 327.66 90)
 			(effects
 				(font
@@ -8334,7 +8292,7 @@
 		(dnp no)
 		(uuid "1f213fd7-a71c-4219-9249-bac481f4a560")
 		(property "Reference" "U3"
-			(at 178.562 109.728 0)
+			(at 178.054 118.364 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8342,14 +8300,14 @@
 			)
 		)
 		(property "Value" "LM339B"
-			(at 178.562 107.188 0)
+			(at 177.8 109.474 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 175.26 116.84 0)
 			(effects
 				(font
@@ -8436,7 +8394,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1ff12cb9-ee81-45ba-af2e-fbdcc5e97b27")
-		(property "Reference" "TP27"
+		(property "Reference" "TP23"
 			(at 416.56 297.688 90)
 			(effects
 				(font
@@ -8453,7 +8411,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 419.1 294.64 0)
 			(effects
 				(font
@@ -8486,8 +8444,112 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP27")
+					(reference "TP23")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Comparator:LM339")
+		(at 406.4 114.3 0)
+		(mirror x)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2610a196-2a39-44ea-a8ba-3f515ef47255")
+		(property "Reference" "U3"
+			(at 407.162 118.872 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM339B"
+			(at 407.416 108.966 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 405.13 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/lm139.pdf"
+			(at 407.67 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Quad Differential Comparators, SOIC-14/TSSOP-14"
+			(at 406.4 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "9b8d5478-5ac4-4a56-8431-9c761605e34a")
+		)
+		(pin "4"
+			(uuid "e30a32d2-ca3b-4605-a277-ee28b58040de")
+		)
+		(pin "2"
+			(uuid "3ae06893-26b9-49cb-97cf-981bb1eb1a64")
+		)
+		(pin "10"
+			(uuid "535532fe-641c-4052-90be-7b63f38e53e7")
+		)
+		(pin "14"
+			(uuid "76084d12-95e0-4ae7-9ad6-af72e9438e8c")
+		)
+		(pin "13"
+			(uuid "a5bf155a-6e7f-46f3-926e-79e2e6cb6a46")
+		)
+		(pin "12"
+			(uuid "4aa8f5ab-7039-4d89-a7e2-e4db00f3e1a7")
+		)
+		(pin "9"
+			(uuid "ff44e20d-3fe0-4f92-aa80-5aa822b44237")
+		)
+		(pin "3"
+			(uuid "e86df9e5-0300-4081-a37e-a56886ab3075")
+		)
+		(pin "7"
+			(uuid "3b41ab30-9360-4fd2-be42-dbec15f5a355")
+		)
+		(pin "6"
+			(uuid "987b25c2-0b4f-48d7-8d2c-2871fb0ef8fb")
+		)
+		(pin "11"
+			(uuid "766cbc2e-7ca4-49d5-9853-bbd69bed61e2")
+		)
+		(pin "8"
+			(uuid "a7d039c5-91ff-4083-8da9-b33a304868a8")
+		)
+		(pin "1"
+			(uuid "85deed15-576c-4059-86b6-29f64ffd0e8e")
+		)
+		(instances
+			(project "BREAD_Slice"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
+					(reference "U3")
+					(unit 3)
 				)
 			)
 		)
@@ -8501,7 +8563,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "27bab781-8c8e-40dd-8f06-e3e4ae77e983")
-		(property "Reference" "TP20"
+		(property "Reference" "TP21"
 			(at 418.846 158.75 0)
 			(effects
 				(font
@@ -8518,7 +8580,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 424.18 163.83 0)
 			(effects
 				(font
@@ -8551,7 +8613,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP20")
+					(reference "TP21")
 					(unit 1)
 				)
 			)
@@ -8566,7 +8628,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "27fd3e93-83cb-49df-8a23-54870f408329")
-		(property "Reference" "TP11"
+		(property "Reference" "TP7"
 			(at 186.69 297.688 90)
 			(effects
 				(font
@@ -8583,7 +8645,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 189.23 294.64 0)
 			(effects
 				(font
@@ -8616,7 +8678,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP11")
+					(reference "TP7")
 					(unit 1)
 				)
 			)
@@ -8631,7 +8693,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "33406c3a-16ae-42dc-a8bf-5bd4da71722d")
-		(property "Reference" "C12"
+		(property "Reference" "C13"
 			(at 358.902 146.05 0)
 			(effects
 				(font
@@ -8649,7 +8711,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 356.5652 151.13 0)
 			(effects
 				(font
@@ -8685,7 +8747,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "C12")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -8700,7 +8762,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "37479acc-4544-4378-944b-a8321bb40030")
-		(property "Reference" "TP23"
+		(property "Reference" "TP29"
 			(at 491.49 105.156 0)
 			(effects
 				(font
@@ -8717,7 +8779,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 496.57 110.49 0)
 			(effects
 				(font
@@ -8750,7 +8812,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP23")
+					(reference "TP29")
 					(unit 1)
 				)
 			)
@@ -8766,7 +8828,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "37cc470a-a06c-4e0c-966b-f58cc44c9816")
-		(property "Reference" "U5"
+		(property "Reference" "U4"
 			(at 374.65 160.0199 0)
 			(effects
 				(font
@@ -8784,7 +8846,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 375.92 161.29 0)
 			(effects
 				(font
@@ -8841,7 +8903,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "U5")
+					(reference "U4")
 					(unit 3)
 				)
 			)
@@ -8950,7 +9012,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 144.78 175.26 0)
 			(effects
 				(font
@@ -9029,110 +9091,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Comparator:LM339")
-		(at 406.4 267.97 0)
-		(unit 4)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3c583012-b274-462e-ac3e-169b1af45990")
-		(property "Reference" "U3"
-			(at 406.4 257.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LM339B"
-			(at 406.4 260.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 405.13 265.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.st.com/resource/en/datasheet/lm139.pdf"
-			(at 407.67 262.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Quad Differential Comparators, SOIC-14/TSSOP-14"
-			(at 406.4 267.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "7"
-			(uuid "9f30d65b-8dfc-41eb-8f18-a025b899afc5")
-		)
-		(pin "2"
-			(uuid "c679e3c5-309b-4bab-8e8d-ac7cc539fe11")
-		)
-		(pin "14"
-			(uuid "c911d236-f605-40a0-b579-bba5354f937c")
-		)
-		(pin "8"
-			(uuid "7e149928-b0b6-4a57-972f-f018d4fd067c")
-		)
-		(pin "6"
-			(uuid "a7900cfe-81f8-46bb-a8a6-655c8f202c7b")
-		)
-		(pin "10"
-			(uuid "c5cf9f1b-1e19-496a-9f8c-a25480a53a68")
-		)
-		(pin "4"
-			(uuid "28e2bd3b-6dda-4eb5-bbbd-2ca109b49346")
-		)
-		(pin "9"
-			(uuid "875eebd2-f317-4414-910e-e502e35999ad")
-		)
-		(pin "12"
-			(uuid "f51bcd02-dca7-450b-99a5-d13df6cea09e")
-		)
-		(pin "1"
-			(uuid "a25c8288-ca6c-4d4e-aa33-060477c38179")
-		)
-		(pin "5"
-			(uuid "3c3b7594-d266-46c1-98cb-aada0faaa3a6")
-		)
-		(pin "3"
-			(uuid "7d59c79b-730d-4d5f-aa1d-50e3b9a07e04")
-		)
-		(pin "11"
-			(uuid "c3bc2468-f6c8-4027-9173-5742f690ce5d")
-		)
-		(pin "13"
-			(uuid "835f8a8a-4fbd-4ec3-8da3-e9f68660a280")
-		)
-		(instances
-			(project "BREAD_Slice"
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "U3")
-					(unit 4)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 454.66 146.05 90)
 		(unit 1)
@@ -9141,7 +9099,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3ec2dc14-be52-4266-ae9b-4bec984528f6")
-		(property "Reference" "TP22"
+		(property "Reference" "TP26"
 			(at 452.12 144.018 90)
 			(effects
 				(font
@@ -9158,7 +9116,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 454.66 140.97 0)
 			(effects
 				(font
@@ -9191,7 +9149,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP22")
+					(reference "TP26")
 					(unit 1)
 				)
 			)
@@ -9206,7 +9164,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "416a47c2-ec54-48b0-afe5-822ba8d00dae")
-		(property "Reference" "TP21"
+		(property "Reference" "TP25"
 			(at 451.358 111.252 90)
 			(effects
 				(font
@@ -9223,7 +9181,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 454.66 107.95 0)
 			(effects
 				(font
@@ -9256,7 +9214,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP21")
+					(reference "TP25")
 					(unit 1)
 				)
 			)
@@ -9271,7 +9229,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "42751f94-5808-4618-90d1-6b6937c7c0d5")
-		(property "Reference" "TP30"
+		(property "Reference" "TP28"
 			(at 452.12 297.688 90)
 			(effects
 				(font
@@ -9288,7 +9246,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 454.66 294.64 0)
 			(effects
 				(font
@@ -9321,7 +9279,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP30")
+					(reference "TP28")
 					(unit 1)
 				)
 			)
@@ -9336,7 +9294,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "42d9bfce-e05b-4462-bdd4-44b214c209fe")
-		(property "Reference" "R22"
+		(property "Reference" "R27"
 			(at 429.768 106.68 0)
 			(effects
 				(font
@@ -9354,7 +9312,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 426.212 107.95 90)
 			(effects
 				(font
@@ -9390,7 +9348,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R22")
+					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -9405,7 +9363,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "46b54a39-3d30-46e6-a832-7063862a1340")
-		(property "Reference" "R26"
+		(property "Reference" "R20"
 			(at 334.518 299.72 0)
 			(effects
 				(font
@@ -9423,7 +9381,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 330.962 300.99 90)
 			(effects
 				(font
@@ -9459,7 +9417,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R26")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -9493,7 +9451,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder"
 			(at 237.998 327.66 90)
 			(effects
 				(font
@@ -9537,97 +9495,6 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:MCP6002-xMC")
-		(at 375.92 314.96 0)
-		(unit 3)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "52ff9cef-8914-47ab-b801-8aa0a48505d1")
-		(property "Reference" "U6"
-			(at 374.65 313.6899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MCP6242T-E/SN"
-			(at 374.65 316.2299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
-			(at 375.92 314.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
-			(at 375.92 314.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
-			(at 375.92 314.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e182d713-b4c6-4918-b2e5-0fc0f3be855d")
-		)
-		(pin "7"
-			(uuid "aa9acb8d-37bf-4307-af41-43dae7a2cb35")
-		)
-		(pin "8"
-			(uuid "f046c139-e1c6-4f27-bcbc-664411192cea")
-		)
-		(pin "3"
-			(uuid "b827679b-0b85-4310-9637-0f530c92d00b")
-		)
-		(pin "2"
-			(uuid "84d84638-b7e1-400f-b599-5a774fe8c7e4")
-		)
-		(pin "5"
-			(uuid "ca07829f-7ace-416c-b379-da870668d92d")
-		)
-		(pin "6"
-			(uuid "264a1b01-594f-4bc5-a8f5-13cb58454e96")
-		)
-		(pin "4"
-			(uuid "b0aefb76-b7a3-4ce8-8ce3-01762f127375")
-		)
-		(pin "9"
-			(uuid "463ec12a-f946-4c1e-8ef0-ce794ea56530")
-		)
-		(instances
-			(project "BREAD_Slice"
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "U6")
-					(unit 3)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
 		(at 176.53 153.67 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9635,7 +9502,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "539c384b-ff72-45ea-8894-b67c83e0e8ce")
-		(property "Reference" "U4"
+		(property "Reference" "U2"
 			(at 174.752 144.78 0)
 			(effects
 				(font
@@ -9651,7 +9518,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 176.53 153.67 0)
 			(effects
 				(font
@@ -9708,7 +9575,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "U4")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -9873,7 +9740,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5a20a601-fd24-4d27-8b98-6f3b83abc7ce")
-		(property "Reference" "C5"
+		(property "Reference" "C9"
 			(at 157.988 116.84 0)
 			(effects
 				(font
@@ -9891,7 +9758,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 155.9052 121.92 0)
 			(effects
 				(font
@@ -9927,7 +9794,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "C5")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -9942,7 +9809,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5a25a2a6-7916-4b12-9d69-6abacc84875b")
-		(property "Reference" "R14"
+		(property "Reference" "R12"
 			(at 199.898 260.35 0)
 			(effects
 				(font
@@ -9960,7 +9827,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 196.342 261.62 90)
 			(effects
 				(font
@@ -9996,7 +9863,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R14")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -10012,7 +9879,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5b636dca-37a4-408e-a8b5-98ee0f64bc3f")
-		(property "Reference" "U5"
+		(property "Reference" "U4"
 			(at 406.4 143.51 0)
 			(effects
 				(font
@@ -10028,7 +9895,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 406.4 153.67 0)
 			(effects
 				(font
@@ -10085,7 +9952,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "U5")
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -10100,7 +9967,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5e54bdd5-9088-4027-bab0-b2e82997066e")
-		(property "Reference" "TP9"
+		(property "Reference" "TP2"
 			(at 162.56 260.858 90)
 			(effects
 				(font
@@ -10117,7 +9984,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 165.1 257.81 0)
 			(effects
 				(font
@@ -10150,7 +10017,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP9")
+					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -10166,7 +10033,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5f6295c4-623e-4c8f-bb37-31a8f82d39fa")
-		(property "Reference" "D4"
+		(property "Reference" "D10"
 			(at 483.362 155.956 90)
 			(effects
 				(font
@@ -10184,7 +10051,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SOD-923_TOS"
+		(property "Footprint" "Diode_SMD:D_SOD-923"
 			(at 487.68 154.94 0)
 			(effects
 				(font
@@ -10222,7 +10089,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "D4")
+					(reference "D10")
 					(unit 1)
 				)
 			)
@@ -10238,7 +10105,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6209dac7-4265-4c73-9f3e-4500f62ff1b0")
-		(property "Reference" "TP6"
+		(property "Reference" "TP14"
 			(at 261.62 126.238 0)
 			(effects
 				(font
@@ -10255,7 +10122,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 266.7 120.65 0)
 			(effects
 				(font
@@ -10288,7 +10155,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP6")
+					(reference "TP14")
 					(unit 1)
 				)
 			)
@@ -10303,7 +10170,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6b9f3c23-8e50-4ce0-8a57-87d33f35ff8a")
-		(property "Reference" "R13"
+		(property "Reference" "R10"
 			(at 177.8 280.67 90)
 			(effects
 				(font
@@ -10319,7 +10186,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 177.8 287.528 90)
 			(effects
 				(font
@@ -10355,7 +10222,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R13")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -10370,7 +10237,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "70cb7b62-43c9-4872-9c44-00ed5aca5fcd")
-		(property "Reference" "R25"
+		(property "Reference" "R18"
 			(at 325.12 280.67 90)
 			(effects
 				(font
@@ -10386,7 +10253,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 325.12 287.528 90)
 			(effects
 				(font
@@ -10422,7 +10289,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R25")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -10456,7 +10323,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder"
 			(at 237.998 173.99 90)
 			(effects
 				(font
@@ -10507,7 +10374,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "731d4dce-31a1-4ef2-b33f-cfecea348695")
-		(property "Reference" "R8"
+		(property "Reference" "R1"
 			(at 95.25 127 90)
 			(effects
 				(font
@@ -10523,7 +10390,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 95.25 133.858 90)
 			(effects
 				(font
@@ -10559,7 +10426,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R8")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -10574,7 +10441,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "73836228-8663-4059-8de6-4c1d61624bf2")
-		(property "Reference" "R15"
+		(property "Reference" "R14"
 			(at 212.09 266.7 90)
 			(effects
 				(font
@@ -10590,7 +10457,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 212.09 273.558 90)
 			(effects
 				(font
@@ -10626,7 +10493,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R15")
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -10641,7 +10508,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "742a7f23-36f1-4e7f-9a22-ae9423b605a6")
-		(property "Reference" "TP2"
+		(property "Reference" "TP4"
 			(at 186.69 144.018 90)
 			(effects
 				(font
@@ -10658,7 +10525,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 189.23 140.97 0)
 			(effects
 				(font
@@ -10691,7 +10558,7 @@
 		(instances
 			(project ""
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP2")
+					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -10706,7 +10573,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "78a8e517-fc4a-49a2-a2d1-90d61a3627fd")
-		(property "Reference" "R30"
+		(property "Reference" "R28"
 			(at 429.768 260.35 0)
 			(effects
 				(font
@@ -10724,7 +10591,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 426.212 261.62 90)
 			(effects
 				(font
@@ -10760,7 +10627,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R30")
+					(reference "R28")
 					(unit 1)
 				)
 			)
@@ -10775,7 +10642,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7945ec69-6edf-472a-b257-40a4ad1a60ed")
-		(property "Reference" "TP4"
+		(property "Reference" "TP10"
 			(at 222.25 144.018 90)
 			(effects
 				(font
@@ -10792,7 +10659,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 224.79 140.97 0)
 			(effects
 				(font
@@ -10825,7 +10692,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP4")
+					(reference "TP10")
 					(unit 1)
 				)
 			)
@@ -10841,7 +10708,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "797b13b8-5107-4c6b-9fa0-19276713d2f9")
-		(property "Reference" "U5"
+		(property "Reference" "U4"
 			(at 406.4 297.18 0)
 			(effects
 				(font
@@ -10857,7 +10724,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 406.4 307.34 0)
 			(effects
 				(font
@@ -10914,7 +10781,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "U5")
+					(reference "U4")
 					(unit 2)
 				)
 			)
@@ -10929,7 +10796,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "799e33f7-e615-455c-8b2a-e76a4f635bbf")
-		(property "Reference" "TP28"
+		(property "Reference" "TP24"
 			(at 418.846 312.42 0)
 			(effects
 				(font
@@ -10946,7 +10813,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 424.18 317.5 0)
 			(effects
 				(font
@@ -10979,7 +10846,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP28")
+					(reference "TP24")
 					(unit 1)
 				)
 			)
@@ -11010,7 +10877,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 217.17 309.118 90)
 			(effects
 				(font
@@ -11061,7 +10928,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7ed02d83-f608-43a4-9bd4-b6b06eafe720")
-		(property "Reference" "TP3"
+		(property "Reference" "TP5"
 			(at 188.976 158.75 0)
 			(effects
 				(font
@@ -11078,7 +10945,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 194.31 163.83 0)
 			(effects
 				(font
@@ -11111,7 +10978,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP3")
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -11127,7 +10994,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "80babcd1-a573-4bb8-9bd5-a39b8c68e8a3")
-		(property "Reference" "TP24"
+		(property "Reference" "TP30"
 			(at 491.49 126.238 0)
 			(effects
 				(font
@@ -11144,7 +11011,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 496.57 120.65 0)
 			(effects
 				(font
@@ -11177,7 +11044,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP24")
+					(reference "TP30")
 					(unit 1)
 				)
 			)
@@ -11193,7 +11060,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "824e4a03-fc56-48fa-855a-4c6485032e76")
-		(property "Reference" "U4"
+		(property "Reference" "U2"
 			(at 144.78 152.3999 0)
 			(effects
 				(font
@@ -11211,7 +11078,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 146.05 153.67 0)
 			(effects
 				(font
@@ -11268,7 +11135,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "U4")
+					(reference "U2")
 					(unit 3)
 				)
 			)
@@ -11283,7 +11150,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "82cbff6b-2e99-4706-9197-a132e9b35861")
-		(property "Reference" "R31"
+		(property "Reference" "R30"
 			(at 441.96 266.7 90)
 			(effects
 				(font
@@ -11299,7 +11166,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 441.96 273.558 90)
 			(effects
 				(font
@@ -11335,7 +11202,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R31")
+					(reference "R30")
 					(unit 1)
 				)
 			)
@@ -11350,7 +11217,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "833124d2-80d7-4320-b0cf-72069913b8d1")
-		(property "Reference" "U4"
+		(property "Reference" "U2"
 			(at 178.054 302.514 0)
 			(effects
 				(font
@@ -11366,7 +11233,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 176.53 307.34 0)
 			(effects
 				(font
@@ -11423,7 +11290,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "U4")
+					(reference "U2")
 					(unit 2)
 				)
 			)
@@ -11438,7 +11305,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8415cf90-877a-4d16-94ee-617809e1ea5c")
-		(property "Reference" "R20"
+		(property "Reference" "R22"
 			(at 373.634 116.84 0)
 			(effects
 				(font
@@ -11456,7 +11323,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 370.332 118.11 90)
 			(effects
 				(font
@@ -11492,7 +11359,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R20")
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -11507,7 +11374,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8486a884-2541-4c67-a4af-4fe99ecf59bc")
-		(property "Reference" "R18"
+		(property "Reference" "R19"
 			(at 334.518 146.05 0)
 			(effects
 				(font
@@ -11525,7 +11392,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 330.962 147.32 90)
 			(effects
 				(font
@@ -11561,7 +11428,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R18")
+					(reference "R19")
 					(unit 1)
 				)
 			)
@@ -11669,7 +11536,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 496.57 274.32 0)
 			(effects
 				(font
@@ -11717,7 +11584,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "87fa5671-1481-493a-ab31-fcb7e90eae6f")
-		(property "Reference" "R24"
+		(property "Reference" "R31"
 			(at 447.04 148.59 90)
 			(effects
 				(font
@@ -11733,7 +11600,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 447.04 155.448 90)
 			(effects
 				(font
@@ -11769,7 +11636,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R24")
+					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -11801,7 +11668,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 165.1 104.14 0)
 			(effects
 				(font
@@ -11867,7 +11734,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 346.4052 151.13 0)
 			(effects
 				(font
@@ -11910,110 +11777,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Comparator:LM339")
-		(at 176.53 267.97 0)
-		(unit 2)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8dc87045-612c-46b0-ab11-b1d02dbd2e94")
-		(property "Reference" "U3"
-			(at 176.53 257.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LM339B"
-			(at 176.53 260.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 175.26 265.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.st.com/resource/en/datasheet/lm139.pdf"
-			(at 177.8 262.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Quad Differential Comparators, SOIC-14/TSSOP-14"
-			(at 176.53 267.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "6"
-			(uuid "76fc19ac-ff84-404c-8213-6c3d6c457eb8")
-		)
-		(pin "12"
-			(uuid "c007acad-3d5d-42a8-b691-a47f42e0b420")
-		)
-		(pin "13"
-			(uuid "1932c7dc-b627-4cda-ba09-9791edff1fa7")
-		)
-		(pin "11"
-			(uuid "b71dee10-42f9-4d5a-b884-434b5969e7a9")
-		)
-		(pin "7"
-			(uuid "de6639e7-2eef-44db-a309-0519e078c90b")
-		)
-		(pin "1"
-			(uuid "ddb6888b-061d-4f32-9db1-3d808652527a")
-		)
-		(pin "3"
-			(uuid "311fda18-829a-482b-a871-e5f5bb0303bb")
-		)
-		(pin "9"
-			(uuid "0d432e6f-e313-4ff1-815b-d114403a4f81")
-		)
-		(pin "5"
-			(uuid "5fb4d105-ac50-4491-a204-5f239c71eb34")
-		)
-		(pin "8"
-			(uuid "5726448d-ea61-429f-a69e-069b840423d0")
-		)
-		(pin "4"
-			(uuid "3ed19d71-b1e5-4477-a9ff-2f099da5eb44")
-		)
-		(pin "2"
-			(uuid "881c1c4d-3698-41f3-a1de-30cfa7dff10c")
-		)
-		(pin "10"
-			(uuid "1435f4f3-4b9f-426f-b2b2-5e4235fab8e9")
-		)
-		(pin "14"
-			(uuid "dea630aa-239e-43d8-a6c3-c0f40ec72708")
-		)
-		(instances
-			(project "BREAD_Slice"
-				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "U3")
-					(unit 2)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 491.49 264.16 0)
 		(unit 1)
@@ -12039,7 +11802,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 496.57 264.16 0)
 			(effects
 				(font
@@ -12087,7 +11850,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "949690fb-80cf-4e30-8dd3-2e9051d98b2a")
-		(property "Reference" "TP5"
+		(property "Reference" "TP13"
 			(at 261.62 105.156 0)
 			(effects
 				(font
@@ -12104,7 +11867,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 266.7 110.49 0)
 			(effects
 				(font
@@ -12137,7 +11900,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP5")
+					(reference "TP13")
 					(unit 1)
 				)
 			)
@@ -12152,7 +11915,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "956f9459-da31-4443-8968-5e32d88145e4")
-		(property "Reference" "C15"
+		(property "Reference" "C14"
 			(at 358.902 299.72 0)
 			(effects
 				(font
@@ -12170,7 +11933,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 356.5652 304.8 0)
 			(effects
 				(font
@@ -12206,7 +11969,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "C15")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -12221,7 +11984,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9aa897dc-34f1-4d05-acfd-6ce5ac45ddff")
-		(property "Reference" "R3"
+		(property "Reference" "R9"
 			(at 177.8 127 90)
 			(effects
 				(font
@@ -12237,7 +12000,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 177.8 133.858 90)
 			(effects
 				(font
@@ -12273,7 +12036,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R3")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -12364,7 +12127,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9f1e6e17-5204-43b4-84da-67a709cdba16")
-		(property "Reference" "R11"
+		(property "Reference" "R7"
 			(at 145.288 257.81 0)
 			(effects
 				(font
@@ -12380,7 +12143,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 140.462 259.08 90)
 			(effects
 				(font
@@ -12416,7 +12179,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R11")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -12431,7 +12194,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a0096a9c-5bfa-4735-9a91-56138c10b596")
-		(property "Reference" "R6"
+		(property "Reference" "R13"
 			(at 212.09 113.03 90)
 			(effects
 				(font
@@ -12447,7 +12210,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 212.09 119.888 90)
 			(effects
 				(font
@@ -12483,7 +12246,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R6")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -12498,7 +12261,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a3025bb1-3fac-4990-b0ee-7772be88283b")
-		(property "Reference" "R12"
+		(property "Reference" "R8"
 			(at 143.764 270.51 0)
 			(effects
 				(font
@@ -12516,7 +12279,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 140.462 271.78 90)
 			(effects
 				(font
@@ -12552,7 +12315,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R12")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -12661,7 +12424,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder"
 			(at 467.868 173.99 90)
 			(effects
 				(font
@@ -12712,7 +12475,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "abe9233b-ee2c-4fc9-bafa-0e6452572388")
-		(property "Reference" "TP14"
+		(property "Reference" "TP12"
 			(at 222.25 297.688 90)
 			(effects
 				(font
@@ -12729,7 +12492,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 224.79 294.64 0)
 			(effects
 				(font
@@ -12762,7 +12525,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP14")
+					(reference "TP12")
 					(unit 1)
 				)
 			)
@@ -12777,7 +12540,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ad326b0e-3fdb-4ba5-9fae-779a997959f5")
-		(property "Reference" "TP29"
+		(property "Reference" "TP27"
 			(at 451.358 264.922 90)
 			(effects
 				(font
@@ -12794,7 +12557,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 454.66 261.62 0)
 			(effects
 				(font
@@ -12827,7 +12590,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP29")
+					(reference "TP27")
 					(unit 1)
 				)
 			)
@@ -12842,7 +12605,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b0c5752e-759a-4474-a826-1e4b05a3c966")
-		(property "Reference" "C13"
+		(property "Reference" "C15"
 			(at 387.858 116.84 0)
 			(effects
 				(font
@@ -12860,7 +12623,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 385.7752 121.92 0)
 			(effects
 				(font
@@ -12896,7 +12659,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "C13")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -12911,7 +12674,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b5308754-0c27-43a7-95a2-74700cc9da1f")
-		(property "Reference" "R29"
+		(property "Reference" "R26"
 			(at 407.67 280.67 90)
 			(effects
 				(font
@@ -12927,7 +12690,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 407.67 287.528 90)
 			(effects
 				(font
@@ -12963,7 +12726,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R29")
+					(reference "R26")
 					(unit 1)
 				)
 			)
@@ -12978,7 +12741,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b680e274-1f90-42a3-a1d3-9c45e1f05855")
-		(property "Reference" "R4"
+		(property "Reference" "R11"
 			(at 199.898 106.68 0)
 			(effects
 				(font
@@ -12996,7 +12759,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 196.342 107.95 90)
 			(effects
 				(font
@@ -13032,7 +12795,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R4")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -13047,7 +12810,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b6ece4ab-ccec-4a42-8986-9423c61e45e4")
-		(property "Reference" "TP10"
+		(property "Reference" "TP6"
 			(at 186.69 260.858 90)
 			(effects
 				(font
@@ -13064,7 +12827,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 189.23 257.81 0)
 			(effects
 				(font
@@ -13097,7 +12860,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP10")
+					(reference "TP6")
 					(unit 1)
 				)
 			)
@@ -13113,7 +12876,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b78e9cd7-de35-432b-83cd-0aa62a29974c")
-		(property "Reference" "D5"
+		(property "Reference" "D11"
 			(at 483.362 309.626 90)
 			(effects
 				(font
@@ -13131,7 +12894,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SOD-923_TOS"
+		(property "Footprint" "Diode_SMD:D_SOD-923"
 			(at 487.68 308.61 0)
 			(effects
 				(font
@@ -13169,7 +12932,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "D5")
+					(reference "D11")
 					(unit 1)
 				)
 			)
@@ -13185,7 +12948,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bbe6f3d4-bf85-4959-bdc9-5ff5e209dabf")
-		(property "Reference" "D3"
+		(property "Reference" "D9"
 			(at 253.492 309.626 90)
 			(effects
 				(font
@@ -13203,7 +12966,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SOD-923_TOS"
+		(property "Footprint" "Diode_SMD:D_SOD-923"
 			(at 257.81 308.61 0)
 			(effects
 				(font
@@ -13241,7 +13004,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "D3")
+					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -13256,7 +13019,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bcef5f66-8c05-490f-9bb7-fb47698df144")
-		(property "Reference" "C14"
+		(property "Reference" "C12"
 			(at 348.742 299.72 0)
 			(effects
 				(font
@@ -13274,7 +13037,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 346.4052 304.8 0)
 			(effects
 				(font
@@ -13310,7 +13073,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "C14")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -13326,7 +13089,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bd6d2bad-06bc-40ed-993a-6cf241b1d79e")
-		(property "Reference" "R27"
+		(property "Reference" "R23"
 			(at 375.158 257.81 0)
 			(effects
 				(font
@@ -13342,7 +13105,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 370.332 259.08 90)
 			(effects
 				(font
@@ -13378,7 +13141,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R27")
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -13393,7 +13156,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bfa03dbf-4cfe-49bb-9a9b-8c2a5fdfecbf")
-		(property "Reference" "TP8"
+		(property "Reference" "TP3"
 			(at 186.69 107.188 90)
 			(effects
 				(font
@@ -13410,7 +13173,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 189.23 104.14 0)
 			(effects
 				(font
@@ -13443,7 +13206,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP8")
+					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -13476,7 +13239,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 155.9052 275.59 0)
 			(effects
 				(font
@@ -13519,6 +13282,110 @@
 		)
 	)
 	(symbol
+		(lib_id "Comparator:LM339")
+		(at 176.53 267.97 0)
+		(mirror x)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c3e9c16f-074b-4e01-abe4-d729fce53945")
+		(property "Reference" "U3"
+			(at 177.292 272.796 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM339B"
+			(at 178.054 262.636 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 175.26 270.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/lm139.pdf"
+			(at 177.8 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Quad Differential Comparators, SOIC-14/TSSOP-14"
+			(at 176.53 267.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "56d287f7-2308-4d64-9222-3375833f0281")
+		)
+		(pin "12"
+			(uuid "c007acad-3d5d-42a8-b691-a47f42e0b420")
+		)
+		(pin "13"
+			(uuid "1932c7dc-b627-4cda-ba09-9791edff1fa7")
+		)
+		(pin "11"
+			(uuid "b71dee10-42f9-4d5a-b884-434b5969e7a9")
+		)
+		(pin "7"
+			(uuid "cd3e540a-7414-4f05-bbaa-6cb60f7161c2")
+		)
+		(pin "1"
+			(uuid "85403bdd-1f3a-4c34-bb56-fcc887bdefb9")
+		)
+		(pin "3"
+			(uuid "311fda18-829a-482b-a871-e5f5bb0303bb")
+		)
+		(pin "9"
+			(uuid "0d432e6f-e313-4ff1-815b-d114403a4f81")
+		)
+		(pin "5"
+			(uuid "5fb4d105-ac50-4491-a204-5f239c71eb34")
+		)
+		(pin "8"
+			(uuid "5726448d-ea61-429f-a69e-069b840423d0")
+		)
+		(pin "4"
+			(uuid "3ed19d71-b1e5-4477-a9ff-2f099da5eb44")
+		)
+		(pin "2"
+			(uuid "881c1c4d-3698-41f3-a1de-30cfa7dff10c")
+		)
+		(pin "10"
+			(uuid "1435f4f3-4b9f-426f-b2b2-5e4235fab8e9")
+		)
+		(pin "14"
+			(uuid "dea630aa-239e-43d8-a6c3-c0f40ec72708")
+		)
+		(instances
+			(project "BREAD_Slice"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
+					(reference "U3")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 441.96 118.11 90)
 		(unit 1)
@@ -13527,7 +13394,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c56f5339-15cf-4651-99db-6419be064101")
-		(property "Reference" "R23"
+		(property "Reference" "R29"
 			(at 441.96 113.03 90)
 			(effects
 				(font
@@ -13543,7 +13410,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 441.96 119.888 90)
 			(effects
 				(font
@@ -13579,7 +13446,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R23")
+					(reference "R29")
 					(unit 1)
 				)
 			)
@@ -13594,7 +13461,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c5f2c100-e52c-4a93-8994-f151f0d324e9")
-		(property "Reference" "C6"
+		(property "Reference" "C5"
 			(at 118.872 146.05 0)
 			(effects
 				(font
@@ -13612,7 +13479,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 116.5352 151.13 0)
 			(effects
 				(font
@@ -13648,7 +13515,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "C6")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -13663,7 +13530,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cf80fbcc-71b7-47b6-a38b-f0e7d30b0af8")
-		(property "Reference" "TP13"
+		(property "Reference" "TP11"
 			(at 221.488 264.922 90)
 			(effects
 				(font
@@ -13680,7 +13547,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 224.79 261.62 0)
 			(effects
 				(font
@@ -13713,7 +13580,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP13")
+					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -13746,7 +13613,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 126.6952 151.13 0)
 			(effects
 				(font
@@ -13813,7 +13680,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 325.12 133.858 90)
 			(effects
 				(font
@@ -13864,7 +13731,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d71a8548-3424-4796-a877-8903b97dc951")
-		(property "Reference" "R9"
+		(property "Reference" "R2"
 			(at 95.25 280.67 90)
 			(effects
 				(font
@@ -13880,7 +13747,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 95.25 287.528 90)
 			(effects
 				(font
@@ -13916,7 +13783,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R9")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -13931,7 +13798,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d8737e69-ee06-444b-9c4a-c13eda3de501")
-		(property "Reference" "C9"
+		(property "Reference" "C8"
 			(at 129.032 299.72 0)
 			(effects
 				(font
@@ -13949,7 +13816,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 126.6952 304.8 0)
 			(effects
 				(font
@@ -13985,7 +13852,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "C9")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -14018,7 +13885,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 266.7 274.32 0)
 			(effects
 				(font
@@ -14083,7 +13950,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 266.7 264.16 0)
 			(effects
 				(font
@@ -14131,7 +13998,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "de91c047-374b-4378-8436-dc0000cd3a23")
-		(property "Reference" "Q1"
+		(property "Reference" "Q2"
 			(at 230.378 157.48 0)
 			(effects
 				(font
@@ -14191,7 +14058,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "Q1")
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -14206,7 +14073,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "df9a78be-afbc-47b1-9793-4fbde731d8c4")
-		(property "Reference" "R7"
+		(property "Reference" "R3"
 			(at 104.648 146.05 0)
 			(effects
 				(font
@@ -14224,7 +14091,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 101.092 147.32 90)
 			(effects
 				(font
@@ -14260,7 +14127,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R7")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -14275,7 +14142,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e1916f24-97f2-45a0-a7f0-a4eba3b14001")
-		(property "Reference" "R10"
+		(property "Reference" "R4"
 			(at 104.648 299.72 0)
 			(effects
 				(font
@@ -14293,7 +14160,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 101.092 300.99 90)
 			(effects
 				(font
@@ -14329,7 +14196,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R10")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -14344,7 +14211,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e42ed603-4741-4e33-b12f-75bed1a8d236")
-		(property "Reference" "R28"
+		(property "Reference" "R24"
 			(at 373.634 270.51 0)
 			(effects
 				(font
@@ -14362,7 +14229,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 370.332 271.78 90)
 			(effects
 				(font
@@ -14398,7 +14265,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R28")
+					(reference "R24")
 					(unit 1)
 				)
 			)
@@ -14413,7 +14280,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e4e21489-37bf-4680-901e-a0093e3dad50")
-		(property "Reference" "TP7"
+		(property "Reference" "TP9"
 			(at 221.488 111.252 90)
 			(effects
 				(font
@@ -14430,7 +14297,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 224.79 107.95 0)
 			(effects
 				(font
@@ -14463,7 +14330,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP7")
+					(reference "TP9")
 					(unit 1)
 				)
 			)
@@ -14494,7 +14361,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 447.04 309.118 90)
 			(effects
 				(font
@@ -14546,7 +14413,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e6680c14-4b28-4e57-9c64-bb2d4f98c0c0")
-		(property "Reference" "R1"
+		(property "Reference" "R5"
 			(at 145.288 104.14 0)
 			(effects
 				(font
@@ -14562,7 +14429,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 140.462 105.41 90)
 			(effects
 				(font
@@ -14598,7 +14465,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R1")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -14606,16 +14473,16 @@
 	)
 	(symbol
 		(lib_id "Comparator:LM339")
-		(at 406.4 114.3 0)
-		(unit 3)
+		(at 406.4 267.97 0)
+		(mirror x)
+		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e8fa7c73-0c66-4f6b-bd8c-74161b3a53b4")
+		(uuid "e690927c-2280-416d-b03b-7527c04a6ade")
 		(property "Reference" "U3"
-			(at 406.4 104.14 0)
+			(at 407.67 272.542 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14623,15 +14490,15 @@
 			)
 		)
 		(property "Value" "LM339B"
-			(at 406.4 106.68 0)
+			(at 407.416 262.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 405.13 111.76 0)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 405.13 270.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14640,7 +14507,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.st.com/resource/en/datasheet/lm139.pdf"
-			(at 407.67 109.22 0)
+			(at 407.67 273.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14649,7 +14516,7 @@
 			)
 		)
 		(property "Description" "Quad Differential Comparators, SOIC-14/TSSOP-14"
-			(at 406.4 114.3 0)
+			(at 406.4 267.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14657,53 +14524,53 @@
 				(hide yes)
 			)
 		)
-		(pin "5"
-			(uuid "9b8d5478-5ac4-4a56-8431-9c761605e34a")
-		)
-		(pin "4"
-			(uuid "e30a32d2-ca3b-4605-a277-ee28b58040de")
+		(pin "7"
+			(uuid "9f30d65b-8dfc-41eb-8f18-a025b899afc5")
 		)
 		(pin "2"
-			(uuid "3ae06893-26b9-49cb-97cf-981bb1eb1a64")
-		)
-		(pin "10"
-			(uuid "55649143-6c89-47ac-a2a1-2811bd8a2513")
+			(uuid "c679e3c5-309b-4bab-8e8d-ac7cc539fe11")
 		)
 		(pin "14"
-			(uuid "76084d12-95e0-4ae7-9ad6-af72e9438e8c")
-		)
-		(pin "13"
-			(uuid "08361c8c-0645-4f47-afd2-d6de0c13ec8a")
-		)
-		(pin "12"
-			(uuid "4aa8f5ab-7039-4d89-a7e2-e4db00f3e1a7")
-		)
-		(pin "9"
-			(uuid "ff44e20d-3fe0-4f92-aa80-5aa822b44237")
-		)
-		(pin "3"
-			(uuid "e86df9e5-0300-4081-a37e-a56886ab3075")
-		)
-		(pin "7"
-			(uuid "3b41ab30-9360-4fd2-be42-dbec15f5a355")
-		)
-		(pin "6"
-			(uuid "987b25c2-0b4f-48d7-8d2c-2871fb0ef8fb")
-		)
-		(pin "11"
-			(uuid "eb699898-c9b0-4883-a703-1e1674c8631c")
+			(uuid "e3d95da0-1404-490a-aad8-57712764273d")
 		)
 		(pin "8"
-			(uuid "a7d039c5-91ff-4083-8da9-b33a304868a8")
+			(uuid "044529d5-68f1-4263-814a-03cedd37f3b6")
+		)
+		(pin "6"
+			(uuid "a7900cfe-81f8-46bb-a8a6-655c8f202c7b")
+		)
+		(pin "10"
+			(uuid "c5cf9f1b-1e19-496a-9f8c-a25480a53a68")
+		)
+		(pin "4"
+			(uuid "28e2bd3b-6dda-4eb5-bbbd-2ca109b49346")
+		)
+		(pin "9"
+			(uuid "e6b7c82d-1b1c-4d28-b26d-edf4fc725eec")
+		)
+		(pin "12"
+			(uuid "f51bcd02-dca7-450b-99a5-d13df6cea09e")
 		)
 		(pin "1"
-			(uuid "85deed15-576c-4059-86b6-29f64ffd0e8e")
+			(uuid "a25c8288-ca6c-4d4e-aa33-060477c38179")
+		)
+		(pin "5"
+			(uuid "3c3b7594-d266-46c1-98cb-aada0faaa3a6")
+		)
+		(pin "3"
+			(uuid "7d59c79b-730d-4d5f-aa1d-50e3b9a07e04")
+		)
+		(pin "11"
+			(uuid "c3bc2468-f6c8-4027-9173-5742f690ce5d")
+		)
+		(pin "13"
+			(uuid "835f8a8a-4fbd-4ec3-8da3-e9f68660a280")
 		)
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
 					(reference "U3")
-					(unit 3)
+					(unit 4)
 				)
 			)
 		)
@@ -14718,7 +14585,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ec06d379-8963-4e9b-8555-a60585cbf9ba")
-		(property "Reference" "R19"
+		(property "Reference" "R21"
 			(at 375.158 104.14 0)
 			(effects
 				(font
@@ -14734,7 +14601,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 370.332 105.41 90)
 			(effects
 				(font
@@ -14770,7 +14637,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R19")
+					(reference "R21")
 					(unit 1)
 				)
 			)
@@ -14785,7 +14652,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ed8332bd-0cd6-4a21-b58a-0987aa96c77d")
-		(property "Reference" "R5"
+		(property "Reference" "R15"
 			(at 217.17 148.59 90)
 			(effects
 				(font
@@ -14801,7 +14668,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 217.17 155.448 90)
 			(effects
 				(font
@@ -14837,7 +14704,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "R5")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -14852,7 +14719,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ee45b322-2e58-4c5f-bd8f-cde7940713f9")
-		(property "Reference" "Q2"
+		(property "Reference" "Q1"
 			(at 229.108 121.412 0)
 			(effects
 				(font
@@ -14912,7 +14779,7 @@
 		(instances
 			(project ""
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "Q2")
+					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -14927,7 +14794,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f95773e1-d935-4473-9afe-b91393720719")
-		(property "Reference" "TP18"
+		(property "Reference" "TP19"
 			(at 416.56 107.188 90)
 			(effects
 				(font
@@ -14944,7 +14811,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 419.1 104.14 0)
 			(effects
 				(font
@@ -14977,7 +14844,7 @@
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
-					(reference "TP18")
+					(reference "TP19")
 					(unit 1)
 				)
 			)

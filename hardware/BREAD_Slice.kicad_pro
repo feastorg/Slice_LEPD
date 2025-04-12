@@ -195,6 +195,7 @@
       ],
       "track_widths": [
         0.0,
+        0.4,
         0.5,
         1.0,
         1.5,
@@ -233,7 +234,11 @@
         },
         {
           "diameter": 0.5,
-          "drill": 0.0
+          "drill": 0.25
+        },
+        {
+          "diameter": 0.6,
+          "drill": 0.3
         },
         {
           "diameter": 1.0,
@@ -727,6 +732,14 @@
     [
       "90b4483d-6b39-4313-b183-b0f1c023a5be",
       "Linear Constant‐Current LED Driver x4"
+    ],
+    [
+      "cf3661e2-460e-4d34-bba1-a5b7472a40fa",
+      "Photodiode TIA Amplifier x2"
+    ],
+    [
+      "f8bef72d-9682-41d8-9b0a-3126969eebf7",
+      "TPS7A4901-VAA"
     ]
   ],
   "text_variables": {}
