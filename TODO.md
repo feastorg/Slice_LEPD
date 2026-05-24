@@ -1,14 +1,18 @@
 # TODO
 
-## KiBot CI/Docs Pipeline
+## Pass 1 — CI Pipeline
 
-- DRC job: pass
-- ERC job: fail (pre-DRC finds 2 clearance violations)
-- Fab job: fail (pre-DRC finds 2 clearance violations)
-- gen-kibot-index: skipped
-- deploy-pages: skipped
+- [x] Pipeline added
+- [x] DRC: FAIL — 2 clearance violations (zone clearance 0.5mm, actual ~0.475-0.488mm)
+- [x] ERC: PASS
+- [ ] Fab: SKIPPED (blocked by DRC pre-flight)
+- [ ] gen-kibot-index: SKIPPED
+- [ ] deploy-pages: SKIPPED
 
-### DRC Errors (2)
+## Pass 2 — Pre-Fab Review
 
-- clearance: zone clearance 0.5000mm, actual 0.4755mm
-- clearance: zone clearance 0.5000mm, actual 0.4875mm
+- [ ] Fix 2x zone clearance violations (increase spacing or reduce zone clearance rule)
+- [ ] Verify BOM completeness and sourcing
+- [ ] Confirm board outline and mounting holes
+- [ ] Footprint verification against datasheets
+- [ ] Design review sign-off
