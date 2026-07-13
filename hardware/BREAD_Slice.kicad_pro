@@ -79,7 +79,7 @@
         "extra_footprint": "warning",
         "footprint": "error",
         "footprint_filters_mismatch": "ignore",
-        "footprint_symbol_mismatch": "warning",
+        "footprint_symbol_mismatch": "error",
         "footprint_type_mismatch": "error",
         "hole_clearance": "error",
         "hole_near_hole": "error",
@@ -731,7 +731,7 @@
     ],
     [
       "90b4483d-6b39-4313-b183-b0f1c023a5be",
-      "Linear Constant‐Current LED Driver x4"
+      "Linear Constant\u2010Current LED Driver x4"
     ],
     [
       "cf3661e2-460e-4d34-bba1-a5b7472a40fa",
