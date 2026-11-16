@@ -986,7 +986,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "kml-custom:DF2S6.8MFS_L3M"
+		(symbol "KMLib_Discrete_Semiconductors:DF2S6.8MFS_L3M_ESD-TVS_Diode"
 			(pin_names
 				(offset 0.254)
 			)
@@ -1082,7 +1082,7 @@
 					)
 				)
 			)
-			(symbol "DF2S6.8MFS_L3M_0_1"
+			(symbol "DF2S6.8MFS_L3M_ESD-TVS_Diode_0_1"
 				(polyline
 					(pts
 						(xy 0 2.54) (xy -2.54 5.08)
@@ -1168,7 +1168,7 @@
 					)
 				)
 			)
-			(symbol "DF2S6.8MFS_L3M_1_1"
+			(symbol "DF2S6.8MFS_L3M_ESD-TVS_Diode_1_1"
 				(text "Cathode"
 					(at -4.826 -1.524 0)
 					(effects
@@ -3517,7 +3517,7 @@
 		)
 	)
 	(symbol
-		(lib_id "kml-custom:DF2S6.8MFS_L3M")
+		(lib_id "KMLib_Discrete_Semiconductors:DF2S6.8MFS_L3M_ESD-TVS_Diode")
 		(at 143.51 142.24 90)
 		(mirror x)
 		(unit 1)
@@ -3838,7 +3838,7 @@
 		)
 	)
 	(symbol
-		(lib_id "kml-custom:DF2S6.8MFS_L3M")
+		(lib_id "KMLib_Discrete_Semiconductors:DF2S6.8MFS_L3M_ESD-TVS_Diode")
 		(at 143.51 69.85 90)
 		(mirror x)
 		(unit 1)
@@ -4634,7 +4634,7 @@
 		)
 	)
 	(symbol
-		(lib_id "kml-custom:DF2S6.8MFS_L3M")
+		(lib_id "KMLib_Discrete_Semiconductors:DF2S6.8MFS_L3M_ESD-TVS_Diode")
 		(at 143.51 106.68 90)
 		(unit 1)
 		(body_style 1)
@@ -6252,7 +6252,7 @@
 		)
 	)
 	(symbol
-		(lib_id "kml-custom:DF2S6.8MFS_L3M")
+		(lib_id "KMLib_Discrete_Semiconductors:DF2S6.8MFS_L3M_ESD-TVS_Diode")
 		(at 143.51 34.29 90)
 		(unit 1)
 		(body_style 1)
