@@ -6900,7 +6900,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VAA")
+		(lib_id "power:+5V")
 		(at 78.74 111.76 0)
 		(unit 1)
 		(body_style 1)
@@ -6909,7 +6909,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "00b8fc02-f189-40b8-9f16-040edd2bd7bb")
+		(uuid "415a3c3b-e062-4c91-ac13-f1e833281ca8")
 		(property "Reference" "#PWR013"
 			(at 78.74 115.57 0)
 			(hide yes)
@@ -6921,8 +6921,8 @@
 				)
 			)
 		)
-		(property "Value" "+5VA"
-			(at 78.74 108.204 0)
+		(property "Value" "+5V"
+			(at 78.74 107.95 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6953,7 +6953,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VAA\""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 78.74 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -6965,7 +6965,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "6519d7a0-9142-43fe-8bdd-b4a317a38825")
+			(uuid "0f1cf0a3-a691-4bb5-a1db-b0d0068816d7")
 		)
 		(instances
 			(project "BREAD_Slice"
@@ -9701,7 +9701,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GNDA")
+		(lib_id "power:GND")
 		(at 78.74 146.05 0)
 		(unit 1)
 		(body_style 1)
@@ -9710,7 +9710,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "c6b56376-c2b3-4044-a1a1-92562364e23a")
+		(uuid "7466b524-801a-4bdb-99d1-33754a3b5153")
 		(property "Reference" "#PWR014"
 			(at 78.74 152.4 0)
 			(hide yes)
@@ -9722,7 +9722,7 @@
 				)
 			)
 		)
-		(property "Value" "GNDA"
+		(property "Value" "GND"
 			(at 78.74 149.86 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9754,7 +9754,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 78.74 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -9766,7 +9766,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "e375b62b-c540-4376-b9b1-e13a4507d39a")
+			(uuid "d8985611-52a7-43f4-939e-e8db2c404fd2")
 		)
 		(instances
 			(project "BREAD_Slice"
