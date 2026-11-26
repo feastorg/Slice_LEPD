@@ -4370,6 +4370,26 @@
 	)
 	(wire
 		(pts
+			(xy 267.97 138.43) (xy 273.05 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "114df0e6-0d5f-427d-aea5-df6b1d7eaa8d")
+	)
+	(wire
+		(pts
+			(xy 273.05 138.43) (xy 273.05 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ddee5e2-9206-4734-aa5a-fdf1479fb182")
+	)
+	(wire
+		(pts
 			(xy 35.56 100.33) (xy 31.75 100.33)
 		)
 		(stroke
@@ -6227,6 +6247,83 @@
 			(justify left bottom)
 		)
 		(uuid "fa97794a-c0bf-4585-8740-cc478b1e354e")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 273.05 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "09850a25-c90a-4148-a166-ee92e65c52db")
+		(property "Reference" "#PWR021"
+			(at 273.05 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 273.05 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 273.05 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 273.05 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 273.05 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "05a63364-da49-4c30-a13b-3a066c11d27c")
+		)
+		(instances
+			(project "BREAD_Slice"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
@@ -10001,7 +10098,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GNDPWR")
+		(lib_id "power:GND")
 		(at 109.22 76.2 0)
 		(unit 1)
 		(body_style 1)
@@ -10010,10 +10107,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e5763dec-2c3d-4c91-b9ac-af52895bf9c3")
+		(uuid "fc8e319b-b171-441b-9430-c00c6d17bd6d")
 		(property "Reference" "#PWR016"
-			(at 109.22 81.28 0)
+			(at 109.22 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10023,8 +10119,8 @@
 				)
 			)
 		)
-		(property "Value" "GNDPWR"
-			(at 109.093 80.01 0)
+		(property "Value" "GND"
+			(at 109.22 80.01 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10034,7 +10130,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 109.22 77.47 0)
+			(at 109.22 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10045,7 +10141,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 109.22 77.47 0)
+			(at 109.22 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10055,7 +10151,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 109.22 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -10067,7 +10163,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "52a3e227-a0fd-410d-9daf-b701cdb93ade")
+			(uuid "d60f897a-27f9-4ee6-a8e1-20023557865e")
 		)
 		(instances
 			(project "BREAD_Slice"
@@ -10683,6 +10779,16 @@
 		(pin "PD_OUT2" input
 			(at 267.97 133.35 0)
 			(uuid "41343ba9-6b49-42fd-8872-a44055458e97")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "NANO_GND" passive
+			(at 267.97 138.43 0)
+			(uuid "1c09e376-d033-42ec-85ed-842b9e0434c3")
 			(effects
 				(font
 					(size 1.27 1.27)

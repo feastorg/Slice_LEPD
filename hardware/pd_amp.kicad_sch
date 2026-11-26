@@ -2971,15 +2971,16 @@
 		)
 		(uuid "8352728c-0686-43af-bdd9-1718f769ca1d")
 	)
-	(label "GND"
-		(at 260.35 85.09 0)
+	(hierarchical_label "NANO_GND"
+		(shape passive)
+		(at 260.35 85.09 270)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "84accf17-5c49-4a29-8786-727f57ee1d55")
+		(uuid "fdf76302-7380-4b30-be28-f84bccecf539")
 	)
 	(label "+3V3_1"
 		(at 191.77 64.77 180)
@@ -3001,15 +3002,16 @@
 		)
 		(uuid "940fee57-4759-441c-a5eb-c760de2d64da")
 	)
-	(label "GND"
-		(at 260.35 157.48 0)
+	(hierarchical_label "NANO_GND"
+		(shape passive)
+		(at 260.35 157.48 270)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "ad8f4747-0060-4f68-948b-566985dccee5")
+		(uuid "a1a3cc64-ef96-497b-81c5-b7c574c60ee1")
 	)
 	(label "PD_CATHODE2"
 		(at 129.54 130.81 0)
