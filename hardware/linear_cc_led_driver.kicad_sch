@@ -9788,7 +9788,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1.6k 1%"
+		(property "Value" "825 1%"
 			(at 334.518 302.26 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12120,7 +12120,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1.6k 1%"
+		(property "Value" "825 1%"
 			(at 334.518 148.59 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15287,7 +15287,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1.6k 1%"
+		(property "Value" "825 1%"
 			(at 104.648 148.59 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15368,7 +15368,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1.6k 1%"
+		(property "Value" "825 1%"
 			(at 104.648 302.26 0)
 			(show_name no)
 			(do_not_autoplace no)
