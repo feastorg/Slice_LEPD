@@ -12989,6 +12989,148 @@
 			)
 		)
 	)
+	(footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(layer "F.Cu")
+		(uuid "7d8d63ee-63be-44fe-a7d9-965398efbcdd")
+		(at 170.523 130.55 90)
+		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
+		(tags "capacitor handsolder")
+		(property "Reference" "C35"
+			(at 0 2.6 0)
+			(layer "F.SilkS")
+			(uuid "62277797-b648-4285-afab-62a0bae98cfd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 0 1.68 90)
+			(layer "F.Fab")
+			(uuid "80eb3dc9-fbab-492e-b59c-af9c031bdadb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 90)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "49f1365a-436c-4a99-9b04-e22cb30654c3")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 90)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2e4630c3-c726-48a4-a9e6-7e3121201178")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "C_*")
+		(path "/115cc0b9-600a-4745-9586-e45671835338")
+		(sheetname "/")
+		(sheetfile "BREAD_Slice.kicad_sch")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -0.261252 -0.735)
+			(end 0.261252 -0.735)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "75aa0654-4193-4ff6-9b1b-f3914fdda220")
+		)
+		(fp_line
+			(start -0.261252 0.735)
+			(end 0.261252 0.735)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "ed99de22-1993-40f5-ba35-4082366fddb3")
+		)
+		(fp_rect
+			(start -1.88 -0.98)
+			(end 1.88 0.98)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "2975cecb-e127-4817-8d02-b078b71cf08c")
+		)
+		(fp_rect
+			(start -1 -0.625)
+			(end 1 0.625)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "2861df46-8f44-478c-940d-7bd24721689e")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 90)
+			(layer "F.Fab")
+			(uuid "5d8c86e6-bf4f-4c84-8e0f-15fc42a37aab")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.08)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -1.0375 0 90)
+			(size 1.175 1.45)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.212766)
+			(net "+5V")
+			(pintype "passive")
+			(uuid "123e35a2-7981-4728-a64a-ddd3c994920b")
+		)
+		(pad "2" smd roundrect
+			(at 1.0375 0 90)
+			(size 1.175 1.45)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.212766)
+			(net "GND")
+			(pintype "passive")
+			(uuid "d8efd14f-db25-4790-957c-88087f5f2914")
+		)
+		(embedded_fonts no)
+		(model "${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "F.Cu")
 		(uuid "7daa5daf-aec3-48f1-b8d8-126d05c6c6e9")
@@ -31463,6 +31605,14 @@
 		(uuid "14fc1de1-d3a2-4ba2-9162-5135e1647641")
 	)
 	(segment
+		(start 170.523 128.2)
+		(end 170.523 129.5125)
+		(width 0.5)
+		(layer "F.Cu")
+		(net "GND")
+		(uuid "152914eb-f908-4ea5-8b32-cf812d06b5f2")
+	)
+	(segment
 		(start 156.8 67.6)
 		(end 156.796968 67.6)
 		(width 0.25)
@@ -32288,6 +32438,14 @@
 		(uuid "9d639436-ff5e-4ad9-9a9e-9f27ab9985ac")
 	)
 	(via
+		(at 170.523 128.2)
+		(size 0.8)
+		(drill 0.4)
+		(layers "F.Cu" "B.Cu")
+		(net "GND")
+		(uuid "a20b578b-2723-43fc-a074-8e5da94f8c09")
+	)
+	(via
 		(at 131.15 118.2)
 		(size 0.8)
 		(drill 0.4)
@@ -33066,6 +33224,14 @@
 		(layer "F.Cu")
 		(net "+5V")
 		(uuid "11719655-a11c-4a39-bf8d-b4863b3bb190")
+	)
+	(segment
+		(start 170.523 131.5875)
+		(end 170.523 134.132769)
+		(width 0.5)
+		(layer "F.Cu")
+		(net "+5V")
+		(uuid "1db2af4e-8191-461d-9305-39b7b043501f")
 	)
 	(segment
 		(start 165.290538 137.425)
