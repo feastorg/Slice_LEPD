@@ -11519,7 +11519,7 @@
 		(at 140.875 85.15 180)
 		(tags "TPS7A4901DGNR ")
 		(property "Reference" "U7"
-			(at 0 0 180)
+			(at 0.575 -2.45 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "fb3018a9-73c0-4ddb-9be9-0eef23eeb59b")
@@ -22697,12 +22697,12 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R18"
-			(at 0 -1.43 0)
+			(at 1.9625 -0.275 90)
 			(layer "F.SilkS")
 			(uuid "a2b678b7-4abc-408f-bc44-c1b7f2731fb6")
 			(effects
 				(font
-					(size 1 1)
+					(size 0.8 0.8)
 					(thickness 0.15)
 				)
 			)
