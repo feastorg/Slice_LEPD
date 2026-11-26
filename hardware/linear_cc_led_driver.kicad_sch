@@ -7677,7 +7677,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "10u X5R"
 			(at 118.872 302.26 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7699,7 +7699,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-us/products/productdetail?partno=GRM188R61A106KE69%23"
 			(at 115.57 300.99 0)
 			(hide yes)
 			(show_name no)
@@ -7711,6 +7711,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 115.57 300.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM188R61A106KE69D"
 			(at 115.57 300.99 0)
 			(hide yes)
 			(show_name no)
@@ -12522,7 +12533,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "10u X5R"
 			(at 348.742 148.59 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12544,7 +12555,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-us/products/productdetail?partno=GRM188R61A106KE69%23"
 			(at 345.44 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -12556,6 +12567,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 345.44 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM188R61A106KE69D"
 			(at 345.44 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -14053,7 +14075,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "10u X5R"
 			(at 348.742 302.26 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14075,7 +14097,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-us/products/productdetail?partno=GRM188R61A106KE69%23"
 			(at 345.44 300.99 0)
 			(hide yes)
 			(show_name no)
@@ -14087,6 +14109,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 345.44 300.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM188R61A106KE69D"
 			(at 345.44 300.99 0)
 			(hide yes)
 			(show_name no)
@@ -14567,7 +14600,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "10u X5R"
 			(at 118.872 148.59 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14589,7 +14622,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-us/products/productdetail?partno=GRM188R61A106KE69%23"
 			(at 115.57 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -14601,6 +14634,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 115.57 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM188R61A106KE69D"
 			(at 115.57 147.32 0)
 			(hide yes)
 			(show_name no)
