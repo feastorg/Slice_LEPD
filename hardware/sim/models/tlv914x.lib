@@ -1,0 +1,505 @@
+* TLV914X
+************************************************************************************************************************
+* (C) Copyright 2026 Texas Instruments Incorporated. All rights reserved.     
+************************************************************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.      
+** TI and its licensors and suppliers make no warranties, either expressed   
+** or implied, with respect to this model, including the warranties of       
+** merchantability or fitness for a particular purpose. The model is        
+** provided solely on an "as is" basis. The entire risk as to its quality   
+** and performance is with the customer
+************************************************************************************************************************
+*
+* This model is subject to change without notice. Texas Instruments
+* Incorporated is not responsible for updating this model.
+*
+************************************************************************************************************************
+* Released by: Srivatsan Sathyamoorthy
+* Date: 04/24/2026
+* Part: TLV914x
+*
+* Model Type: Generic (suitable for all analysis types)
+* EVM Users Guide:  SBOU197 - JULY 2017 (Generic Version)
+* Datasheet: SBOSAM4 - DECEMBER 2024 - REVISED APRIL 2026
+* Created with Green-Williams-Lis Op Amp Macro-model Architecture
+*
+* Top Level Model: TLV914x
+* Model Version: 1.0
+*
+************************************************************************************************************************
+*
+* Final 1.0
+* Release to Web.
+*
+************************************************************************************************************************
+*
+* Model Usage Notes:
+* 1. The following parameters are modeled: 
+*    a. OPEN-LOOP GAIN AND PHASE VS. FREQUENCY  WITH RL, CL EFFECTS (Aol)
+*    b. UNITY GAIN BANDWIDTH (GBW)
+*    c. INPUT COMMON-MODE REJECTION RATIO VS. FREQUENCY (CMRR)
+*    d. POWER SUPPLY REJECTION RATIO VS. FREQUENCY (PSRR)
+*    e. DIFFERENTIAL INPUT IMPEDANCE (Zid)
+*    f. COMMON-MODE INPUT IMPEDANCE (Zic)
+*    g. OPEN-LOOP OUTPUT IMPEDANCE VS. FREQUENCY (Zo)
+*    h. OUTPUT CURRENT THROUGH THE SUPPLY (Iout)
+*    i. INPUT VOLTAGE NOISE DENSITY VS. FREQUENCY (en)
+*    j. INPUT CURRENT NOISE DENSITY VS. FREQUENCY (in)
+*    k. OUTPUT VOLTAGE SWING vs. OUTPUT CURRENT (Vo)
+*    l. SHORT-CIRCUIT OUTPUT CURRENT (Isc)
+*    m. QUIESCENT CURRENT (Iq)
+*    n. SETTLING TIME VS. CAPACITIVE LOAD (ts)
+*    o. SLEW RATE (SR)
+*    p. SMALL SIGNAL OVERSHOOT VS. CAPACITIVE LOAD
+*    q. LARGE SIGNAL RESPONSE
+*    r. OVERLOAD RECOVERY TIME (tor)
+*    s. INPUT BIAS CURRENT (Ib)
+*    t. INPUT OFFSET CURRENT (Ios)
+*    u. INPUT OFFSET VOLTAGE (Vos)
+*    v. INPUT OFFSET VOLTAGE VS. TEMPERATURE (Vos Drift)
+*    w. INPUT COMMON-MODE VOLTAGE RANGE (Vcm)
+*    x. INPUT OFFSET VOLTAGE VS. INPUT COMMON-MODE VOLTAGE (Vos vs. Vcm)
+*    y. INPUT/OUTPUT ESD CELLS (ESDin, ESDout)
+*
+************************************************************************************************************************
+*
+
+************************************************************************************************************************
+.SUBCKT TLV914X IN+ IN- V+ V- OUT
+****************************************
+* Models
+.MODEL R_NOISELESS RES (T_ABS=-273.15)
+****************************************
+* Components
+C_C1 N00105 N00775 530N 
+C_C2 MID CLAMP 10.83U 
+C_C3 MID N06927 1P 
+C_C4 MID CONN 50F 
+C_C5 MID N08847 100F 
+C_C6 VCLP MID 1P 
+C_C7 N16156 N16166 22.74P 
+C_C8 N19210 N19220 159.2N 
+C_C9 N19500 N19510 159.2N 
+C_C10 0 N31805 100F 
+C_C11 0 N32095 1U 
+C_C12 0 N32776 100F 
+C_C13 MID IN_P 100F 
+C_C14 VIMON MID 1N 
+C_C15 VOUT_S MID 1N 
+C_C16 N66808 MID 10F 
+C_C17 N70478 MID 10F 
+C_C18 N75944 MID 100F 
+C_C19 N75948 MID 100F 
+C_C20 N80029 MID 100F 
+C_C21 N80187 MID 100F 
+C_C22 N113830 MID 1P 
+C_C23 N114948 MID 100F 
+C_C24 N115030 MID 100F 
+C_C25 MID N132687 1P 
+C_C26 MID N132784 1P 
+C_C27 MID SW_OL 1P 
+C_CCMN MID IN_N 1.056P 
+C_CCMP N02991 MID 1.056P 
+C_CDIFF IN_N N02991 3P 
+E_E1 N14790 MID CL_CLAMP MID 1
+E_E2 MID 0 N32095 0 1
+E_E3 N65823 MID OUT MID 1
+G_G1 N00105 MID CL_CLAMP N00254 -89
+G_G2 VSENSE MID CLAMP MID -1M
+G_G3 CONN MID N08847 MID -1U
+G_G4 N08847 MID N06927 MID -1U
+G_G5 N06927 MID VSENSE MID -1U
+G_G6 CLAW_CLAMP MID CONN MID -1M
+G_G7 CL_CLAMP MID CLAW_CLAMP MID -1M
+G_G8 VP_B 0 V+ 0 -1
+G_G9 VN_B 0 V- 0 -1
+G_G10 VP_CLP MID N66808 MID -1M
+G_G11 VN_CLP MID N70478 MID -1M
+G_G12 N128374 MID N127781 MID -1
+G_G13 N128961 MID N128981 MID -1
+G_GCMR1 N16156 MID N02991 MID -2.013
+G_GCMR2 N17206 N17194 N16166 MID -1M
+G_GPSR N17206 N23355 N19220 N19510 -1M
+G_GPSRN1 N19500 MID VN_B MID -336.6M
+G_GPSRP1 N19210 MID VP_B MID -336.6M
+I_IB N02991 MID DC 0.25PADC
+I_IOS MID IN_N DC 0.25PADC
+I_IQ V+ V- DC 6.6UADC
+R_R1 MID N00105 R_NOISELESS 1 
+R_R2 MID N00775 R_NOISELESS 23.08K 
+R_R3 N00775 N00105 R_NOISELESS 100K 
+R_R4 MID N01139 R_NOISELESS 1 
+R_R5 MID N03966 R_NOISELESS 1MEG 
+R_R6 MID CLAMP R_NOISELESS 1MEG 
+R_R7 MID VSENSE R_NOISELESS 1K 
+R_R8 MID CONN R_NOISELESS 1MEG 
+R_R9 MID N08847 R_NOISELESS 1MEG 
+R_R10 MID N06927 R_NOISELESS 1MEG 
+R_R11 MID CLAW_CLAMP R_NOISELESS 1K 
+R_R12 MID CL_CLAMP R_NOISELESS 1K 
+R_R13 N14790 VCLP R_NOISELESS 100 
+R_R14 N16166 N16156 R_NOISELESS 100MEG 
+R_R15 MID N16156 R_NOISELESS 1 
+R_R16 MID N16166 R_NOISELESS 1.4K 
+R_R17 N17206 N17194 R_NOISELESS 1K 
+R_R18 N19220 N19210 R_NOISELESS 100MEG 
+R_R19 MID N19210 R_NOISELESS 1 
+R_R20 MID N19220 R_NOISELESS 33.33 
+R_R21 N17206 N23355 R_NOISELESS 1K 
+R_R22 N19510 N19500 R_NOISELESS 100MEG 
+R_R23 MID N19500 R_NOISELESS 1 
+R_R24 MID N19510 R_NOISELESS 33.33 
+R_R25 0 VP_B R_NOISELESS 1 
+R_R26 N31805 VP_B R_NOISELESS 10M 
+R_R27 N32095 N31805 R_NOISELESS 10MEG 
+R_R28 0 N32095 R_NOISELESS 1T 
+R_R29 N32776 VN_B R_NOISELESS 10M 
+R_R30 N32095 N32776 R_NOISELESS 10MEG 
+R_R31 0 VN_B R_NOISELESS 1 
+R_R32 0 N32095 R_NOISELESS 1T 
+R_R33 N55647 MID R_NOISELESS 1T 
+R_R34 N56122 MID R_NOISELESS 1T 
+R_R35 MID N55461 R_NOISELESS 1 
+R_R36 N55461 IN_P R_NOISELESS 10M 
+R_R37 N64074 VP_B R_NOISELESS 1K 
+R_R38 N64277 VN_B R_NOISELESS 1K 
+R_R39 MID N64876 R_NOISELESS 1G 
+R_R40 VIMON N64876 R_NOISELESS 100 
+R_R41 N65823 VOUT_S R_NOISELESS 100 
+R_R42 N66808 N64074 R_NOISELESS 1K 
+R_R43 VP_CLP MID R_NOISELESS 1K 
+R_R44 VN_CLP MID R_NOISELESS 1K 
+R_R45 N70478 N64277 R_NOISELESS 1K 
+R_R46 VN_CLP MID R_NOISELESS 1T 
+R_R47 VP_CLP MID R_NOISELESS 1T 
+R_R48 N74849 MID R_NOISELESS 1 
+R_R49 N74871 MID R_NOISELESS 1 
+R_R50 N75948 N74871 R_NOISELESS 10M 
+R_R51 N74849 N75944 R_NOISELESS 10M 
+R_R52 N79971 MID R_NOISELESS 1T 
+R_R53 N80025 MID R_NOISELESS 1 
+R_R54 N80025 N80029 R_NOISELESS 10M 
+R_R55 N80187 N80175 R_NOISELESS 10M 
+R_R56 N80175 MID R_NOISELESS 1 
+R_R57 N80211 MID R_NOISELESS 1T 
+R_R58 VSENSE N113830 R_NOISELESS 10M 
+R_R59 N114472 MID R_NOISELESS 1T 
+R_R60 N114944 MID R_NOISELESS 1 
+R_R61 N114944 N114948 R_NOISELESS 10M 
+R_R62 N115030 N115020 R_NOISELESS 10M 
+R_R63 N115020 MID R_NOISELESS 1 
+R_R64 N115964 MID R_NOISELESS 1T 
+R_R65 MID N128374 R_NOISELESS 1 
+R_R66 MID N128961 R_NOISELESS 1 
+R_R67 V11 N132687 R_NOISELESS 100 
+R_R68 V10 N132784 R_NOISELESS 100 
+R_R69 N133017 SW_OL R_NOISELESS 100 
+R_R70 MID N133017 R_NOISELESS 1 
+R_RCMN MID IN_N R_NOISELESS 5T 
+R_RCMP N02991 MID R_NOISELESS 5T 
+R_RDIFF IN_N N02991 R_NOISELESS 500G 
+R_RDUMMY N00254 MID R_NOISELESS 250K 
+R_RINN IN_N IN- R_NOISELESS 10M 
+R_RINP N02991 IN+ R_NOISELESS 10M 
+R_RX N00254 N01139 R_NOISELESS 2.5MEG 
+V_V_ISCN N80211 MID -40VDC
+V_V_ISCP N79971 MID 40VDC
+V_V1 N114472 MID 1000VDC
+V_V2 N115964 MID -1000VDC
+V_V3 N127781 VCLP -3.6VDC
+V_V4 N128981 VCLP 3.6VDC
+V_VCMN N56122 VN_B -200MVDC
+V_VCMP N55647 VP_B 200MVDC
+X_H1 N00254 OUT N64876 MID H1_TLV914X
+X_H2 N128648 N128374 V11 MID H2_TLV914X
+X_H3 N128749 N128961 V10 MID H3_TLV914X
+X_S1 N128648 CLAMP N128648 CLAMP S1_TLV914X
+X_S2 CLAMP N128749 CLAMP N128749 S2_TLV914X
+X_U1 N00775 MID MID N01139 ZO_SRC_TLV914X PARAMS: GAIN=5.33 IPOS=2.5E5 INEG=-2.5E5
+X_U2 IN_P IN_N MID N03966 AOL_1_TLV914X PARAMS: GAIN=1E-4 IPOS=.5 INEG=-.5
+X_U3 N03966 MID MID CLAMP AOL_2_TLV914X PARAMS: GAIN=7.7E-2 IPOS=1.11 INEG=-1.11
+X_U4 IN- IN+ V+ V- ESD_IN_TLV914X
+X_U5 OUT V+ V- ESD_OUT_TLV914X
+X_U6 N17194 N35887 VOS_DRIFT_TLV914X PARAMS: DC=222E-6 POL=1 DRIFT=0.65E-06
+X_U7 N02991 N35887 VNSE1_TLV914X PARAMS: FLW=1 NLF=803.85 NVR=43.57
+X_U8 N02991 MID FEMT2_TLV914X PARAMS: FLWF=100 NLFF=1 NVRF=10
+X_U9 IN_N MID FEMT2_TLV914X PARAMS: FLWF=100 NLFF=1 NVRF=10
+X_U10 N23355 MID N55461 MID N55647 N56122 VCM_CLAMP_TLV914X PARAMS: GAIN=1
+X_U11 VIMON MID N64074 VP_B CLAWP_TLV914X
+X_U12 MID VIMON VN_B N64277 CLAWN_TLV914X
+X_U13 VIMON MID V+ MID IQ_SRC_TLV914X PARAMS: GAIN=1E-3
+X_U14 MID VIMON MID V- IQ_SRC_TLV914X PARAMS: GAIN=1E-3
+X_U15 VP_CLP VN_CLP VOUT_S MID N74849 N74871 CLAMP_AMP_LO_TLV914X PARAMS: G=1
+X_U16 N75944 N75948 CLAW_CLAMP MID CLAW_SRC_TLV914X PARAMS: GAIN=10 IPOS=2 INEG=-2
+X_U17 N79971 N80211 VIMON MID N80025 N80175 CLAMP_AMP_LO_TLV914X PARAMS: G=1
+X_U18 N80029 N80187 CL_CLAMP MID CL_SRC_TLV914X PARAMS: GAIN=1 IPOS=4 INEG=-4
+X_U19 N114472 N115964 N113830 MID N114944 N115020 CLAMP_AMP_HI_TLV914X PARAMS: G=10
+X_U20 N114948 N115030 CLAMP MID GR_SRC_TLV914X PARAMS: GAIN=1 IPOS=2.25 INEG=-2.25
+X_U21 MID N133017 N132687 N132784 OL_SENSE_TLV914X
+X_U22 SW_OL MID N00105 N00775 SW_OL_TLV914X
+.ENDS TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT AOL_1_TLV914X VC+ VC- IOUT+ IOUT- PARAMS: GAIN=1E-4 IPOS=.5 INEG=-.5
+****************************************
+* Components
+G1 IOUT+ IOUT- VALUE={LIMIT(GAIN*V(VC+,VC-),INEG,IPOS)}
+.ENDS AOL_1_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT AOL_2_TLV914X VC+ VC- IOUT+ IOUT- PARAMS: GAIN=20.36E-3 IPOS=0.163 INEG=-0.163
+****************************************
+* Components
+G1 IOUT+ IOUT- VALUE={LIMIT(GAIN*V(VC+,VC-),INEG,IPOS)}
+.ENDS AOL_2_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT CL_SRC_TLV914X VC+ VC- IOUT+ IOUT- PARAMS: GAIN=1 IPOS=0.452E1 INEG=-0.452E1
+****************************************
+* Components
+G1 IOUT+ IOUT- VALUE={LIMIT(GAIN*V(VC+,VC-),INEG,IPOS)}
+.ENDS CL_SRC_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT CLAMP_AMP_HI_TLV914X VC+ VC- VIN COM VO+ VO- PARAMS: G=10
+****************************************
+* Components
+GVO- COM VO- VALUE = {IF(V(VIN,COM)<V(VC-,COM),((V(VC-,COM)-V(VIN,COM))*G),0)}
+GVO+ COM VO+ VALUE = {IF(V(VIN,COM)>V(VC+,COM),((V(VIN,COM)-V(VC+,COM))*G),0)}
+.ENDS CLAMP_AMP_HI_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT CLAMP_AMP_LO_TLV914X VC+ VC- VIN COM VO+ VO- PARAMS: G=1
+****************************************
+* Components
+GVO- COM VO- VALUE = {IF(V(VIN,COM)<V(VC-,COM),((V(VC-,COM)-V(VIN,COM))*G),0)}
+GVO+ COM VO+ VALUE = {IF(V(VIN,COM)>V(VC+,COM),((V(VIN,COM)-V(VC+,COM))*G),0)}
+.ENDS CLAMP_AMP_LO_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT CLAW_SRC_TLV914X VC+ VC- IOUT+ IOUT- PARAMS: GAIN=1 IPOS=0.226E1 INEG=-0.226E1
+****************************************
+* Components
+G1 IOUT+ IOUT- VALUE={LIMIT(GAIN*V(VC+,VC-),INEG,IPOS)}
+.ENDS CLAW_SRC_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT CLAWN_TLV914X VC+ VC- IOUT+ IOUT-
+****************************************
+* Components
+G1 IOUT+ IOUT- TABLE {(V(VC+,VC-))} =(0.01, 1.27E-05)(0.20, 2.55E-05)(1.00, 7.78E-05)(3.00, 2.10E-04)(6.00,
++ 4.12E-04)(15.0, 1.06E-03)(25.0, 1.92E-03)(37.5, 3.00E-03)(37.9, 4.00E-03)(40.0, 9.00E-03)
+.ENDS CLAWN_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT CLAWP_TLV914X VC+ VC- IOUT+ IOUT-
+****************************************
+* Components
+G1 IOUT+ IOUT- TABLE {(V(VC+,VC-))} =(0.01, 1.27E-05)(0.20, 2.55E-05)(1.00, 7.78E-05)(3.00, 2.10E-04)(6.00,
++ 4.12E-04)(15.0, 1.06E-03)(25.0, 1.92E-03)(37.5, 3.00E-03)(37.9, 4.00E-03)(40.0, 9.00E-03)
+.ENDS CLAWP_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT ESD_IN_TLV914X ESDN ESDP VCC VEE
+****************************************
+* Models
+.MODEL ESD_SW VSWITCH (RON=50 ROFF=1E12 VON=500E-3 VOFF=100E-3)
+****************************************
+* Components
+S1 VCC ESDN ESDN VCC ESD_SW
+S2 VCC ESDP ESDP VCC ESD_SW
+S3 ESDN VEE VEE ESDN ESD_SW
+S4 ESDP VEE VEE ESDP ESD_SW
+.ENDS ESD_IN_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT ESD_OUT_TLV914X OUT VCC VEE
+****************************************
+* Models
+.MODEL ESD_SW VSWITCH (RON=50 ROFF=1E12 VON=500E-3 VOFF=100E-3)
+****************************************
+* Components
+S1 VCC OUT OUT VCC ESD_SW
+S2 OUT VEE VEE OUT ESD_SW
+.ENDS ESD_OUT_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT FEMT2_TLV914X 1 2 PARAMS: NLFF=0.1 FLWF=0.001 NVRF=0.1
+****************************************
+* Parameters
+.PARAM GLFF={PWR(FLWF,0.25)*NLFF/1164}
+.PARAM RNVF={1.184*PWR(NVRF,2)}
+****************************************
+* Models
+.MODEL DVNF D (KF={PWR(FLWF,0.5)/1E11} IS=1.0E-16)
+****************************************
+* Components
+C1 1 0 1E-15 
+C2 2 0 1E-15 
+C3 1 2 1E-15 
+D1 7 0 DVNF 
+D2 8 0 DVNF 
+E1 3 6 7 8 {GLFF}
+E2 6 4 5 0 10
+G1 1 2 3 4 1E-6
+I1 0 7 10E-3
+I2 0 8 10E-3
+R1 3 0 1E9 
+R2 3 0 1E9 
+R3 3 6 1E9 
+R4 5 0 {RNVF} 
+R5 5 0 {RNVF} 
+R6 3 4 1E9 
+R7 4 0 1E9 
+.ENDS FEMT2_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT GR_SRC_TLV914X VC+ VC- IOUT+ IOUT- PARAMS: GAIN=1 IPOS=0.326E1 INEG=-0.326E1
+****************************************
+* Components
+G1 IOUT+ IOUT- VALUE={LIMIT(GAIN*V(VC+,VC-),INEG,IPOS)}
+.ENDS GR_SRC_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT IQ_SRC_TLV914X VC+ VC- IOUT+ IOUT- PARAMS: GAIN=1E-3
+****************************************
+* Components
+G1 IOUT+ IOUT- VALUE={IF((V(VC+,VC-)<=0),0,GAIN*V(VC+,VC-))}
+.ENDS IQ_SRC_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT OL_SENSE_TLV914X COM SW+ OLN OLP
+****************************************
+* Components
+GSW+ COM SW+ VALUE = {IF((V(OLN,COM)>10E-3|V(OLP,COM)>10E-3),1,0)}
+.ENDS OL_SENSE_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT SW_OL_TLV914X SW_OL MID CAP_L CAP_R
+****************************************
+* Models
+.MODEL OL_SW VSWITCH (RON=1E-3 ROFF=1E12 VON=900E-3 VOFF=800E-3)
+****************************************
+* Components
+S1 CAP_L CAP_R SW_OL MID OL_SW
+.ENDS SW_OL_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT H1_TLV914X 1 2 3 4
+****************************************
+* Components
+H_H1 3 4 VH_H1 1K
+VH_H1 1 2 0V
+.ENDS H1_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT H2_TLV914X 1 2 3 4
+****************************************
+* Components
+H_H2 3 4 VH_H2 -1
+VH_H2 1 2 0V
+.ENDS H2_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT H3_TLV914X 1 2 3 4
+****************************************
+* Components
+H_H3 3 4 VH_H3 1
+VH_H3 1 2 0V
+.ENDS H3_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT S1_TLV914X 1 2 3 4
+****************************************
+* Models
+.MODEL _S1 VSWITCH (ROFF=10G RON=100M VOFF=0 VON=10M)
+****************************************
+* Components
+RS_S1 1 2 1G 
+S_S1 3 4 1 2 _S1
+.ENDS S1_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT S2_TLV914X 1 2 3 4
+****************************************
+* Models
+.MODEL _S2 VSWITCH (ROFF=10G RON=100M VOFF=0 VON=10M)
+****************************************
+* Components
+RS_S2 1 2 1G 
+S_S2 3 4 1 2 _S2
+.ENDS S2_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT VCM_CLAMP_TLV914X VIN+ VIN- IOUT- IOUT+ VP+ VP- PARAMS: GAIN=10
+****************************************
+* Components
+G1 IOUT+ IOUT- VALUE={LIMIT(GAIN*V(VIN+,VIN-),V(VP-,VIN-),V(VP+,VIN-))}
+.ENDS VCM_CLAMP_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT VNSE1_TLV914X 1 2 PARAMS: FLW=1 NLF=120 NVR=18
+****************************************
+* Parameters
+.PARAM GLF={PWR(FLW,0.25)*NLF/1164}
+.PARAM RNV={1.184*PWR(NVR,2)}
+****************************************
+* Models
+.MODEL DVN D (KF={PWR(FLW,0.5)/1E11} IS=1.0E-16)
+****************************************
+* Components
+D1 7 0 DVN 
+D2 8 0 DVN 
+E1 3 6 7 8 {GLF}
+E2 6 4 5 0 10
+E3 1 2 3 4 1
+I1 0 7 10E-3
+I2 0 8 10E-3
+R1 3 0 1E9 
+R2 3 0 1E9 
+R3 3 6 1E9 
+R4 5 0 {RNV} 
+R5 5 0 {RNV} 
+R6 3 4 1E9 
+R7 4 0 1E9 
+.ENDS VNSE1_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT VOS_DRIFT_TLV914X VOS+ VOS- PARAMS: DC=496.4E-6 POL=1 DRIFT=2E-06
+****************************************
+* Components
+E1 VOS+ VOS- VALUE={DC+POL*DRIFT*(TEMP-27)}
+.ENDS VOS_DRIFT_TLV914X
+************************************************************************************************************************
+
+************************************************************************************************************************
+.SUBCKT ZO_SRC_TLV914X VC+ VC- IOUT+ IOUT- PARAMS: GAIN=200 IPOS=14.5E5 INEG=-14.5E5
+****************************************
+* Components
+G1 IOUT+ IOUT- VALUE={LIMIT(GAIN*V(VC+,VC-),INEG,IPOS)}
+.ENDS ZO_SRC_TLV914X
+************************************************************************************************************************
+

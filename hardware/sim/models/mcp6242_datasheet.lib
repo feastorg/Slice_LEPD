@@ -1,0 +1,27 @@
+* MCP6242 DATASHEET STAND-IN - NOT A VENDOR MODEL.
+*
+* The Microchip product page (https://www.microchip.com/en-us/product/MCP6242) refused the
+* fetch (HTTP 403, 2026-11-25), so this is built from the MCP6241/1R/1U/2/4 datasheet
+* (DS21882D) typical values, one amplifier:
+*   AOL 110 dB, GBWP 550 kHz, phase margin 68 deg at G = +1 (second pole at 1.36 MHz),
+*   slew 0.30 V/us, output to within 35 mV of either rail (behind 30 ohm), IQ 50 uA.
+* It does NOT model: input offset voltage (VOS +/-5 mV max is a budget, not a value here),
+*   input bias current, input common-mode limits (VSS - 0.3 .. VDD + 0.3), output current
+*   limit (ISC 23 mA), PSRR, CMRR, noise, temperature.
+*
+* Pins: IN+ IN- V+ V- OUT
+.subckt MCP6242_DS inp inn vdd vss out
+Bmid mid 0 V = (V(vdd) + V(vss)) / 2
+* transconductance into the dominant-pole node: GBW = gm / (2 pi C1), slew = Imax / C1
+Bgm mid n1 I = 0.3m * tanh(3.456m * (V(inp) - V(inn)) / 0.3m)
+C1 n1 mid 1n
+R1 n1 mid 91.5meg
+* keep the integrator inside the rails (no wind-up)
+Bcl n1 mid I = 1m * (max(V(n1) - V(vdd) - 0.2, 0) + min(V(n1) - V(vss) + 0.2, 0))
+E2 n2 mid n1 mid 1
+R2 n2 n3 1k
+C2 n3 mid 117p
+Bout n4 0 V = min(max(V(n3), V(vss) + 0.035), V(vdd) - 0.035)
+Rout n4 out 30
+Iq vdd vss 50u
+.ends MCP6242_DS
