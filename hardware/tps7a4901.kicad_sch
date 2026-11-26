@@ -1122,7 +1122,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 110.49) (xy 106.68 110.49)
+			(xy 91.44 110.49) (xy 93.98 110.49)
 		)
 		(stroke
 			(width 0.2032)
@@ -1133,7 +1133,18 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 110.49) (xy 135.89 110.49)
+			(xy 99.06 110.49) (xy 106.68 110.49)
+		)
+		(stroke
+			(width 0.2032)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "001d2024-210a-418f-a129-baad5f6ccee2")
+	)
+	(wire
+		(pts
+			(xy 111.76 110.49) (xy 140.97 110.49)
 		)
 		(stroke
 			(width 0.2032)
@@ -2073,7 +2084,7 @@
 	)
 	(symbol
 		(lib_id "Device:NetTie_2")
-		(at 138.43 110.49 0)
+		(at 96.52 110.49 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2083,7 +2094,7 @@
 		(dnp no)
 		(uuid "feee1a54-a0f4-4fe6-8ba7-044273bee089")
 		(property "Reference" "NT2"
-			(at 137.922 108.712 0)
+			(at 96.012 108.712 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2093,7 +2104,7 @@
 			)
 		)
 		(property "Value" "NetTie_2"
-			(at 138.43 107.95 0)
+			(at 96.52 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2104,7 +2115,7 @@
 			)
 		)
 		(property "Footprint" "NetTie:NetTie-2_SMD_Pad2.0mm"
-			(at 138.43 110.49 0)
+			(at 96.52 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2115,7 +2126,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 138.43 110.49 0)
+			(at 96.52 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2126,7 +2137,7 @@
 			)
 		)
 		(property "Description" "Net tie, 2 pins"
-			(at 138.43 110.49 0)
+			(at 96.52 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
