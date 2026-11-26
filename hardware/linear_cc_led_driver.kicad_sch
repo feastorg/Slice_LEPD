@@ -5,7 +5,7 @@
 	(uuid "4be4354f-7d4e-4dca-87e0-487417d9bf2f")
 	(paper "A2")
 	(lib_symbols
-		(symbol "Amplifier_Operational:MCP6002-xMC"
+		(symbol "Amplifier_Operational:MCP6002-xSN"
 			(pin_names
 				(offset 0.127)
 			)
@@ -25,7 +25,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "MCP6002-xMC"
+			(property "Value" "MCP6002-xSN"
 				(at 0 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -36,7 +36,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
+			(property "Footprint" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -58,7 +58,7 @@
 					)
 				)
 			)
-			(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
+			(property "Description" "1MHz, Low-Power Op Amp, SOIC-8"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -90,7 +90,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "DFN*1EP*3x2mm*P0.5mm*"
+			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -101,7 +101,7 @@
 					)
 				)
 			)
-			(symbol "MCP6002-xMC_1_1"
+			(symbol "MCP6002-xSN_1_1"
 				(polyline
 					(pts
 						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
@@ -169,7 +169,7 @@
 					)
 				)
 			)
-			(symbol "MCP6002-xMC_2_1"
+			(symbol "MCP6002-xSN_2_1"
 				(polyline
 					(pts
 						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
@@ -237,7 +237,7 @@
 					)
 				)
 			)
-			(symbol "MCP6002-xMC_3_1"
+			(symbol "MCP6002-xSN_3_1"
 				(pin power_in line
 					(at -2.54 -7.62 90)
 					(length 3.81)
@@ -267,25 +267,6 @@
 						)
 					)
 					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -2.54 -7.62 90)
-					(length 3.81)
-					(hide yes)
-					(name "V-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -9169,7 +9150,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
+		(lib_id "Amplifier_Operational:MCP6002-xSN")
 		(at 375.92 161.29 0)
 		(unit 3)
 		(body_style 1)
@@ -9258,9 +9239,6 @@
 		)
 		(pin "4"
 			(uuid "529ef079-7bd8-47ad-90fc-549d1a537a80")
-		)
-		(pin "9"
-			(uuid "77f885e4-3410-48fe-b383-cdbb713b09b7")
 		)
 		(instances
 			(project "BREAD_Slice"
@@ -9952,7 +9930,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
+		(lib_id "Amplifier_Operational:MCP6002-xSN")
 		(at 176.53 153.67 0)
 		(unit 1)
 		(body_style 1)
@@ -10035,9 +10013,6 @@
 		)
 		(pin "4"
 			(uuid "19d646b9-9a4a-49c7-bb4f-f079b28dc258")
-		)
-		(pin "9"
-			(uuid "52c21ac7-711b-4e56-b0e9-aca410caaf36")
 		)
 		(pin "1"
 			(uuid "f08b1605-67ad-4393-993a-ab4f746f2b23")
@@ -10388,7 +10363,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
+		(lib_id "Amplifier_Operational:MCP6002-xSN")
 		(at 406.4 153.67 0)
 		(unit 1)
 		(body_style 1)
@@ -10472,9 +10447,6 @@
 		)
 		(pin "4"
 			(uuid "19d646b9-9a4a-49c7-bb4f-f079b28dc259")
-		)
-		(pin "9"
-			(uuid "52c21ac7-711b-4e56-b0e9-aca410caaf37")
 		)
 		(pin "1"
 			(uuid "001a4365-b45a-4775-9f48-0e6c19ba287c")
@@ -11361,7 +11333,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
+		(lib_id "Amplifier_Operational:MCP6002-xSN")
 		(at 406.4 307.34 0)
 		(unit 2)
 		(body_style 1)
@@ -11448,9 +11420,6 @@
 		)
 		(pin "8"
 			(uuid "1b5a3828-7df1-4b97-aef4-b501926091c0")
-		)
-		(pin "9"
-			(uuid "2f6963a5-9b83-4756-bfe4-0c142d7cba26")
 		)
 		(instances
 			(project "BREAD_Slice"
@@ -11773,7 +11742,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
+		(lib_id "Amplifier_Operational:MCP6002-xSN")
 		(at 146.05 153.67 0)
 		(unit 3)
 		(body_style 1)
@@ -11862,9 +11831,6 @@
 		)
 		(pin "4"
 			(uuid "a5249253-a6cb-489f-84af-29825aebbf22")
-		)
-		(pin "9"
-			(uuid "0b2b163a-308b-4b9b-80da-05573e4508fd")
 		)
 		(instances
 			(project "BREAD_Slice"
@@ -11955,7 +11921,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
+		(lib_id "Amplifier_Operational:MCP6002-xSN")
 		(at 176.53 307.34 0)
 		(unit 2)
 		(body_style 1)
@@ -12041,9 +12007,6 @@
 		)
 		(pin "8"
 			(uuid "1b5a3828-7df1-4b97-aef4-b501926091bf")
-		)
-		(pin "9"
-			(uuid "2f6963a5-9b83-4756-bfe4-0c142d7cba25")
 		)
 		(instances
 			(project "BREAD_Slice"
