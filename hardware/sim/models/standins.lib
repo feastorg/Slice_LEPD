@@ -1,8 +1,8 @@
 * STAND-INS - NOT VENDOR MODELS. Each one is labelled with what it does and does not cover.
 *
 * LED_IR_1V2: an IR LED as a diode, Vf = 1.20 V at 100 mA (N = 2, RS = 1 ohm). The
-*   INL-5AMIR15 datasheet is not in hand; 1.2 V is the low end for a 5 mm IR LED, which is the
-*   worst case for the sink FET's dissipation. CJO 30 pF is assumed (5 mm LEDs are tens of pF),
+*   INL-5AMIR15's typical curve (datasheet V1.0) reads 1.26 V at 10 mA and about 2.03 V at
+*   67.5 mA; 1.2 V is kept as the low end, the worst case for the sink FET's dissipation. CJO 30 pF is assumed (5 mm LEDs are tens of pF),
 *   not from a datasheet. No light output, temperature or reverse behaviour.
 * LED_3V0: a blue/white LED as a diode, Vf = 3.00 V at 100 mA (N = 3, RS = 2 ohm): the
 *   worst case for the sink's headroom. Same limits.

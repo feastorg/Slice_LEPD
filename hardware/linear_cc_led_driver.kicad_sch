@@ -2383,7 +2383,7 @@
 		)
 		(uuid "96045499-0e34-4aea-ba82-0b2ffbf2f016")
 	)
-	(text "I_LED = DAC_1 / RS, RS = 12.4 ohm 1%\n(LED derated: INL-5AMIR15 IF 100mA abs. max)\nDAC_max_in = 1.000V\nI_LED_max = 1.000V / 12.4 = 80.6mA\n		(+13mV via R9: 81.7mA)\nPWM_max = 1V/1.000V *100% = 100%\n\nPRS_max = I**2 * R\n		= 0.0817*0.0817*12.4 = 0.083W"
+	(text "I_LED = DAC_1 / RS, RS = 15.0 ohm 1%\n(LED derated: INL-5AMIR15 IF 100mA abs. max,\nPd 160mW; VF typ 2.03V at 67.5mA: 137mW)\nDAC_max_in = 1.000V\nI_LED_max = 1.000V / 15.0 = 66.7mA\n		(+13mV via R9: 67.5mA)\nPWM_max = 1V/1.000V *100% = 100%\n\nPRS_max = I**2 * R\n		= 0.0675*0.0675*15.0 = 0.068W"
 		(exclude_from_sim no)
 		(at 195.834 181.356 0)
 		(effects
@@ -8928,7 +8928,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12.4 0.5W 1%"
+		(property "Value" "15.0 0.5W 1%"
 			(at 464.312 328.93 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10329,7 +10329,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12.4 0.5W 1%"
+		(property "Value" "15.0 0.5W 1%"
 			(at 234.442 328.93 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11339,7 +11339,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12.4 0.5W 1%"
+		(property "Value" "15.0 0.5W 1%"
 			(at 234.442 175.26 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13802,7 +13802,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12.4 0.5W 1%"
+		(property "Value" "15.0 0.5W 1%"
 			(at 464.312 175.26 0)
 			(show_name no)
 			(do_not_autoplace no)

@@ -23,11 +23,12 @@ fitted the other way round drives the output to the bottom rail (about 12 mV).
 
 ### LED outputs (J2-J5)
 
-Each channel sinks up to 1.000 V / 12.4 Ω = 80.6 mA at 100 % duty (81.7 mA with R9's 13 mV of
-comparator hysteresis). The INL-5AMIR15's absolute maximum is 100 mA DC at 25 °C (Pd 160 mW),
-derated linearly above about 30 °C ambient: about 83 mA at 40 °C and 51 mA at 60 °C (datasheet
-V1.0, page 3). Its typical forward-voltage curve gives about 2.15 V at 80 mA, so the sink keeps
-about 1.8 V across Q2 at full scale.
+Each channel sinks up to 1.000 V / 15.0 Ω = 66.7 mA at 100 % duty (67.5 mA with R9's 13 mV of
+comparator hysteresis), 0.27 A for all four. The INL-5AMIR15's absolute maximum is 100 mA DC at
+25 °C (Pd 160 mW), derated linearly from 30 °C to about 10 mA at 85 °C (datasheet V1.0, page 3):
+67.5 mA is within the curve up to about 50 °C ambient. Its typical forward-voltage curve
+(1.26 V at 10 mA, 1.47 V at 20 mA, about 2.15 V at 80 mA, 2.29 V at 100 mA) gives about 2.03 V
+at 67.5 mA: 137 mW in the LED, and about 2.0 V across Q2 at full scale.
 
 ## Documentation
 
