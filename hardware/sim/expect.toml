@@ -28,7 +28,8 @@
 # Models: U6 is TI's TLV914x model (SBOMCV0); U3 is TI's LM2901/LM339 model (SLCJ010, the
 # LM339B page's model, VOS 0.37 mV, not the B-version's VICR of VCC - 1.5 V); Q2 is
 # Infineon's BSS806N_L1 (OptiMOS2 20 V library, version 100320). STAND-INS, not vendor
-# models: U2/U5 (MCP6242, from DS21882D: the Microchip page refused the download, HTTP 403),
+# models: U2/U5 (MCP6242, from the DS21882D typicals; Microchip's MCP6241 macro model, rev D,
+# also covers the MCP6242),
 # Q1 (BC858, reverse beta assumed 3), the LEDs, the photodiode junction, U7 (ideal error amp).
 
 mirrors = ["R1", "R3", "C5", "C7", "R9", "R5", "R6", "C9", "U3", "R11", "R13", "Q1", "U2", "R15",
