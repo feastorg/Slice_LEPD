@@ -3245,7 +3245,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.murata.com/en-us/products/productdetail?partno=GRM188R71C104KA01%23"
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C104K4RACTU?lang=en"
 			(at 95.25 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -3267,7 +3267,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM188R71C104KA01D"
+		(property "MPN" "C0603C104K4RACTU"
 			(at 95.25 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -3337,7 +3337,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.murata.com/en-us/products/productdetail?partno=GRM188R71C104KA01%23"
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C104K4RACTU?lang=en"
 			(at 107.95 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -3359,7 +3359,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM188R71C104KA01D"
+		(property "MPN" "C0603C104K4RACTU"
 			(at 107.95 110.49 0)
 			(hide yes)
 			(show_name no)
