@@ -31286,8 +31286,8 @@
 			)
 		)
 	)
-	(gr_text "BREAD Slice\nPhotometer\nSLC_LEPD\nR1 11-2026"
-		(at 128.55 103.325 270)
+	(gr_text "BREAD Slice\nPhotometer\nSLC_LEPD\nG3 r1 11-2026"
+		(at 128.55 103.075 270)
 		(layer "F.SilkS")
 		(uuid "5abfd3cf-8b82-409d-b0dd-ab0b45a460bd")
 		(effects
