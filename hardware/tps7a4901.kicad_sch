@@ -801,7 +801,7 @@
 		)
 		(uuid "b03d35fd-d8ec-4b65-a459-8a11dc9f9175")
 	)
-	(text "* see notebook in documentation \ndirectory for complete calculations"
+	(text "* VOUT calculation below"
 		(exclude_from_sim no)
 		(at 128.27 75.438 0)
 		(effects
@@ -812,7 +812,7 @@
 		)
 		(uuid "b641c953-969b-4e64-b233-de5b5d800f7d")
 	)
-	(text "VOUT = Vfb * (1 + R1/R2)\n\nR1_CHOSEN_EQUIV = 178.5 kΩ\nVOUT = 1.185 * (1 + 178.5 / 100) = 3.300225 V\n\nR1_CHOSEN_STD_EQUIV = 100 kΩ + 78.7 kΩ = 178.7 kΩ\nVOUT = 1.185 * (1 + 178.7 / 100) = 3.302595 V\n"
+	(text "VOUT = Vfb * (1 + R1/R2)\n\nR1 = R49 + R50 = 300 kΩ + 22 kΩ = 322 kΩ\nR2 = R51 = 100 kΩ\nVOUT = 1.185 * (1 + 322 / 100) = 5.0007 V\n"
 		(exclude_from_sim no)
 		(at 134.62 121.158 0)
 		(effects

@@ -2383,7 +2383,7 @@
 		)
 		(uuid "96045499-0e34-4aea-ba82-0b2ffbf2f016")
 	)
-	(text "I_LED = DAC_1 / RS\n\nI_LED_max = 100mA\nDAC_max_in = I_LED_max * RS = 1V\n\nPWM_max = 1V/1.63V *100% \n		= 61.34% = 60%\n\nPRS_max = I**2 * R \n		= 0.1*0.1*10\n		=0.1W"
+	(text "I_LED = DAC_1 / RS\n\nI_LED_max = 100mA\nDAC_max_in = I_LED_max * RS = 1V\n\nPWM_max = 1V/1.000V *100% \n		= 100%\n\nPRS_max = I**2 * R \n		= 0.1*0.1*10\n		=0.1W"
 		(exclude_from_sim no)
 		(at 195.834 181.356 0)
 		(effects
@@ -2441,7 +2441,7 @@
 		)
 		(uuid "bf5a8107-5da2-49d6-aee5-93ae748552a5")
 	)
-	(text "FILTER CALCS\nStart by calculating equiv RC:\nThev. equiv of resistors Ra and Rb is:\nReff = Ra || Rb \n	 = (Ra*Rb) / (Ra+Rb)\n	 = (3300*1600) / (3300+1600)\n	 = 1077.55 = 1.78 Kohms\nCtot = Ca + Cb\n	 = 1.0u + 0.22u\n	 = 1.22uF\n\nCalculate Results:\nτ=Reff​*Ctot\n = 1.78 Kohms * 1.22uF\n = 2.17ms\nfc = 1 / (2*pi*τ)\n   = 1 / (2*pi*2.17)\n   = 73.3Hz"
+	(text "FILTER CALCS\nStart by calculating equiv RC:\nThev. equiv of resistors Ra and Rb is:\nReff = Ra || Rb \n	 = (Ra*Rb) / (Ra+Rb)\n	 = (3300*825) / (3300+825)\n	 = 660 ohms\n	 (R9 200k ignored: 658 ohms)\nCtot = Ca + Cb\n	 = 10u + 0.22u\n	 = 10.22uF\n\nCalculate Results:\nτ=Reff​*Ctot\n = 660 ohms * 10.22uF\n = 6.75ms\nfc = 1 / (2*pi*τ)\n   = 1 / (2*pi*6.75ms)\n   = 23.6Hz"
 		(exclude_from_sim no)
 		(at 90.17 105.41 0)
 		(effects
@@ -2477,7 +2477,7 @@
 		)
 		(uuid "d3d178cc-3eda-47a3-925d-cf98e16c68f3")
 	)
-	(text "DAC output:\nDAC_max \n= 5V * 1.6k / (3.3k + 1.6k)\n= 1.63V"
+	(text "DAC output:\nDAC_max \n= 5V * 825 / (3.3k + 825)\n= 1.000V (+13mV via R9)"
 		(exclude_from_sim no)
 		(at 111.506 126.492 0)
 		(effects

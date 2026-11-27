@@ -1232,7 +1232,7 @@
 		)
 		(uuid "52200f75-f697-4582-a8d0-1a09edc87d4f")
 	)
-	(text "reverse biasing of photodiode"
+	(text "PD at 0 V bias (TIA_BIAS 49 mV)"
 		(exclude_from_sim no)
 		(at 186.69 61.468 0)
 		(effects
