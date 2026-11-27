@@ -458,6 +458,8 @@ max = 8.72e-3
 # Informational: peak of FEEDBACK after the step (0.55 V = no overshoot). R15 10k into the
 # BSS806N gate (Ciss 370 pF typ) puts a pole near the loop's crossover (U2's 550 kHz
 # GBW x the follower's gain): expect a low phase margin and overshoot, not a clean step.
+# The board adds Rf R52 10k (FEEDBACK -> IN-) and Cf C36 1n (OUT -> IN-) per channel to fix
+# this; they are not in the bench, so this copy still shows the uncompensated loop.
 [[measure]]
 name = "step_peak"
 analysis = "tran"
