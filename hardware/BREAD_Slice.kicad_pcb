@@ -31270,12 +31270,12 @@
 		)
 	)
 	(gr_text "ARDUINO NANO"
-		(at 150.22 116.49 90)
+		(at 150.22 119.7 90)
 		(layer "F.SilkS")
 		(uuid "d2c2573f-95ca-4b27-b2b0-4a4afcd9537c")
 		(effects
 			(font
-				(size 2 2)
+				(size 1.6 1.6)
 				(thickness 0.15)
 			)
 		)
