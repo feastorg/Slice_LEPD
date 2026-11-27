@@ -8918,7 +8918,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10 0.5W 1%"
+		(property "Value" "12.4 0.5W 1%"
 			(at 309.88 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8977,7 +8977,7 @@
 				(justify left)
 			)
 		)
-		(property "Sim.Params" "r=10"
+		(property "Sim.Params" "r=12.4"
 			(at 309.88 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -12298,7 +12298,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10 0.5W 1%"
+		(property "Value" "12.4 0.5W 1%"
 			(at 309.88 124.46 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12357,7 +12357,7 @@
 				(justify left)
 			)
 		)
-		(property "Sim.Params" "r=10"
+		(property "Sim.Params" "r=12.4"
 			(at 309.88 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -15678,7 +15678,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10 0.5W 1%"
+		(property "Value" "12.4 0.5W 1%"
 			(at 309.88 154.94 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15737,7 +15737,7 @@
 				(justify left)
 			)
 		)
-		(property "Sim.Params" "r=10"
+		(property "Sim.Params" "r=12.4"
 			(at 309.88 152.40 0)
 			(hide yes)
 			(show_name no)
@@ -19058,7 +19058,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10 0.5W 1%"
+		(property "Value" "12.4 0.5W 1%"
 			(at 309.88 185.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19117,7 +19117,7 @@
 				(justify left)
 			)
 		)
-		(property "Sim.Params" "r=10"
+		(property "Sim.Params" "r=12.4"
 			(at 309.88 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -20192,7 +20192,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10 0.5W 1%"
+		(property "Value" "12.4 0.5W 1%"
 			(at 111.76 215.90 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20251,7 +20251,7 @@
 				(justify left)
 			)
 		)
-		(property "Sim.Params" "r=10"
+		(property "Sim.Params" "r=12.4"
 			(at 111.76 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -21681,7 +21681,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10 0.5W 1%"
+		(property "Value" "12.4 0.5W 1%"
 			(at 144.78 246.38 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21740,7 +21740,7 @@
 				(justify left)
 			)
 		)
-		(property "Sim.Params" "r=10"
+		(property "Sim.Params" "r=12.4"
 			(at 144.78 243.84 0)
 			(hide yes)
 			(show_name no)

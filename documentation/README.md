@@ -11,8 +11,10 @@
   - Molex pico blade: https://www.digikey.ca/en/products/detail/molex/0530480210/242864?s=N4IgTCBcDaIKwGYAMAWAHEsBGJIC6AvkA
 
 - LED driver sense resistor
-  - https://www.digikey.ca/en/products/detail/stackpole-electronics-inc/RMCF1210FT10R0/1758534
-  - 1/2W 1% 1210 (3225 Metric)
+  - RS1-RS4: 12.4 Ω 1% 1/2W 1210 (3225 Metric), for example Stackpole RMCF1210FT12R4 (same series
+    as the RMCF1210FT10R0 this design first used)
+  - 12.4 Ω sets full scale to 1.000 V / 12.4 Ω = 80.6 mA (81.7 mA with R9's 13 mV of hysteresis),
+    under the INL-5AMIR15's 100 mA absolute maximum forward current; 83 mW in the resistor
 
 ## LED Driver
 
@@ -49,21 +51,21 @@ Purpose: we want the LED to emit a set light level with high accuracy (known) an
 4. **MCP6242 Op Amp (Bottom)**
 
    - **+ Input:** Receives the same DAC voltage from the PWM filter.
-   - **− Input:** Connected to the source of the BSS806 MOSFET (the voltage sensed across a 10 Ω resistor).
+   - **− Input:** Connected to the source of the BSS806 MOSFET (the voltage sensed across a 12.4 Ω resistor).
    - **Output:** Drives the gate of the BSS806 MOSFET (labeled “FET_GATE”) to regulate current.
 
 5. **BSS806 N-Channel MOSFET (Bottom Switch)**
 
    - **Drain:** Tied to the common output node (also the emitter of the BC858).
-   - **Source:** Connects to a 10 Ω resistor that goes to ground. This resistor acts as a current-sense element.
+   - **Source:** Connects to a 12.4 Ω resistor that goes to ground. This resistor acts as a current-sense element.
    - **Function:** Controlled by the op amp to regulate the voltage at the source, and hence the current through the LED.
 
-6. **LED and 10 Ω Sense Resistor**
+6. **LED and 12.4 Ω Sense Resistor**
 
    - **LED Anode:** Connected to the +5 V rail.
    - **LED Cathode:** Connected to the common node (junction of BC858 emitter and MOSFET drain).
-   - **Current Path:** +5 V → LED → common node → MOSFET → 10 Ω resistor → Ground.
-   - **Sensing:** The voltage across the 10 Ω resistor is used by the op amp for current regulation.
+   - **Current Path:** +5 V → LED → common node → MOSFET → 12.4 Ω resistor → Ground.
+   - **Sensing:** The voltage across the 12.4 Ω resistor is used by the op amp for current regulation.
 
 7. **TVS Diode (DF2S6.8M)**
    - **Connection:** Placed between the common output node and ground.
@@ -78,7 +80,7 @@ Purpose: we want the LED to emit a set light level with high accuracy (known) an
 
 2. **Op Amp and MOSFET Current Regulation:**
 
-   - The MCP6242 op amp compares the DAC setpoint with the voltage at the MOSFET source (across the 10 Ω sense resistor).
+   - The MCP6242 op amp compares the DAC setpoint with the voltage at the MOSFET source (across the 12.4 Ω sense resistor).
    - Based on this comparison, the op amp adjusts the gate voltage of the BSS806 MOSFET.
    - This regulation maintains the correct current through the LED by ensuring that the sensed voltage (proportional to current) matches the DAC setpoint.
 
@@ -89,9 +91,9 @@ Purpose: we want the LED to emit a set light level with high accuracy (known) an
    - The comparator’s output drives the BC858 PNP transistor, which can provide an alternate current path or act as a switch to either enable or limit the LED current based on threshold conditions.
 
 4. **Combined Regulation and Protection:**
-   - **Current Flow:** The LED current flows from the +5 V rail through the LED, into the common node, through the MOSFET, and finally through the 10 Ω resistor to ground.
+   - **Current Flow:** The LED current flows from the +5 V rail through the LED, into the common node, through the MOSFET, and finally through the 12.4 Ω resistor to ground.
    - **Protection:** A TVS diode is connected at the output node to guard against voltage spikes.
-   - **Feedback:** The op amp continuously adjusts the MOSFET’s gate voltage to ensure that the voltage across the 10 Ω resistor (and thus the LED current) matches the desired value set by the DAC voltage.
+   - **Feedback:** The op amp continuously adjusts the MOSFET’s gate voltage to ensure that the voltage across the 12.4 Ω resistor (and thus the LED current) matches the desired value set by the DAC voltage.
 
 **In summary:**  
 The circuit converts a PWM signal to a DC level that serves as a setpoint for LED current. The op amp and MOSFET form a linear regulator that adjusts the LED current, while the comparator and PNP transistor provide threshold-based switching or clamping for additional control and protection.

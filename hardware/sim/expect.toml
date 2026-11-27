@@ -3,8 +3,9 @@
 # LED driver, channel 1 (hardware/linear_cc_led_driver.kicad_sch; x4, all four the same):
 # PWM1 (Nano D6, 0/5 V) -> R1 3.3k -> DAC_1, with R3 825 to GND and C5 10u || C7 0.22u.
 # DAC_1 drives U2A + (MCP6242) and U3A + (LM339B). U2A -> R15 10k -> Q2 (BSS806N) gate;
-# Q2 source = FEEDBACK_1 = U2A - -> RS1 10 ohm -> GND; Q2 drain = LED_CATHODE_1 = J2.1.
-# LED anode J2.2 on +5V (the buck), so I_LED = V(FEEDBACK_1) / 10 = DAC / 10.
+# Q2 source = FEEDBACK_1 = U2A - -> RS1 12.4 ohm -> GND; Q2 drain = LED_CATHODE_1 = J2.1.
+# LED anode J2.2 on +5V (the buck), so I_LED = V(FEEDBACK_1) / 12.4 = DAC / 12.4
+# (RS 12.4 ohm derates the INL-5AMIR15 below its 100 mA absolute maximum).
 # U3A: - = COMP_REF_1 = 5 V x 430 / 65.33k = 32.910 mV (R5 64.9k, R6 430, C9 10n); open
 # collector with R11 1k to +5V and R9 200k back to DAC_1 (hysteresis); out -> R13 10k ->
 # Q1 (BC858) base, Q1 collector on +5V, emitter on the LED cathode: with U3A low, Q1
@@ -19,7 +20,7 @@
 # The bench sweeps x = duty 0 .. 1 (V4); channel 1 sees B1 = 5 V x duty, the PWM's average.
 # The same x drives each photodiode with Iph = 3.2 uA x x.
 #
-# Offset budgets (rtol): U2 (MCP6242) VOS +/-5 mV max -> +/-0.5 mA of LED current;
+# Offset budgets (rtol): U2 (MCP6242) VOS +/-5 mV max -> +/-0.4 mA of LED current;
 # U3 (LM339B) VIO +/-3.5 mV max on the 32.9 mV threshold (10.6 %) + R5/R6 1 % -> 12 %;
 # U6 (TLV9142) VOS +/-1 mV max, IB 10 pA x 1.5M = 15 uV; R45/R46 1 %.
 #
@@ -93,20 +94,20 @@ meas = "find v(/dac_1) at=1"
 expect = 1.01309
 rtol = 0.002
 
-# I_LED = DAC / 10 ohm. 50 %: 51.47 mA, +/-0.5 mA (U2 VOS)
+# I_LED = DAC / 12.4 ohm. 50 %: 41.51 mA, +/-0.4 mA (U2 VOS)
 [[measure]]
 name = "iled_duty50"
 analysis = "dc"
 meas = "find i(v11) at=0.5"
-expect = 0.051473
+expect = 0.041510
 rtol = 0.0097
 
-# 100 %: 101.31 mA full scale, +/-0.5 mA
+# 100 %: 81.70 mA full scale, +/-0.4 mA
 [[measure]]
 name = "iled_duty100"
 analysis = "dc"
 meas = "find i(v11) at=1"
-expect = 0.10131
+expect = 0.081701
 rtol = 0.0049
 
 # LED off at duty 0: Q1 shorts the LED and the sink asks 0.1 mA at most; the LED passes ~0
@@ -117,7 +118,7 @@ meas = "find i(v11) at=0"
 max = 1e-6
 
 # LED-off threshold, rising: U3A trips when DAC = 32.910 mV with VOL on R9:
-# x = (32.910 - 0.0032891 x 0.315 V) / 0.996711 = 3.198 % duty (DAC 32.9 mV, 3.3 mA); the
+# x = (32.910 - 0.0032891 x 0.315 V) / 0.996711 = 3.198 % duty (DAC 32.9 mV, 2.65 mA); the
 # model's +0.37 mV VOS moves it to 3.16 %. Falling, VOH on R9: (32.910 - 16.36) / 0.996711 =
 # 1.66 % (hysteresis 1.5 % duty). Sweep step 0.05 % duty.
 [[measure]]
@@ -127,7 +128,7 @@ meas = "when v(/comp_out_1)=2.5 rise=1"
 expect = 0.03198
 rtol = 0.12
 
-# Informational: LED current just below the threshold (duty 3.0 %, sink asks 3.0 mA). Q1 can
+# Informational: LED current just below the threshold (duty 3.0 %, sink asks 2.4 mA). Q1 can
 # pass only ~(BR + 1) x 0.40 mA in inverse mode, the rest goes through the LED; BR = 3 is the
 # stand-in's assumption, not a BC858 datasheet value.
 [[measure]]
@@ -141,39 +142,39 @@ name = "iled_1ma_duty"
 analysis = "dc"
 meas = "when i(v11)=1m rise=1"
 
-# Q2 at full scale with the 1.2 V IR LED stand-in (Vf = 1.2020 V at 101.3 mA):
-# drain (LED cathode) = 5 - 1.2020 = 3.7980 V, so Vds = 3.7980 - 1.0131 = 2.7849 V of headroom
+# Q2 at full scale with the 1.2 V IR LED stand-in (Vf = 1.1712 V at 81.70 mA):
+# drain (LED cathode) = 5 - 1.1712 = 3.8288 V, so Vds = 3.8288 - 1.0131 = 2.8157 V of headroom
 [[measure]]
 name = "q2_drain_fs"
 analysis = "dc"
 meas = "find v(/led_cathode_1) at=1"
-expect = 3.7980
+expect = 3.8288
 rtol = 0.005
 
-# P = 101.31 mA x 2.7849 V = 0.2821 W, the peak over the sweep (P(I) peaks at
-# I = (5 - Vf) / 20 = 190 mA, above full scale). BSS806N: RthJA 250 K/W (40 mm2 test board)
-# -> +70.5 K, Tj 95.5 C at 25 C ambient; Ptot 0.5 W at 25 C.
+# P = 81.70 mA x 2.8157 V = 0.2300 W, the peak over the sweep (P(I) peaks at
+# I = (5 - Vf) / 24.8 = 154 mA, above full scale). BSS806N: RthJA 250 K/W (40 mm2 test board)
+# -> +57.5 K, Tj 82.5 C at 25 C ambient; Ptot 0.5 W at 25 C.
 [[measure]]
 name = "q2_power_fs"
 analysis = "dc"
 meas = "find v(/p_q2) at=1"
-expect = 0.28214
+expect = 0.23004
 rtol = 0.01
 
-# Headroom with a 3.0 V LED (copy x600, no R9, so DAC = 1.000 V): 100.0 mA,
-# drain = 5 - 3.0 = 2.0 V, Vds = 2.0 - 1.0 = 1.0 V (0.1 W)
+# Headroom with a 3.0 V LED (copy x600, no R9, so DAC = 1.000 V): 80.65 mA,
+# drain = 5 - 2.9446 = 2.0554 V (the stand-in's Vf at 80.65 mA), Vds = 1.0554 V (0.085 W)
 [[measure]]
 name = "iled_3v0_fs"
 analysis = "dc"
 meas = "find i(v611) at=1"
-expect = 0.1
+expect = 0.080645
 rtol = 0.005
 
 [[measure]]
 name = "q602_drain_fs"
 analysis = "dc"
 meas = "find v(/led_cathode_600) at=1"
-expect = 2.0
+expect = 2.0554
 rtol = 0.005
 
 # Informational: Q2's gate at full scale (U2 swings to 4.965 V)
@@ -362,7 +363,7 @@ meas = "when vm(/dac_1)=0.70478 fall=1"
 expect = 23.673
 rtol = 0.02
 
-# Op-amp + FET loop (copy x500 at DAC = 0.5 V, 50 mA), |FEEDBACK / STEP| at 10 Hz = 1
+# Op-amp + FET loop (copy x500 at DAC = 0.5 V, 40.3 mA), |FEEDBACK / STEP| at 10 Hz = 1
 [[measure]]
 name = "ac_loop_gain"
 analysis = "ac"
@@ -386,11 +387,11 @@ meas = "when vm(/feedback_500)=0.7071 fall=1"
 # by 80 ms (11.9 tau) the start-up error is under 4 uV. Ripple over 80 .. 100 ms.
 # Filter: Rth = R1 || R3 || R9 = 657.83 ohm, swing 5 V x 657.83 / 3300 = 0.99671 V,
 # C = C5 + C7 = 10.22 uF, tau = 6.7230 ms. A 50 % square wave of period T gives
-#   DAC ripple = 0.99671 x tanh(T / (4 tau)) peak to peak; LED ripple = DAC ripple / 10 ohm.
+#   DAC ripple = 0.99671 x tanh(T / (4 tau)) peak to peak; LED ripple = DAC ripple / 12.4 ohm.
 # Timer1/Timer2 (D9, D10, D11) default 16 MHz / 64 / 510 = 490.20 Hz; Timer0 (D6, PWM1)
 # 16 MHz / 64 / 256 = 976.56 Hz; Timer1/2 at prescaler 1, 16 MHz / 510 = 31372.5 Hz.
 
-# 490.2 Hz: 75.46 mVpp, 7.546 mApp
+# 490.2 Hz: 75.46 mVpp, 6.086 mApp
 [[measure]]
 name = "ripple_dac_490hz"
 analysis = "tran"
@@ -402,10 +403,10 @@ rtol = 0.01
 name = "ripple_iled_490hz"
 analysis = "tran"
 meas = "pp i(v211) from=80m to=100m"
-expect = 7.5465e-3
+expect = 6.0859e-3
 rtol = 0.01
 
-# 976.6 Hz (D6 = PWM1, Timer0 keeps millis()): 37.93 mVpp, 3.793 mApp
+# 976.6 Hz (D6 = PWM1, Timer0 keeps millis()): 37.93 mVpp, 3.059 mApp
 [[measure]]
 name = "ripple_dac_976hz"
 analysis = "tran"
@@ -417,10 +418,10 @@ rtol = 0.01
 name = "ripple_iled_976hz"
 analysis = "tran"
 meas = "pp i(v311) from=80m to=100m"
-expect = 3.7935e-3
+expect = 3.0593e-3
 rtol = 0.01
 
-# 31.37 kHz: 1.181 mVpp, 0.118 mApp (the LED ripple carries the loop's own small residue: 3 %)
+# 31.37 kHz: 1.181 mVpp, 0.0953 mApp (the LED ripple carries the loop's own small residue: 3 %)
 [[measure]]
 name = "ripple_dac_31khz"
 analysis = "tran"
@@ -432,18 +433,18 @@ rtol = 0.01
 name = "ripple_iled_31khz"
 analysis = "tran"
 meas = "pp i(v411) from=80m to=100m"
-expect = 1.1814e-4
+expect = 9.527e-5
 rtol = 0.03
 
-# Mean LED current at 50 % = the DC value, 51.47 mA
+# Mean LED current at 50 % = the DC value, 41.51 mA
 [[measure]]
 name = "iled_mean_31khz"
 analysis = "tran"
 meas = "avg i(v411) from=80m to=100m"
-expect = 0.051473
+expect = 0.041510
 rtol = 0.0097
 
-# Loop step (copy x500): V8 steps U502 + from 0.45 to 0.55 V at 2 ms (45 -> 55 mA).
+# Loop step (copy x500): V8 steps U502 + from 0.45 to 0.55 V at 2 ms (36.3 -> 44.4 mA).
 # Design intent (lepd-design.md 8): no ringing, settled well inside the DAC tau (6.72 ms).
 # Settling: last crossing of 0.549 V (1 % of the step), within 6.72 ms of the step.
 [[measure]]
