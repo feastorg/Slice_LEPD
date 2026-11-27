@@ -10968,7 +10968,7 @@
 				(justify left top)
 			)
 		)
-		(pin "PD_ANODE1" input
+		(pin "PD_CATHODE1" input
 			(at 229.87 121.92 180)
 			(uuid "673ba601-573c-4dd9-a725-b13c42e300d7")
 			(effects
@@ -10978,7 +10978,7 @@
 				(justify left)
 			)
 		)
-		(pin "PD_ANODE2" input
+		(pin "PD_CATHODE2" input
 			(at 229.87 132.08 180)
 			(uuid "f08ca8a8-2978-4dc6-be90-6c68918951ca")
 			(effects
@@ -10988,7 +10988,7 @@
 				(justify left)
 			)
 		)
-		(pin "PD_CATHODE1" input
+		(pin "PD_ANODE1" input
 			(at 229.87 124.46 180)
 			(uuid "6ec9e752-8cff-46a0-8d73-2db6b1260f97")
 			(effects
@@ -10998,7 +10998,7 @@
 				(justify left)
 			)
 		)
-		(pin "PD_CATHODE2" input
+		(pin "PD_ANODE2" input
 			(at 229.87 134.62 180)
 			(uuid "4eafcfcb-0f0b-424f-bd14-a1fb789e24bd")
 			(effects

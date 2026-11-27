@@ -182,50 +182,108 @@ name = "q2_gate_fs"
 analysis = "dc"
 meas = "find v(/nfet_gate_1) at=1"
 
-# TIA, both photodiode polarities (hardware/pd_amp.kicad_sch). U6A: + = TIA_BIAS_1, - = the
-# summing node with R45 1.5M || C17 10n to TIA_OUT_1; TIA_OUT_1 -> R47 10k -> PD1 = A0
-# (C23 0.1u). The photocurrent leaves the anode.
-# Swapped (channel 2, cathode on the summing node): TIA_OUT = 49.27 mV + Iph x 1.5M, rising.
+# TIA (hardware/pd_amp.kicad_sch), photodiode as built on both channels: J6.2/J7.2 = PD_CATHODE1/2
+# -> R37/R39 0R -> the summing node, J6.1/J7.1 = PD_ANODE1/2 -> R38/R40 0R -> TIA_BIAS_1/2.
+# U6A: + = TIA_BIAS_1, - = the summing node with R45 1.5M || C17 10n to TIA_OUT_1;
+# TIA_OUT_1 -> R47 10k -> PD1 = A0 (C23 0.1u); channel 2 the same with R46/C19/R48/C24 -> A1.
+# The photocurrent leaves the anode into TIA_BIAS and enters the cathode from the summing node,
+# so the op-amp sources it through R45: TIA_OUT = 49.27 mV + Iph x 1.5M, rising.
 # Full scale (5 V rail) at (5.0 - 0.049) / 1.5M = 3.30 uA; the TLV914x model saturates at
 # 4.987 V (3.29 uA) and its DC sweep does not converge there, so the sweep stops at 3.2 uA.
-# As drawn (channel 1, anode on the summing node): TIA_OUT = 49.27 mV - Iph x 1.5M, falling,
-# clipped at the bottom rail from Iph = 33 nA.
+# (Bench 57e2532 also ran the opposite polarity: the output fell and sat at the bottom rail,
+# 12 mV, from 33 nA up, with the photodiode forward-biased. That is why J6/J7 were renamed.)
 
-# Swapped, Iph = 0: 49.27 mV (+ TLV9142 VOS, 1 mV max)
+# Channel 1, Iph = 0: 49.27 mV (+ TLV9142 VOS, 1 mV max)
 [[measure]]
-name = "tia_swapped_0ua"
+name = "tia1_0ua"
+analysis = "dc"
+meas = "find v(/tia_out_1) at=0"
+expect = 0.049266
+rtol = 0.021
+
+# Channel 1 rises through 1 V at Iph = (1 - 0.04927) / 1.5M = 633.8 nA, x = 0.19807
+[[measure]]
+name = "tia1_rises_1v"
+analysis = "dc"
+meas = "when v(/tia_out_1)=1 rise=1"
+expect = 0.19807
+rtol = 0.02
+
+# Channel 1, 1 uA (x = 0.3125): 0.04927 + 1.5 = 1.5493 V
+[[measure]]
+name = "tia1_1ua"
+analysis = "dc"
+meas = "find v(/tia_out_1) at=0.3125"
+expect = 1.5493
+rtol = 0.011
+
+# Channel 1, 3 uA: 4.5493 V
+[[measure]]
+name = "tia1_3ua"
+analysis = "dc"
+meas = "find v(/tia_out_1) at=0.9375"
+expect = 4.5493
+rtol = 0.011
+
+# Channel 1, 3.2 uA (end of the sweep): 4.8493 V, below the rail
+[[measure]]
+name = "tia1_3u2a"
+analysis = "dc"
+meas = "find v(/tia_out_1) at=1"
+expect = 4.8493
+rtol = 0.011
+
+# A0 (PD1) at 3 uA: R47 carries no DC current, = TIA_OUT_1
+[[measure]]
+name = "pd1_3ua"
+analysis = "dc"
+meas = "find v(/pd1) at=0.9375"
+expect = 4.5493
+rtol = 0.011
+
+# Channel 1 summing node at 1 uA: held at the bias, 49.27 mV (+ VOS), photodiode at 0 V
+[[measure]]
+name = "tia1_sum_1ua"
+analysis = "dc"
+meas = "find v(/tia_feedback_1) at=0.3125"
+expect = 0.049266
+rtol = 0.021
+
+# Channel 2, Iph = 0: 49.27 mV
+[[measure]]
+name = "tia2_0ua"
 analysis = "dc"
 meas = "find v(/tia_out_2) at=0"
 expect = 0.049266
 rtol = 0.021
 
-# Swapped, 1 uA (x = 0.3125): 0.04927 + 1.5 = 1.5493 V
+# Channel 2, 1 uA: 1.5493 V
 [[measure]]
-name = "tia_swapped_1ua"
+name = "tia2_1ua"
 analysis = "dc"
 meas = "find v(/tia_out_2) at=0.3125"
 expect = 1.5493
 rtol = 0.011
 
-# Swapped, 2 uA: 3.0493 V
+# Channel 2, 2 uA: 3.0493 V
 [[measure]]
-name = "tia_swapped_2ua"
+name = "tia2_2ua"
 analysis = "dc"
 meas = "find v(/tia_out_2) at=0.625"
 expect = 3.0493
 rtol = 0.011
 
-# Swapped, 3 uA: 4.5493 V
+# Channel 2, 3 uA: 4.5493 V
 [[measure]]
-name = "tia_swapped_3ua"
+name = "tia2_3ua"
 analysis = "dc"
 meas = "find v(/tia_out_2) at=0.9375"
 expect = 4.5493
 rtol = 0.011
 
-# Swapped, 3.2 uA (end of the sweep): 4.8493 V, below the rail
+# Channel 2, 3.2 uA (end of the sweep): 4.8493 V
 [[measure]]
-name = "tia_swapped_3u2a"
+name = "tia2_3u2a"
 analysis = "dc"
 meas = "find v(/tia_out_2) at=1"
 expect = 4.8493
@@ -239,46 +297,9 @@ meas = "find v(/pd2) at=0.9375"
 expect = 4.5493
 rtol = 0.011
 
-# As drawn, Iph = 0: 49.27 mV (same as swapped)
-[[measure]]
-name = "tia_drawn_0ua"
-analysis = "dc"
-meas = "find v(/tia_out_1) at=0"
-expect = 0.049266
-rtol = 0.021
-
-# As drawn: the output FALLS through 25 mV at Iph = (49.27 - 25) mV / 1.5M = 16.2 nA, x = 0.005055
-[[measure]]
-name = "tia_drawn_falls_25mv"
-analysis = "dc"
-meas = "when v(/tia_out_1)=0.025 fall=1"
-expect = 0.005055
-rtol = 0.05
-
-# As drawn, 1 uA: 49.27 mV - 1.5 V is below 0 V: clipped at the bottom rail (A0 reads ~0)
-[[measure]]
-name = "tia_drawn_1ua"
-analysis = "dc"
-meas = "find v(/tia_out_1) at=0.3125"
-max = 0.02
-
-# As drawn, 3 uA: still clipped
-[[measure]]
-name = "tia_drawn_3ua"
-analysis = "dc"
-meas = "find v(/tia_out_1) at=0.9375"
-max = 0.02
-
-# Informational: as drawn at 1 uA the photocurrent forward-biases the photodiode (the summing
-# node rises to ~0.5 V with the stand-in junction): the TIA no longer holds it at the bias.
-[[measure]]
-name = "tia_drawn_sum_1ua"
-analysis = "dc"
-meas = "find v(/tia_feedback_1) at=0.3125"
-
 # ---------------------------------------------------------------- AC: V4 = x, 1 V ac, about x = 0
 
-# Swapped TIA at 0.1 Hz: |TIA_OUT_2| = 3.2 uA x 1.5M = 4.8 V (x 0.99996)
+# Channel 2 TIA at 0.1 Hz: |TIA_OUT_2| = 3.2 uA x 1.5M = 4.8 V (x 0.99996)
 [[measure]]
 name = "ac_tia_gain"
 analysis = "ac"
@@ -316,12 +337,14 @@ name = "ac_tia_peak"
 analysis = "ac"
 meas = "max vm(/tia_out_2)"
 
-# Informational: the as-drawn channel has the same small-signal magnitude (inverted sign) about
-# Iph = 0: an AC check cannot tell the polarity, the DC one can
+# Channel 1 TIA at 0.1 Hz: 4.8 V, as channel 2 (an AC check cannot tell the polarity; the DC
+# sweep above does)
 [[measure]]
-name = "ac_tia_drawn_gain"
+name = "ac_tia1_gain"
 analysis = "ac"
 meas = "find vm(/tia_out_1) at=0.1"
+expect = 4.7998
+rtol = 0.01
 
 # DAC filter, |DAC_1 / x| at 0.1 Hz: 5 x R3 || R1 || R9 / R1 = 5 x 657.83 / 3300 = 0.99671
 [[measure]]
@@ -440,6 +463,6 @@ meas = "max v(/feedback_500) from=2m to=3m"
 
 # Informational: TIA outputs at Iph = 0 (V4 = 0 in tran)
 [[measure]]
-name = "tran_tia_drawn"
+name = "tran_tia1_0ua"
 analysis = "tran"
 meas = "find v(/tia_out_1) at=99m"
