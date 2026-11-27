@@ -44,7 +44,7 @@
     {
       "analysis": "TRAN",
       "commands": [
-        ".options method=gear itl1=1000 itl2=1000 gmin=1e-10 rshunt=1e12",
+        ".options method=gear itl1=1000 itl2=1000 gmin=1e-10 rshunt=1e12 abstol=1e-10",
         ".tran 1u 100m 0 1u",
         ".kicad adjustpaths",
         ".save all"

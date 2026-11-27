@@ -395,6 +395,9 @@ analysis = "ac"
 meas = "find vm(/feedback_500) at=31.37k"
 
 # ---------------------------------------------------------------- TRAN: 100 ms
+# The workbook's TRAN options set abstol = 1e-10 A (ngspice's default is 1e-12): at 1e-12 the run
+# stopped on "timestep too small" in Q402 for some element orders of the exported netlist.
+# The smallest current measured here is the 31 kHz ripple, 68 uA.
 # Copies x200 / x300 / x400: channel 1 driven by a 0/5 V PWM at 50 % from t = 0, DAC from 0 V;
 # by 80 ms (11.9 tau) the start-up error is under 4 uV. Ripple over 80 .. 100 ms.
 # Filter: Rth = R1 || R3 || R9 = 657.83 ohm, swing 5 V x 657.83 / 3300 = 0.99671 V,
