@@ -1,0 +1,488 @@
+# Expected behaviour of the LEPD LED driver and photodiode TIA, worked by hand from the schematic.
+#
+# LED driver, channel 1 (hardware/linear_cc_led_driver.kicad_sch; x4, all four the same):
+# PWM1 (Nano D6, 0/5 V) -> R1 3.3k -> DAC_1, with R3 825 to GND and C5 10u || C7 0.22u.
+# DAC_1 drives U2A + (MCP6242) and U3A + (LM339B). U2A -> R15 10k -> Q2 (BSS806N) gate;
+# Q2 source = FEEDBACK_1 -> R52 10k -> U2A - (INN_1), with C36 2.2n from U2A out to U2A -;
+# FEEDBACK_1 -> RS1 15.0 ohm -> GND; Q2 drain = LED_CATHODE_1 = J2.1.
+# LED anode J2.2 on +5V (the buck), so I_LED = V(FEEDBACK_1) / 15.0 = DAC / 15.0
+# (RS 15.0 ohm derates the INL-5AMIR15 below its 100 mA absolute maximum and 160 mW Pd).
+# U3A: - = COMP_REF_1 = 5 V x 430 / 65.33k = 32.910 mV (R5 64.9k, R6 430, C9 10n); open
+# collector with R11 1k to +5V and R9 200k back to DAC_1 (hysteresis); out -> R13 10k ->
+# Q1 (BC858) base, Q1 collector on +5V, emitter on the LED cathode: with U3A low, Q1
+# conducts in inverse mode and shorts the LED.
+# DAC: Thevenin of R1/R3 = 660 ohm, 0.2 x 5 V x duty; R9 to COMP_OUT makes
+#   DAC = k x duty + kv x V(COMP_OUT),  k = 200k / 200.66k = 0.996711 (V per unit duty),
+#   kv = 660 / 200.66k = 0.0032891.
+# With U3A high, V(COMP_OUT) = VOH = 5 V less R11 x I(R9) = 4.975 .. 4.980 V: +16.38 mV.
+# With U3A low, V(COMP_OUT) = VOL (LM339B: 110 mV typ, 400 mV max at 4 mA; the TI model
+# gives 0.315 V): +0.36 .. 1.3 mV.
+#
+# The bench sweeps x = duty 0 .. 1 (V4); channel 1 sees B1 = 5 V x duty, the PWM's average.
+# The same x drives each photodiode with Iph = 3.2 uA x x.
+#
+# Offset budgets (rtol): U2 (MCP6242) VOS +/-5 mV max -> +/-0.33 mA of LED current;
+# U3 (LM339B) VIO +/-3.5 mV max on the 32.9 mV threshold (10.6 %) + R5/R6 1 % -> 12 %;
+# U6 (TLV9142) VOS +/-1 mV max, IB 10 pA x 1.5M = 15 uV; R45/R46 1 %.
+#
+# Models: U6 is TI's TLV914x model (SBOMCV0); U3 is TI's LM2901/LM339 model (SLCJ010, the
+# LM339B page's model, VOS 0.37 mV, not the B-version's VICR of VCC - 1.5 V); Q2 is
+# Infineon's BSS806N_L1 (OptiMOS2 20 V library, version 100320). STAND-INS, not vendor
+# models: U2/U5 (MCP6242, from the DS21882D typicals; Microchip's MCP6241 macro model, rev D,
+# also covers the MCP6242),
+# Q1 (BC858, reverse beta assumed 3), the LEDs, the photodiode junction, U7 (ideal error amp).
+
+mirrors = ["R1", "R3", "C5", "C7", "R9", "R5", "R6", "C9", "U3", "R11", "R13", "Q1", "U2", "R15",
+           "Q2", "RS1", "R52", "C36",
+           "R252=R52", "C236=C36", "R352=R52", "C336=C36", "R452=R52", "C436=C36",
+           "R552=R52", "C536=C36", "R652=R52", "C636=C36",
+           "R201=R1", "R203=R3", "C205=C5", "C207=C7", "R209=R9", "R205=R5", "R206=R6", "C209=C9",
+           "U203=U3", "R211=R11", "R213=R13", "Q201=Q1", "U202=U2", "R215=R15", "Q202=Q2", "RS201=RS1",
+           "R301=R1", "R303=R3", "C305=C5", "C307=C7", "R309=R9", "R305=R5", "R306=R6", "C309=C9",
+           "U303=U3", "R311=R11", "R313=R13", "Q301=Q1", "U302=U2", "R315=R15", "Q302=Q2", "RS301=RS1",
+           "R401=R1", "R403=R3", "C405=C5", "C407=C7", "R409=R9", "R405=R5", "R406=R6", "C409=C9",
+           "U403=U3", "R411=R11", "R413=R13", "Q401=Q1", "U402=U2", "R415=R15", "Q402=Q2", "RS401=RS1",
+           "U502=U2", "R515=R15", "Q502=Q2", "RS501=RS1",
+           "R601=R1", "R603=R3", "U602=U2", "R615=R15", "Q602=Q2", "RS601=RS1",
+           "R33", "R34", "U5", "R41", "R43", "C18", "C21", "U6", "R45", "C17", "R47", "C23",
+           "R35", "R36", "U105=U5", "R42", "R44", "C20", "C22", "U106=U6", "R46", "C19", "R48", "C24",
+           "U7", "R49", "R50", "R51", "C27", "C28"]
+
+# ---------------------------------------------------------------- DC: V4 = x swept 0 .. 1.001
+
+# U7: 1.185 x (1 + (R49 + R50) / R51) = 1.185 x 4.22 = 5.0007 V (VREF 1.176 .. 1.212 V on the
+# real part: 4.96 .. 5.11 V; the stand-in's finite gain 1e5 takes 0.2 mV off)
+[[measure]]
+name = "ldo_5va"
+analysis = "dc"
+meas = "find v(/+5va) at=0.5"
+expect = 5.0007
+rtol = 0.001
+
+# TIA bias: U5A buffers 5.0005 x 20k / 30k = 3.3337 V; R41 1k / R43 15: x 15 / 1015 = 49.266 mV
+[[measure]]
+name = "tia_bias"
+analysis = "dc"
+meas = "find v(/tia_bias_1) at=0"
+expect = 0.049266
+rtol = 0.002
+
+# DAC at duty 0: kv x VOL = 1.04 mV with the model's 0.315 V; at most 1.3 mV (VOL 400 mV max)
+[[measure]]
+name = "dac_duty0"
+analysis = "dc"
+meas = "find v(/dac_1) at=0"
+max = 1.3e-3
+
+# DAC at duty 2 % (U3 low): 0.996711 x 0.02 + 0.0032891 x 0.315 = 20.97 mV
+[[measure]]
+name = "dac_duty2"
+analysis = "dc"
+meas = "find v(/dac_1) at=0.02"
+expect = 0.020971
+rtol = 0.02
+
+# DAC at duty 50 % (U3 high): 0.498356 + 0.0032891 x 4.9777 = 514.73 mV
+[[measure]]
+name = "dac_duty50"
+analysis = "dc"
+meas = "find v(/dac_1) at=0.5"
+expect = 0.51473
+rtol = 0.002
+
+# DAC at duty 100 %: 0.996711 + 0.0032891 x 4.9802 = 1.01309 V
+[[measure]]
+name = "dac_duty100"
+analysis = "dc"
+meas = "find v(/dac_1) at=1"
+expect = 1.01309
+rtol = 0.002
+
+# I_LED = DAC / 15.0 ohm. 50 %: 34.31 mA, +/-0.33 mA (U2 VOS)
+[[measure]]
+name = "iled_duty50"
+analysis = "dc"
+meas = "find i(v11) at=0.5"
+expect = 0.034315
+rtol = 0.0097
+
+# 100 %: 67.54 mA full scale, +/-0.33 mA
+[[measure]]
+name = "iled_duty100"
+analysis = "dc"
+meas = "find i(v11) at=1"
+expect = 0.067539
+rtol = 0.0049
+
+# LED off at duty 0: Q1 shorts the LED and the sink asks 0.1 mA at most; the LED passes ~0
+[[measure]]
+name = "iled_duty0"
+analysis = "dc"
+meas = "find i(v11) at=0"
+max = 1e-6
+
+# LED-off threshold, rising: U3A trips when DAC = 32.910 mV with VOL on R9:
+# x = (32.910 - 0.0032891 x 0.315 V) / 0.996711 = 3.198 % duty (DAC 32.9 mV, 2.19 mA); the
+# model's +0.37 mV VOS moves it to 3.16 %. Falling, VOH on R9: (32.910 - 16.36) / 0.996711 =
+# 1.66 % (hysteresis 1.5 % duty). Sweep step 0.05 % duty.
+[[measure]]
+name = "threshold_duty"
+analysis = "dc"
+meas = "when v(/comp_out_1)=2.5 rise=1"
+expect = 0.03198
+rtol = 0.12
+
+# Informational: LED current just below the threshold (duty 3.0 %, sink asks 2.0 mA). Q1 can
+# pass only ~(BR + 1) x 0.40 mA in inverse mode, the rest goes through the LED; BR = 3 is the
+# stand-in's assumption, not a BC858 datasheet value.
+[[measure]]
+name = "iled_duty3"
+analysis = "dc"
+meas = "find i(v11) at=0.03"
+
+# Informational: the duty where the LED first passes 1 mA (below the threshold, see above)
+[[measure]]
+name = "iled_1ma_duty"
+analysis = "dc"
+meas = "when i(v11)=1m rise=1"
+
+# Q2 at full scale with the 1.2 V IR LED stand-in (Vf = 1.1472 V at 67.54 mA):
+# drain (LED cathode) = 5 - 1.1472 = 3.8528 V, so Vds = 3.8528 - 1.0131 = 2.8397 V of headroom
+[[measure]]
+name = "q2_drain_fs"
+analysis = "dc"
+meas = "find v(/led_cathode_1) at=1"
+expect = 3.8528
+rtol = 0.005
+
+# P = 67.54 mA x 2.8397 V = 0.1918 W, the peak over the sweep (P(I) peaks at
+# I = (5 - Vf) / 30 = 128 mA, above full scale). BSS806N: RthJA 250 K/W (40 mm2 test board)
+# -> +48.0 K, Tj 73.0 C at 25 C ambient; Ptot 0.5 W at 25 C. With the INL-5AMIR15's typical
+# VF (2.03 V at 67.5 mA) Q2 sees about 1.96 V and 0.132 W.
+[[measure]]
+name = "q2_power_fs"
+analysis = "dc"
+meas = "find v(/p_q2) at=1"
+expect = 0.19179
+rtol = 0.01
+
+# Headroom with a 3.0 V LED (copy x600, no R9, so DAC = 1.000 V): 66.67 mA,
+# drain = 5 - 2.9019 = 2.0981 V (the stand-in's Vf at 66.67 mA), Vds = 1.0981 V (0.073 W)
+[[measure]]
+name = "iled_3v0_fs"
+analysis = "dc"
+meas = "find i(v611) at=1"
+expect = 0.066667
+rtol = 0.005
+
+[[measure]]
+name = "q602_drain_fs"
+analysis = "dc"
+meas = "find v(/led_cathode_600) at=1"
+expect = 2.0981
+rtol = 0.005
+
+# Informational: Q2's gate at full scale (U2 swings to 4.965 V)
+[[measure]]
+name = "q2_gate_fs"
+analysis = "dc"
+meas = "find v(/nfet_gate_1) at=1"
+
+# TIA (hardware/pd_amp.kicad_sch), photodiode as built on both channels: J6.2/J7.2 = PD_CATHODE1/2
+# -> R37/R39 0R -> the summing node, J6.1/J7.1 = PD_ANODE1/2 -> R38/R40 0R -> TIA_BIAS_1/2.
+# U6A: + = TIA_BIAS_1, - = the summing node with R45 1.5M || C17 10n to TIA_OUT_1;
+# TIA_OUT_1 -> R47 10k -> PD1 = A0 (C23 0.1u); channel 2 the same with R46/C19/R48/C24 -> A1.
+# The photocurrent leaves the anode into TIA_BIAS and enters the cathode from the summing node,
+# so the op-amp sources it through R45: TIA_OUT = 49.27 mV + Iph x 1.5M, rising.
+# Full scale (5 V rail) at (5.0 - 0.049) / 1.5M = 3.30 uA; the TLV914x model saturates at
+# 4.987 V (3.29 uA) and its DC sweep does not converge there, so the sweep stops at 3.2 uA.
+# (Bench 57e2532 also ran the opposite polarity: the output fell and sat at the bottom rail,
+# 12 mV, from 33 nA up, with the photodiode forward-biased. That is why J6/J7 were renamed.)
+
+# Channel 1, Iph = 0: 49.27 mV (+ TLV9142 VOS, 1 mV max)
+[[measure]]
+name = "tia1_0ua"
+analysis = "dc"
+meas = "find v(/tia_out_1) at=0"
+expect = 0.049266
+rtol = 0.021
+
+# Channel 1 rises through 1 V at Iph = (1 - 0.04927) / 1.5M = 633.8 nA, x = 0.19807
+[[measure]]
+name = "tia1_rises_1v"
+analysis = "dc"
+meas = "when v(/tia_out_1)=1 rise=1"
+expect = 0.19807
+rtol = 0.02
+
+# Channel 1, 1 uA (x = 0.3125): 0.04927 + 1.5 = 1.5493 V
+[[measure]]
+name = "tia1_1ua"
+analysis = "dc"
+meas = "find v(/tia_out_1) at=0.3125"
+expect = 1.5493
+rtol = 0.011
+
+# Channel 1, 3 uA: 4.5493 V
+[[measure]]
+name = "tia1_3ua"
+analysis = "dc"
+meas = "find v(/tia_out_1) at=0.9375"
+expect = 4.5493
+rtol = 0.011
+
+# Channel 1, 3.2 uA (end of the sweep): 4.8493 V, below the rail
+[[measure]]
+name = "tia1_3u2a"
+analysis = "dc"
+meas = "find v(/tia_out_1) at=1"
+expect = 4.8493
+rtol = 0.011
+
+# A0 (PD1) at 3 uA: R47 carries no DC current, = TIA_OUT_1
+[[measure]]
+name = "pd1_3ua"
+analysis = "dc"
+meas = "find v(/pd1) at=0.9375"
+expect = 4.5493
+rtol = 0.011
+
+# Channel 1 summing node at 1 uA: held at the bias, 49.27 mV (+ VOS), photodiode at 0 V
+[[measure]]
+name = "tia1_sum_1ua"
+analysis = "dc"
+meas = "find v(/tia_feedback_1) at=0.3125"
+expect = 0.049266
+rtol = 0.021
+
+# Channel 2, Iph = 0: 49.27 mV
+[[measure]]
+name = "tia2_0ua"
+analysis = "dc"
+meas = "find v(/tia_out_2) at=0"
+expect = 0.049266
+rtol = 0.021
+
+# Channel 2, 1 uA: 1.5493 V
+[[measure]]
+name = "tia2_1ua"
+analysis = "dc"
+meas = "find v(/tia_out_2) at=0.3125"
+expect = 1.5493
+rtol = 0.011
+
+# Channel 2, 2 uA: 3.0493 V
+[[measure]]
+name = "tia2_2ua"
+analysis = "dc"
+meas = "find v(/tia_out_2) at=0.625"
+expect = 3.0493
+rtol = 0.011
+
+# Channel 2, 3 uA: 4.5493 V
+[[measure]]
+name = "tia2_3ua"
+analysis = "dc"
+meas = "find v(/tia_out_2) at=0.9375"
+expect = 4.5493
+rtol = 0.011
+
+# Channel 2, 3.2 uA (end of the sweep): 4.8493 V
+[[measure]]
+name = "tia2_3u2a"
+analysis = "dc"
+meas = "find v(/tia_out_2) at=1"
+expect = 4.8493
+rtol = 0.011
+
+# A1 (PD2) at 3 uA: R48 carries no DC current, = TIA_OUT_2
+[[measure]]
+name = "pd2_3ua"
+analysis = "dc"
+meas = "find v(/pd2) at=0.9375"
+expect = 4.5493
+rtol = 0.011
+
+# ---------------------------------------------------------------- AC: V4 = x, 1 V ac, about x = 0
+
+# Channel 2 TIA at 0.1 Hz: |TIA_OUT_2| = 3.2 uA x 1.5M = 4.8 V (x 0.99996)
+[[measure]]
+name = "ac_tia_gain"
+analysis = "ac"
+meas = "find vm(/tia_out_2) at=0.1"
+expect = 4.7998
+rtol = 0.01
+
+# TIA -3 dB: 1 / (2 pi 1.5M 10n) = 10.610 Hz (4.8 / sqrt 2 = 3.394 V)
+[[measure]]
+name = "ac_tia_f3db"
+analysis = "ac"
+meas = "when vm(/tia_out_2)=3.394 fall=1"
+expect = 10.610
+rtol = 0.02
+
+# A1 (PD2): R48 10k / C24 0.1u adds a pole at 159.15 Hz; together -3 dB at 10.564 Hz
+[[measure]]
+name = "ac_pd2_f3db"
+analysis = "ac"
+meas = "when vm(/pd2)=3.394 fall=1"
+expect = 10.564
+rtol = 0.02
+
+# At 1 kHz: 4.8 / |1 + j 1000 / 10.61| / |1 + j 1000 / 159.15| = 8.004 mV
+[[measure]]
+name = "ac_pd2_1khz"
+analysis = "ac"
+meas = "find vm(/pd2) at=1k"
+expect = 8.004e-3
+rtol = 0.02
+
+# Informational: highest |TIA_OUT_2| (C17 swamps the photodiode's 11 pF: no peaking expected)
+[[measure]]
+name = "ac_tia_peak"
+analysis = "ac"
+meas = "max vm(/tia_out_2)"
+
+# Channel 1 TIA at 0.1 Hz: 4.8 V, as channel 2 (an AC check cannot tell the polarity; the DC
+# sweep above does)
+[[measure]]
+name = "ac_tia1_gain"
+analysis = "ac"
+meas = "find vm(/tia_out_1) at=0.1"
+expect = 4.7998
+rtol = 0.01
+
+# DAC filter, |DAC_1 / x| at 0.1 Hz: 5 x R3 || R1 || R9 / R1 = 5 x 657.83 / 3300 = 0.99671
+[[measure]]
+name = "ac_dac_gain"
+analysis = "ac"
+meas = "find vm(/dac_1) at=0.1"
+expect = 0.99671
+rtol = 0.005
+
+# DAC filter -3 dB: 1 / (2 pi 657.83 x 10.22u) = 23.673 Hz (0.99671 / sqrt 2 = 0.70478)
+[[measure]]
+name = "ac_dac_f3db"
+analysis = "ac"
+meas = "when vm(/dac_1)=0.70478 fall=1"
+expect = 23.673
+rtol = 0.02
+
+# Op-amp + FET loop (copy x500 at DAC = 0.5 V, 33.3 mA), |FEEDBACK / STEP| at 10 Hz = 1
+[[measure]]
+name = "ac_loop_gain"
+analysis = "ac"
+meas = "find vm(/feedback_500) at=10"
+expect = 1.0
+rtol = 0.001
+
+# Informational: closed-loop peaking and bandwidth of the sink loop (see the tran step); with
+# Cf the op-amp follows the step through Cf at high frequency, so the bandwidth is the inner
+# follower's, not the outer loop's
+[[measure]]
+name = "ac_loop_peak"
+analysis = "ac"
+meas = "max vm(/feedback_500)"
+
+[[measure]]
+name = "ac_loop_f3db"
+analysis = "ac"
+meas = "when vm(/feedback_500)=0.7071 fall=1"
+
+# Informational: the loop's response at the 31.37 kHz PWM rate (see ripple_iled_31khz)
+[[measure]]
+name = "ac_loop_31khz"
+analysis = "ac"
+meas = "find vm(/feedback_500) at=31.37k"
+
+# ---------------------------------------------------------------- TRAN: 100 ms
+# The workbook's TRAN options set abstol = 1e-10 A (ngspice's default is 1e-12): at 1e-12 the run
+# stopped on "timestep too small" in Q402 for some element orders of the exported netlist.
+# The smallest current measured here is the 31 kHz ripple, 68 uA.
+# Copies x200 / x300 / x400: channel 1 driven by a 0/5 V PWM at 50 % from t = 0, DAC from 0 V;
+# by 80 ms (11.9 tau) the start-up error is under 4 uV. Ripple over 80 .. 100 ms.
+# Filter: Rth = R1 || R3 || R9 = 657.83 ohm, swing 5 V x 657.83 / 3300 = 0.99671 V,
+# C = C5 + C7 = 10.22 uF, tau = 6.7230 ms. A 50 % square wave of period T gives
+#   DAC ripple = 0.99671 x tanh(T / (4 tau)) peak to peak; LED ripple = DAC ripple / 15.0 ohm.
+# Timer1/Timer2 (D9, D10, D11) default 16 MHz / 64 / 510 = 490.20 Hz; Timer0 (D6, PWM1)
+# 16 MHz / 64 / 256 = 976.56 Hz; Timer1/2 at prescaler 1, 16 MHz / 510 = 31372.5 Hz.
+
+# 490.2 Hz: 75.46 mVpp, 5.031 mApp
+[[measure]]
+name = "ripple_dac_490hz"
+analysis = "tran"
+meas = "pp v(/dac_200) from=80m to=100m"
+expect = 0.075465
+rtol = 0.01
+
+[[measure]]
+name = "ripple_iled_490hz"
+analysis = "tran"
+meas = "pp i(v211) from=80m to=100m"
+expect = 5.0310e-3
+rtol = 0.01
+
+# 976.6 Hz (D6 = PWM1, Timer0 keeps millis()): 37.93 mVpp, 2.529 mApp
+[[measure]]
+name = "ripple_dac_976hz"
+analysis = "tran"
+meas = "pp v(/dac_300) from=80m to=100m"
+expect = 0.037935
+rtol = 0.01
+
+[[measure]]
+name = "ripple_iled_976hz"
+analysis = "tran"
+meas = "pp i(v311) from=80m to=100m"
+expect = 2.5290e-3
+rtol = 0.01
+
+# 31.37 kHz: 1.181 mVpp, 0.0788 mApp at the DAC; the compensated loop passes 0.914 of it at
+# 31.37 kHz (ac_loop_31khz) and less of the triangle's harmonics: 0.0720 mApp expected, ~0.068 run
+[[measure]]
+name = "ripple_dac_31khz"
+analysis = "tran"
+meas = "pp v(/dac_400) from=80m to=100m"
+expect = 1.1814e-3
+rtol = 0.01
+
+[[measure]]
+name = "ripple_iled_31khz"
+analysis = "tran"
+meas = "pp i(v411) from=80m to=100m"
+expect = 7.20e-5
+rtol = 0.07
+
+# Mean LED current at 50 % = the DC value, 34.31 mA
+[[measure]]
+name = "iled_mean_31khz"
+analysis = "tran"
+meas = "avg i(v411) from=80m to=100m"
+expect = 0.034315
+rtol = 0.0097
+
+# Loop step (copy x500): V8 steps U502 + from 0.45 to 0.55 V at 2 ms (30.0 -> 36.7 mA).
+# Design intent (lepd-design.md 8): no ringing, settled well inside the DAC tau (6.72 ms).
+# Settling: last crossing of 0.549 V (1 % of the step), within 6.72 ms of the step.
+[[measure]]
+name = "step_settle_time"
+analysis = "tran"
+meas = "when v(/feedback_500)=0.549 cross=last"
+min = 2.0e-3
+max = 8.72e-3
+
+# Peak of FEEDBACK after the step (0.55 V = no overshoot). R52 10k / C36 2.2n close the op-amp
+# loop locally (Cf) and the FET in the slow outer loop, so the step should not overshoot: at
+# most 0.5 % of the 0.1 V step. Without them (R15 10k into Q2's gate alone) this copy peaked
+# at 0.595 V (45 %).
+[[measure]]
+name = "step_peak"
+analysis = "tran"
+meas = "max v(/feedback_500) from=2m to=3m"
+max = 0.5505
+
+# Informational: TIA outputs at Iph = 0 (V4 = 0 in tran)
+[[measure]]
+name = "tran_tia1_0ua"
+analysis = "tran"
+meas = "find v(/tia_out_1) at=99m"

@@ -1,0 +1,127 @@
+{
+  "last_sch_text_sim_command": "",
+  "tabs": [
+    {
+      "analysis": "DC",
+      "commands": [
+        ".options itl1=1000 itl2=1000 gmin=1e-10 rshunt=1e12",
+        ".dc V4 0 1.001 0.5m",
+        ".kicad adjustpaths",
+        ".save all"
+      ],
+      "dottedSecondary": true,
+      "margins": {
+        "bottom": 45,
+        "left": 70,
+        "right": 70,
+        "top": 30
+      },
+      "measurements": [],
+      "showGrid": true,
+      "traces": [
+        {
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(/DAC_1)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(55, 126, 184)",
+          "signal": "I(V11)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(77, 175, 74)",
+          "signal": "V(/TIA_OUT_1)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(152, 78, 163)",
+          "signal": "V(/TIA_OUT_2)",
+          "trace_type": 257
+        }
+      ]
+    },
+    {
+      "analysis": "TRAN",
+      "commands": [
+        ".options method=gear itl1=1000 itl2=1000 gmin=1e-10 rshunt=1e12 abstol=1e-10",
+        ".tran 1u 100m 0 1u",
+        ".kicad adjustpaths",
+        ".save all"
+      ],
+      "dottedSecondary": true,
+      "margins": {
+        "bottom": 45,
+        "left": 70,
+        "right": 70,
+        "top": 30
+      },
+      "measurements": [],
+      "showGrid": true,
+      "traces": [
+        {
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(/DAC_200)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(55, 126, 184)",
+          "signal": "V(/DAC_300)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(77, 175, 74)",
+          "signal": "V(/DAC_400)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(152, 78, 163)",
+          "signal": "V(/FEEDBACK_500)",
+          "trace_type": 257
+        }
+      ]
+    },
+    {
+      "analysis": "AC",
+      "commands": [
+        ".options itl1=1000 itl2=1000 gmin=1e-10 rshunt=1e12",
+        ".ac dec 50 0.01 10meg",
+        ".kicad adjustpaths",
+        ".save all"
+      ],
+      "dottedSecondary": true,
+      "margins": {
+        "bottom": 45,
+        "left": 70,
+        "right": 70,
+        "top": 30
+      },
+      "measurements": [],
+      "showGrid": true,
+      "traces": [
+        {
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(/TIA_OUT_2) (gain)",
+          "trace_type": 521
+        },
+        {
+          "color": "rgb(55, 126, 184)",
+          "signal": "V(/PD2) (gain)",
+          "trace_type": 521
+        },
+        {
+          "color": "rgb(77, 175, 74)",
+          "signal": "V(/DAC_1) (gain)",
+          "trace_type": 521
+        },
+        {
+          "color": "rgb(152, 78, 163)",
+          "signal": "V(/FEEDBACK_500) (gain)",
+          "trace_type": 521
+        }
+      ]
+    }
+  ],
+  "user_defined_signals": [],
+  "version": 6
+}

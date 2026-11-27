@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "filename": "lepd_frontend.kicad_pro",
+    "version": 3
+  },
+  "schematic": {
+    "ngspice": {
+      "model_mode": 4
+    }
+  },
+  "sheets": [
+    [
+      "ed265843-8141-4082-a0f7-e65851634459",
+      "Root"
+    ]
+  ]
+}

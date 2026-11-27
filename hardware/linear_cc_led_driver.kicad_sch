@@ -1,19 +1,23 @@
 (kicad_sch
-	(version 20250114)
+	(version 20260306)
 	(generator "eeschema")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(uuid "4be4354f-7d4e-4dca-87e0-487417d9bf2f")
 	(paper "A2")
 	(lib_symbols
-		(symbol "Amplifier_Operational:MCP6002-xMC"
+		(symbol "Amplifier_Operational:MCP6002-xSN"
 			(pin_names
 				(offset 0.127)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
 				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -21,8 +25,10 @@
 					(justify left)
 				)
 			)
-			(property "Value" "MCP6002-xMC"
+			(property "Value" "MCP6002-xSN"
 				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -30,35 +36,43 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
+			(property "Footprint" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
+			(property "Description" "1MHz, Low-Power Op Amp, SOIC-8"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_locked" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -67,23 +81,27 @@
 			)
 			(property "ki_keywords" "dual opamp"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "DFN*1EP*3x2mm*P0.5mm*"
+			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(symbol "MCP6002-xMC_1_1"
+			(symbol "MCP6002-xSN_1_1"
 				(polyline
 					(pts
 						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
@@ -96,17 +114,17 @@
 						(type background)
 					)
 				)
-				(pin input line
-					(at -7.62 2.54 0)
+				(pin output line
+					(at 7.62 0 180)
 					(length 2.54)
-					(name "+"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -132,17 +150,17 @@
 						)
 					)
 				)
-				(pin output line
-					(at 7.62 0 180)
+				(pin input line
+					(at -7.62 2.54 0)
 					(length 2.54)
-					(name "~"
+					(name "+"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -151,7 +169,7 @@
 					)
 				)
 			)
-			(symbol "MCP6002-xMC_2_1"
+			(symbol "MCP6002-xSN_2_1"
 				(polyline
 					(pts
 						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
@@ -203,7 +221,7 @@
 				(pin output line
 					(at 7.62 0 180)
 					(length 2.54)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -219,25 +237,7 @@
 					)
 				)
 			)
-			(symbol "MCP6002-xMC_3_1"
-				(pin power_in line
-					(at -2.54 7.62 270)
-					(length 3.81)
-					(name "V+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
+			(symbol "MCP6002-xSN_3_1"
 				(pin power_in line
 					(at -2.54 -7.62 90)
 					(length 3.81)
@@ -256,18 +256,17 @@
 						)
 					)
 				)
-				(pin passive line
-					(at -2.54 -7.62 90)
+				(pin power_in line
+					(at -2.54 7.62 270)
 					(length 3.81)
-					(hide yes)
-					(name "V-"
+					(name "V+"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "9"
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -285,8 +284,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
 				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -296,6 +299,8 @@
 			)
 			(property "Value" "LM339"
 				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -305,33 +310,41 @@
 			)
 			(property "Footprint" ""
 				(at -1.27 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" "https://www.st.com/resource/en/datasheet/lm139.pdf"
 				(at 1.27 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Quad Differential Comparators, SOIC-14/TSSOP-14"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_locked" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -340,20 +353,24 @@
 			)
 			(property "ki_keywords" "cmp open collector"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "SOIC*3.9x8.7mm*P1.27mm* TSSOP*4.4x5mm*P0.65mm*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "LM339_1_1"
@@ -382,17 +399,17 @@
 						(type none)
 					)
 				)
-				(pin input line
-					(at -7.62 2.54 0)
+				(pin open_collector line
+					(at 7.62 0 180)
 					(length 2.54)
-					(name "+"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "5"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -418,17 +435,17 @@
 						)
 					)
 				)
-				(pin open_collector line
-					(at 7.62 0 180)
+				(pin input line
+					(at -7.62 2.54 0)
 					(length 2.54)
-					(name "~"
+					(name "+"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "2"
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -463,17 +480,17 @@
 						(type none)
 					)
 				)
-				(pin input line
-					(at -7.62 2.54 0)
+				(pin open_collector line
+					(at 7.62 0 180)
 					(length 2.54)
-					(name "+"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "7"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -499,17 +516,17 @@
 						)
 					)
 				)
-				(pin open_collector line
-					(at 7.62 0 180)
+				(pin input line
+					(at -7.62 2.54 0)
 					(length 2.54)
-					(name "~"
+					(name "+"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -545,24 +562,6 @@
 					)
 				)
 				(pin input line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(name "+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
 					(at -7.62 -2.54 0)
 					(length 2.54)
 					(name "-"
@@ -580,10 +579,28 @@
 						)
 					)
 				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin open_collector line
 					(at 7.62 0 180)
 					(length 2.54)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -626,24 +643,6 @@
 					)
 				)
 				(pin input line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(name "+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
 					(at -7.62 -2.54 0)
 					(length 2.54)
 					(name "-"
@@ -661,10 +660,28 @@
 						)
 					)
 				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin open_collector line
 					(at 7.62 0 180)
 					(length 2.54)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -731,8 +748,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "TP"
 				(at 0 6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -741,6 +762,8 @@
 			)
 			(property "Value" "TestPoint"
 				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -749,47 +772,57 @@
 			)
 			(property "Footprint" ""
 				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "test point"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "test point tp"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "Pin* Test*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "TestPoint_0_1"
@@ -837,8 +870,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "C"
 				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -848,6 +885,8 @@
 			)
 			(property "Value" "C"
 				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -857,47 +896,57 @@
 			)
 			(property "Footprint" ""
 				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Unpolarized capacitor"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "cap capacitor"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "C_*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "C_0_1"
@@ -930,7 +979,7 @@
 				(pin passive line
 					(at 0 3.81 270)
 					(length 2.794)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -948,7 +997,7 @@
 				(pin passive line
 					(at 0 -3.81 90)
 					(length 2.794)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -976,8 +1025,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "R"
 				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -986,6 +1039,8 @@
 			)
 			(property "Value" "R"
 				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -994,47 +1049,57 @@
 			)
 			(property "Footprint" ""
 				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Resistor"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "R res resistor"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "R_*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "R_0_1"
@@ -1054,7 +1119,7 @@
 				(pin passive line
 					(at 0 3.81 270)
 					(length 1.27)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1072,7 +1137,7 @@
 				(pin passive line
 					(at 0 -3.81 90)
 					(length 1.27)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1098,8 +1163,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "Q"
 				(at 5.08 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1109,6 +1178,8 @@
 			)
 			(property "Value" "BC858W"
 				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1118,50 +1189,60 @@
 			)
 			(property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
 				(at 5.08 -1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 						(italic yes)
 					)
 					(justify left)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC857SERIES_BC858SERIES_BC859SERIES_BC860SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541da0e3a1661"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 					(justify left)
-					(hide yes)
 				)
 			)
 			(property "Description" "0.1A Ic, 30V Vce, PNP Small Signal Transistor, SOT-323"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "PNP Transistor"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "SOT?323*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "BC858W_0_1"
@@ -1257,24 +1338,6 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at 2.54 -5.08 90)
 					(length 2.54)
 					(name "E"
@@ -1292,6 +1355,24 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
 			(embedded_fonts no)
 		)
@@ -1302,8 +1383,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "Q"
 				(at 5.08 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1313,6 +1398,8 @@
 			)
 			(property "Value" "IRLML0030"
 				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1322,50 +1409,60 @@
 			)
 			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 				(at 5.08 -1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 						(italic yes)
 					)
 					(justify left)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" "https://www.infineon.com/dgdl/irlml0030pbf.pdf?fileId=5546d462533600a401535664773825df"
 				(at 5.08 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 					(justify left)
-					(hide yes)
 				)
 			)
 			(property "Description" "5.3A Id, 30V Vds, 27mOhm Rds, N-Channel HEXFET Power MOSFET, SOT-23"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "N-Channel HEXFET MOSFET Logic-Level"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "SOT?23*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "IRLML0030_0_1"
@@ -1555,24 +1652,6 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at 2.54 -5.08 90)
 					(length 2.54)
 					(name "S"
@@ -1590,18 +1669,40 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
 			(embedded_fonts no)
 		)
-		(symbol "kml-custom:DF2S6.8MFS_L3M"
+		(symbol "KMLib_Discrete_Semiconductors:DF2S6.8MFS_L3M_ESD-TVS_Diode"
 			(pin_names
 				(offset 0.254)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "D"
 				(at 0 8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.524 1.524)
@@ -1610,6 +1711,8 @@
 			)
 			(property "Value" "DF2S6.8MFS_L3M"
 				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.524 1.524)
@@ -1618,35 +1721,43 @@
 			)
 			(property "Footprint" "SOD-923_TOS"
 				(at 0.254 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 						(italic yes)
 					)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" "DF2S6.8MFS_L3M"
 				(at 1.778 2.032 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 						(italic yes)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_locked" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1655,23 +1766,27 @@
 			)
 			(property "ki_keywords" "DF2S6.8MFS,L3M"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "SOD-923_TOS SOD-923_TOS-M SOD-923_TOS-L"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(symbol "DF2S6.8MFS_L3M_0_1"
+			(symbol "DF2S6.8MFS_L3M_ESD-TVS_Diode_0_1"
 				(polyline
 					(pts
 						(xy 0 2.54) (xy -2.54 5.08)
@@ -1757,7 +1872,7 @@
 					)
 				)
 			)
-			(symbol "DF2S6.8MFS_L3M_1_1"
+			(symbol "DF2S6.8MFS_L3M_ESD-TVS_Diode_1_1"
 				(text "Cathode"
 					(at -4.826 -1.524 0)
 					(effects
@@ -1826,7 +1941,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 20e6e3f5-3d9c-456f-94a8-feb341a976ad)
+		(uuid "20e6e3f5-3d9c-456f-94a8-feb341a976ad")
 	)
 	(rectangle
 		(start 476.25 289.56)
@@ -1838,7 +1953,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 21b4c03e-6a32-4073-92f7-f8c52c7f5938)
+		(uuid "21b4c03e-6a32-4073-92f7-f8c52c7f5938")
 	)
 	(rectangle
 		(start 163.83 135.89)
@@ -1850,7 +1965,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 285f9a1b-6051-4aaa-ba2d-7659baf2c436)
+		(uuid "285f9a1b-6051-4aaa-ba2d-7659baf2c436")
 	)
 	(rectangle
 		(start 317.5 233.68)
@@ -1862,7 +1977,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 2c351037-52de-48e3-b87c-ec19232b8c0a)
+		(uuid "2c351037-52de-48e3-b87c-ec19232b8c0a")
 	)
 	(rectangle
 		(start 87.63 80.01)
@@ -1874,7 +1989,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 55b37821-3cbd-4228-bcdf-4acc897ec13c)
+		(uuid "55b37821-3cbd-4228-bcdf-4acc897ec13c")
 	)
 	(rectangle
 		(start 476.25 81.28)
@@ -1886,7 +2001,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 68762f4c-12e1-4892-af99-91cd1d530362)
+		(uuid "68762f4c-12e1-4892-af99-91cd1d530362")
 	)
 	(rectangle
 		(start 393.7 289.56)
@@ -1898,7 +2013,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 6d6a83b7-690c-4bf2-9f49-14dbe5e8976f)
+		(uuid "6d6a83b7-690c-4bf2-9f49-14dbe5e8976f")
 	)
 	(rectangle
 		(start 137.16 234.95)
@@ -1910,7 +2025,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 781e0133-eeb6-47b7-b2c6-8119ab92f36f)
+		(uuid "781e0133-eeb6-47b7-b2c6-8119ab92f36f")
 	)
 	(rectangle
 		(start 318.77 234.95)
@@ -1922,7 +2037,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 7864745d-ab3e-4cda-8e98-a3e6a62bb72c)
+		(uuid "7864745d-ab3e-4cda-8e98-a3e6a62bb72c")
 	)
 	(rectangle
 		(start 137.16 135.89)
@@ -1934,7 +2049,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 7af45ca7-632e-444d-85a0-27946ac81e1d)
+		(uuid "7af45ca7-632e-444d-85a0-27946ac81e1d")
 	)
 	(rectangle
 		(start 137.16 81.28)
@@ -1946,7 +2061,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 7b4a7957-bb89-4807-98ec-f8378f4fb2b1)
+		(uuid "7b4a7957-bb89-4807-98ec-f8378f4fb2b1")
 	)
 	(rectangle
 		(start 318.77 81.28)
@@ -1958,7 +2073,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 914ca379-a852-4746-9f12-c4ee084d9f36)
+		(uuid "914ca379-a852-4746-9f12-c4ee084d9f36")
 	)
 	(rectangle
 		(start 317.5 80.01)
@@ -1970,7 +2085,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 98eb6102-32de-4a07-af3e-90262a1c4a83)
+		(uuid "98eb6102-32de-4a07-af3e-90262a1c4a83")
 	)
 	(rectangle
 		(start 88.9 234.95)
@@ -1982,7 +2097,7 @@
 		(fill
 			(type none)
 		)
-		(uuid a1570ba2-acb4-4e27-9974-6db5b2a3def9)
+		(uuid "a1570ba2-acb4-4e27-9974-6db5b2a3def9")
 	)
 	(rectangle
 		(start 367.03 234.95)
@@ -1994,7 +2109,7 @@
 		(fill
 			(type none)
 		)
-		(uuid a2cc39be-cd96-4462-b7d0-ff8992ea6763)
+		(uuid "a2cc39be-cd96-4462-b7d0-ff8992ea6763")
 	)
 	(rectangle
 		(start 163.83 289.56)
@@ -2006,7 +2121,7 @@
 		(fill
 			(type none)
 		)
-		(uuid a542d833-24de-429d-9692-910ddc0d01fb)
+		(uuid "a542d833-24de-429d-9692-910ddc0d01fb")
 	)
 	(rectangle
 		(start 87.63 233.68)
@@ -2018,7 +2133,7 @@
 		(fill
 			(type none)
 		)
-		(uuid a8e303fd-769b-4957-a7b5-6b1ba816e65f)
+		(uuid "a8e303fd-769b-4957-a7b5-6b1ba816e65f")
 	)
 	(rectangle
 		(start 88.9 81.28)
@@ -2030,7 +2145,7 @@
 		(fill
 			(type none)
 		)
-		(uuid ad671d80-6955-4eee-bb1b-f4fd94fd98eb)
+		(uuid "ad671d80-6955-4eee-bb1b-f4fd94fd98eb")
 	)
 	(rectangle
 		(start 246.38 289.56)
@@ -2042,7 +2157,7 @@
 		(fill
 			(type none)
 		)
-		(uuid b7c05a48-e3a7-4507-a8bf-60b6d7648d0b)
+		(uuid "b7c05a48-e3a7-4507-a8bf-60b6d7648d0b")
 	)
 	(rectangle
 		(start 476.25 135.89)
@@ -2054,7 +2169,7 @@
 		(fill
 			(type none)
 		)
-		(uuid b9347bd5-8e04-4d56-b192-dcfa275c0bb1)
+		(uuid "b9347bd5-8e04-4d56-b192-dcfa275c0bb1")
 	)
 	(rectangle
 		(start 246.38 135.89)
@@ -2066,7 +2181,7 @@
 		(fill
 			(type none)
 		)
-		(uuid be53911f-927c-41df-a922-72ff9cb0abe1)
+		(uuid "be53911f-927c-41df-a922-72ff9cb0abe1")
 	)
 	(rectangle
 		(start 246.38 81.28)
@@ -2078,7 +2193,7 @@
 		(fill
 			(type none)
 		)
-		(uuid c5c1b43b-0151-4f5b-bf4c-abf5b7191980)
+		(uuid "c5c1b43b-0151-4f5b-bf4c-abf5b7191980")
 	)
 	(rectangle
 		(start 476.25 234.95)
@@ -2090,7 +2205,7 @@
 		(fill
 			(type none)
 		)
-		(uuid c6ef1ca5-1c82-47e9-b724-ce5fbc61c8ec)
+		(uuid "c6ef1ca5-1c82-47e9-b724-ce5fbc61c8ec")
 	)
 	(rectangle
 		(start 393.7 135.89)
@@ -2102,7 +2217,7 @@
 		(fill
 			(type none)
 		)
-		(uuid e74b47d4-a8b0-440a-94c3-df3a7229284d)
+		(uuid "e74b47d4-a8b0-440a-94c3-df3a7229284d")
 	)
 	(rectangle
 		(start 246.38 234.95)
@@ -2114,7 +2229,19 @@
 		(fill
 			(type none)
 		)
-		(uuid f980346d-0f1b-4e63-9c33-1c740aef5987)
+		(uuid "f980346d-0f1b-4e63-9c33-1c740aef5987")
+	)
+	(text "Rf R52-R55 10k FEEDBACK -> IN-, Cf C36-C39\n2.2n C0G OUT -> IN-: the op-amp closes its fast\nloop through Cf; FET + R15 10k sit in the slow\nouter loop. Vendor MCP6241/BSS806N models, RS\n15.0, 5 and 67 mA, 0-85 C, Vth +/-0.2 V, C +33-50 %:\nouter loop PM >= 84 deg, GM >= 26 dB, BW 4-7 kHz;\nat OUT PM >= 67 deg, GM >= 25 dB; step overshoot\n<= 0.2 % at 67 mA, <= 0.9 % at 5 mA. 10k alone: PM 13-20 deg"
+		(exclude_from_sim no)
+		(at 191.77 165.735 0)
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.1524)
+			)
+			(justify left bottom)
+		)
+		(uuid "046443d5-140c-404b-a56e-01ae554053bf")
 	)
 	(text "TVS\nDiode"
 		(exclude_from_sim no)
@@ -2268,7 +2395,7 @@
 		)
 		(uuid "96045499-0e34-4aea-ba82-0b2ffbf2f016")
 	)
-	(text "I_LED = DAC_1 / RS\n\nI_LED_max = 100mA\nDAC_max_in = I_LED_max * RS = 1V\n\nPWM_max = 1V/1.63V *100% \n		= 61.34% = 60%\n\nPRS_max = I**2 * R \n		= 0.1*0.1*10\n		=0.1W"
+	(text "I_LED = DAC_1 / RS, RS = 15.0 ohm 1%\n(LED derated: INL-5AMIR15 IF 100mA abs. max,\nPd 160mW; VF typ 2.03V at 67.5mA: 137mW)\nDAC_max_in = 1.000V\nI_LED_max = 1.000V / 15.0 = 66.7mA\n		(+13mV via R9: 67.5mA)\nPWM_max = 1V/1.000V *100% = 100%\n\nPRS_max = I**2 * R\n		= 0.0675*0.0675*15.0 = 0.068W"
 		(exclude_from_sim no)
 		(at 195.834 181.356 0)
 		(effects
@@ -2326,7 +2453,7 @@
 		)
 		(uuid "bf5a8107-5da2-49d6-aee5-93ae748552a5")
 	)
-	(text "FILTER CALCS\nStart by calculating equiv RC:\nThev. equiv of resistors Ra and Rb is:\nReff = Ra || Rb \n	 = (Ra*Rb) / (Ra+Rb)\n	 = (3300*1600) / (3300+1600)\n	 = 1077.55 = 1.78 Kohms\nCtot = Ca + Cb\n	 = 1.0u + 0.22u\n	 = 1.22uF\n\nCalculate Results:\nτ=Reff​*Ctot\n = 1.78 Kohms * 1.22uF\n = 2.17ms\nfc = 1 / (2*pi*τ)\n   = 1 / (2*pi*2.17)\n   = 73.3Hz"
+	(text "FILTER CALCS\nStart by calculating equiv RC:\nThev. equiv of resistors Ra and Rb is:\nReff = Ra || Rb \n	 = (Ra*Rb) / (Ra+Rb)\n	 = (3300*825) / (3300+825)\n	 = 660 ohms\n	 (R9 200k ignored: 658 ohms)\nCtot = Ca + Cb\n	 = 10u + 0.22u\n	 = 10.22uF\n\nCalculate Results:\nτ=Reff​*Ctot\n = 660 ohms * 10.22uF\n = 6.75ms\nfc = 1 / (2*pi*τ)\n   = 1 / (2*pi*6.75ms)\n   = 23.6Hz"
 		(exclude_from_sim no)
 		(at 90.17 105.41 0)
 		(effects
@@ -2362,7 +2489,7 @@
 		)
 		(uuid "d3d178cc-3eda-47a3-925d-cf98e16c68f3")
 	)
-	(text "DAC output:\nDAC_max \n= 5V * 1.6k / (3.3k + 1.6k)\n= 1.63V"
+	(text "DAC output:\nDAC_max \n= 5V * 825 / (3.3k + 825)\n= 1.000V (+13mV via R9)"
 		(exclude_from_sim no)
 		(at 111.506 126.492 0)
 		(effects
@@ -3662,17 +3789,6 @@
 	)
 	(wire
 		(pts
-			(xy 394.97 167.64) (xy 419.1 167.64)
-		)
-		(stroke
-			(width 0.2032)
-			(type default)
-			(color 194 0 194 1)
-		)
-		(uuid "2bd85bcb-a58e-4905-a9e9-d5c0b8e3974f")
-	)
-	(wire
-		(pts
 			(xy 487.68 95.25) (xy 487.68 110.49)
 		)
 		(stroke
@@ -3923,17 +4039,6 @@
 			(color 0 194 194 1)
 		)
 		(uuid "3c537a78-9be7-4308-bfac-9ed3005c627a")
-	)
-	(wire
-		(pts
-			(xy 165.1 321.31) (xy 189.23 321.31)
-		)
-		(stroke
-			(width 0.2032)
-			(type default)
-			(color 194 0 194 1)
-		)
-		(uuid "3f051759-feb8-43e2-ba9c-6386252820db")
 	)
 	(wire
 		(pts
@@ -4836,17 +4941,6 @@
 			(color 194 0 194 1)
 		)
 		(uuid "70ec65d5-2c6c-48bc-aeba-629d03179be7")
-	)
-	(wire
-		(pts
-			(xy 394.97 321.31) (xy 419.1 321.31)
-		)
-		(stroke
-			(width 0.2032)
-			(type default)
-			(color 194 0 194 1)
-		)
-		(uuid "712a43f9-795c-4f4b-88f6-c0a7f10dbd95")
 	)
 	(wire
 		(pts
@@ -6467,17 +6561,6 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 167.64) (xy 189.23 167.64)
-		)
-		(stroke
-			(width 0.2032)
-			(type default)
-			(color 194 0 194 1)
-		)
-		(uuid "eb9f04ce-b713-47bf-b5a4-22daf5cf38ff")
-	)
-	(wire
-		(pts
 			(xy 125.73 285.75) (xy 165.1 285.75)
 		)
 		(stroke
@@ -6739,6 +6822,86 @@
 			(color 160 32 240 1)
 		)
 		(uuid "ffc5f165-58df-4357-9269-5b5b9393df84")
+	)
+	(label "+5V"
+		(at 255.27 212.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "03bf4233-214e-42b3-9f07-e9d1c760cc95")
+	)
+	(label "GND"
+		(at 255.27 219.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b025835f-a017-41b9-a148-e0526ec8e5ec")
+	)
+	(label "+5V"
+		(at 267.97 212.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fa3b6f93-74ca-485f-a897-77bcb6a04940")
+	)
+	(label "GND"
+		(at 267.97 219.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5b4bce83-5583-4061-b075-14a6c8ee1daa")
+	)
+	(label "+5V"
+		(at 280.67 212.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "da93fd74-15cf-4a74-9f68-9e6e05899380")
+	)
+	(label "GND"
+		(at 280.67 219.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "845df2a4-19af-475a-8511-bcc01d135589")
+	)
+	(label "+5V"
+		(at 293.37 212.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "249b5437-9c66-44ff-9275-a361358ebcf0")
+	)
+	(label "GND"
+		(at 293.37 219.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7c095d09-acdc-4cc7-b23f-51d2e6e16330")
 	)
 	(label "GND"
 		(at 143.51 187.96 0)
@@ -7542,15 +7705,19 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 115.57 300.99 0)
+		(at 255.27 215.9 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
-		(uuid "0494ffad-4b0f-4c71-ba18-5b8dfaddfcaa")
-		(property "Reference" "C6"
-			(at 118.872 299.72 0)
+		(uuid "77536903-7152-4187-a818-a37ae9a02088")
+		(property "Reference" "C29"
+			(at 258.318 214.63 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7558,8 +7725,378 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "100n X7R"
+			(at 258.318 217.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 256.2352 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C104K4RACTU?lang=en"
+			(at 255.27 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 255.27 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C0603C104K4RACTU"
+			(at 255.27 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "55abfb4d-c9ce-4012-8d7a-d88217a391b8")
+		)
+		(pin "1"
+			(uuid "a277ea21-6079-4c88-a75c-6c88b4fddded")
+		)
+		(instances
+			(project "BREAD_Slice"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
+					(reference "C29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 267.97 215.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "64c42759-f748-4f2e-8096-21f14384fb43")
+		(property "Reference" "C30"
+			(at 271.018 214.63 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n X7R"
+			(at 271.018 217.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 268.9352 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C104K4RACTU?lang=en"
+			(at 267.97 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 267.97 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C0603C104K4RACTU"
+			(at 267.97 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "d7520db1-a904-4931-92c2-28a12cdb2007")
+		)
+		(pin "1"
+			(uuid "0acd95ca-36af-423a-97eb-b7ee346697c1")
+		)
+		(instances
+			(project "BREAD_Slice"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
+					(reference "C30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 280.67 215.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "29908ce0-7ac4-4b81-ad65-79d56139ff64")
+		(property "Reference" "C31"
+			(at 283.718 214.63 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n X7R"
+			(at 283.718 217.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 281.6352 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C104K4RACTU?lang=en"
+			(at 280.67 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 280.67 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C0603C104K4RACTU"
+			(at 280.67 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "796940c1-6748-4be1-a170-ae624446f954")
+		)
+		(pin "1"
+			(uuid "a3768344-8ea1-41c0-bab1-c2b1d7622d70")
+		)
+		(instances
+			(project "BREAD_Slice"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
+					(reference "C31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 293.37 215.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dcea7a41-318e-4eeb-9e52-0386243207b1")
+		(property "Reference" "C34"
+			(at 296.418 214.63 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u X7R"
+			(at 296.418 217.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 294.3352 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0805C106K8RACTU?lang=en"
+			(at 293.37 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 293.37 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C0805C106K8RACTU"
+			(at 293.37 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "4e21bd56-b79b-4709-ac4e-8db697f325a4")
+		)
+		(pin "1"
+			(uuid "6373ae6e-a660-498d-b2fa-5e633d8ccd70")
+		)
+		(instances
+			(project "BREAD_Slice"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
+					(reference "C34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 115.57 300.99 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0494ffad-4b0f-4c71-ba18-5b8dfaddfcaa")
+		(property "Reference" "C6"
+			(at 118.872 299.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u X5R"
 			(at 118.872 302.26 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7569,29 +8106,46 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 116.5352 304.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C106M8PACTU?lang=en"
 			(at 115.57 300.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 115.57 300.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "MPN" "C0603C106M8PACTU"
+			(at 115.57 300.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -7613,13 +8167,17 @@
 		(lib_id "Device:R")
 		(at 142.24 118.11 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "0528f2b6-db5e-46a1-90cc-2396abbaf12b")
 		(property "Reference" "R6"
 			(at 143.764 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7629,6 +8187,8 @@
 		)
 		(property "Value" "430 1%"
 			(at 143.764 119.38 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7638,29 +8198,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 140.462 118.11 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 142.24 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 142.24 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7682,13 +8248,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 394.97 109.22 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "08c3a238-125f-402b-a57b-6ba185fd889a")
 		(property "Reference" "TP17"
 			(at 392.43 107.188 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7697,38 +8267,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 391.668 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 394.97 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 394.97 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 394.97 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7747,13 +8325,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 419.1 146.05 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "0a6bb425-3d77-4fc8-abe9-d3b068273083")
 		(property "Reference" "TP20"
 			(at 416.56 144.018 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7762,38 +8344,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 415.798 143.51 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 419.1 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 419.1 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 419.1 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7812,13 +8402,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 189.23 317.5 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "0c43ba7e-f591-4ab4-9f96-fe1f38113a18")
 		(property "Reference" "TP8"
 			(at 188.976 312.42 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7827,38 +8421,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 191.77 314.198 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 194.31 317.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 194.31 317.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 189.23 317.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7874,17 +8476,21 @@
 		)
 	)
 	(symbol
-		(lib_id "kml-custom:DF2S6.8MFS_L3M")
+		(lib_id "KMLib_Discrete_Semiconductors:DF2S6.8MFS_L3M_ESD-TVS_Diode")
 		(at 257.81 154.94 90)
 		(mirror x)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "0cb24c78-e7aa-4e04-8857-39ddcaf7f3a0")
 		(property "Reference" "D8"
 			(at 253.492 155.956 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -7894,6 +8500,8 @@
 		)
 		(property "Value" "DF2S6.8MFS_L3M"
 			(at 264.414 146.558 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -7903,31 +8511,37 @@
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-923"
 			(at 257.81 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "DF2S6.8MFS_L3M"
 			(at 257.81 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 257.81 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -7949,13 +8563,17 @@
 		(lib_id "Device:R")
 		(at 407.67 132.08 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "0ecc9e9e-19f9-4a4e-bc06-6e159d9b964f")
 		(property "Reference" "R25"
 			(at 407.67 127 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7964,6 +8582,8 @@
 		)
 		(property "Value" "200k 1%"
 			(at 407.67 129.54 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7972,29 +8592,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 407.67 133.858 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 407.67 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 407.67 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8016,13 +8642,17 @@
 		(lib_id "Device:C")
 		(at 384.81 271.78 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "12248c60-9a27-491c-9e59-e3bbaf10fe75")
 		(property "Reference" "C16"
 			(at 387.858 270.51 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8032,6 +8662,8 @@
 		)
 		(property "Value" "10n"
 			(at 387.858 273.05 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8041,29 +8673,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 385.7752 275.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 384.81 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 384.81 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -8085,13 +8723,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 394.97 262.89 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "1788a8b2-c63c-4f33-8024-ae61a22289fe")
 		(property "Reference" "TP18"
 			(at 392.43 260.858 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8100,38 +8742,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 391.668 260.35 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 394.97 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 394.97 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 394.97 262.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8150,13 +8800,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 419.1 262.89 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "1b8e3d70-e4bc-4be7-92b5-e3a72d6ec3ea")
 		(property "Reference" "TP22"
 			(at 416.56 260.858 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8165,38 +8819,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 415.798 260.35 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 419.1 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 419.1 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 419.1 262.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8216,13 +8878,17 @@
 		(at 466.09 327.66 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "1e2d9eee-95a2-4808-a4ef-87bfeebbad62")
 		(property "Reference" "RS4"
 			(at 464.312 326.39 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8230,8 +8896,10 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10 0.5W 1%"
+		(property "Value" "15.0 0.5W 1%"
 			(at 464.312 328.93 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8241,29 +8909,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder"
 			(at 467.868 327.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 466.09 327.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 466.09 327.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8286,13 +8960,17 @@
 		(at 176.53 114.3 0)
 		(mirror x)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "1f213fd7-a71c-4219-9249-bac481f4a560")
 		(property "Reference" "U3"
 			(at 178.054 118.364 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8301,6 +8979,8 @@
 		)
 		(property "Value" "LM339B"
 			(at 177.8 109.474 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8309,29 +8989,35 @@
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 175.26 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.st.com/resource/en/datasheet/lm139.pdf"
 			(at 177.8 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Quad Differential Comparators, SOIC-14/TSSOP-14"
 			(at 176.53 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "5"
@@ -8389,13 +9075,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 419.1 299.72 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "1ff12cb9-ee81-45ba-af2e-fbdcc5e97b27")
 		(property "Reference" "TP23"
 			(at 416.56 297.688 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8404,38 +9094,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 415.798 297.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 419.1 294.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 419.1 294.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 419.1 299.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8455,13 +9153,17 @@
 		(at 406.4 114.3 0)
 		(mirror x)
 		(unit 3)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "2610a196-2a39-44ea-a8ba-3f515ef47255")
 		(property "Reference" "U3"
 			(at 407.162 118.872 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8470,6 +9172,8 @@
 		)
 		(property "Value" "LM339B"
 			(at 407.416 108.966 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8478,29 +9182,35 @@
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 405.13 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.st.com/resource/en/datasheet/lm139.pdf"
 			(at 407.67 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Quad Differential Comparators, SOIC-14/TSSOP-14"
 			(at 406.4 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "5"
@@ -8558,13 +9268,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 419.1 163.83 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "27bab781-8c8e-40dd-8f06-e3e4ae77e983")
 		(property "Reference" "TP21"
 			(at 418.846 158.75 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8573,38 +9287,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 421.64 160.528 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 424.18 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 424.18 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 419.1 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8623,13 +9345,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 189.23 299.72 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "27fd3e93-83cb-49df-8a23-54870f408329")
 		(property "Reference" "TP7"
 			(at 186.69 297.688 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8638,38 +9364,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 185.928 297.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 189.23 294.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 189.23 294.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 189.23 299.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8688,13 +9422,17 @@
 		(lib_id "Device:C")
 		(at 355.6 147.32 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "33406c3a-16ae-42dc-a8bf-5bd4da71722d")
 		(property "Reference" "C13"
 			(at 358.902 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8704,6 +9442,8 @@
 		)
 		(property "Value" "0.22u"
 			(at 358.902 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8713,29 +9453,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 356.5652 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 355.6 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 355.6 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -8757,13 +9503,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 491.49 110.49 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "37479acc-4544-4378-944b-a8321bb40030")
 		(property "Reference" "TP29"
 			(at 491.49 105.156 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8772,38 +9522,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 494.03 107.188 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 496.57 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 496.57 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 491.49 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8819,17 +9577,21 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
+		(lib_id "Amplifier_Operational:MCP6002-xSN")
 		(at 375.92 161.29 0)
 		(unit 3)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "37cc470a-a06c-4e0c-966b-f58cc44c9816")
 		(property "Reference" "U4"
 			(at 374.65 160.0199 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8839,6 +9601,8 @@
 		)
 		(property "Value" "MCP6242T-E/SN"
 			(at 374.65 162.5599 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8848,29 +9612,35 @@
 		)
 		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 375.92 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
 			(at 375.92 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
 			(at 375.92 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8897,9 +9667,6 @@
 		(pin "4"
 			(uuid "529ef079-7bd8-47ad-90fc-549d1a537a80")
 		)
-		(pin "9"
-			(uuid "77f885e4-3410-48fe-b383-cdbb713b09b7")
-		)
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
@@ -8913,13 +9680,17 @@
 		(lib_id "Transistor_FET:IRLML0030")
 		(at 233.68 307.34 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "3948cc2d-6876-4e20-8787-194184e33228")
 		(property "Reference" "Q4"
 			(at 230.378 311.15 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8929,6 +9700,8 @@
 		)
 		(property "Value" "BSS806NH6327XTSA1"
 			(at 239.522 316.23 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8938,32 +9711,38 @@
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 238.76 309.245 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.infineon.com/dgdl/irlml0030pbf.pdf?fileId=5546d462533600a401535664773825df"
 			(at 238.76 311.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Description" "5.3A Id, 30V Vds, 27mOhm Rds, N-Channel HEXFET Power MOSFET, SOT-23"
 			(at 233.68 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8988,14 +9767,18 @@
 		(lib_id "Comparator:LM339")
 		(at 146.05 177.8 0)
 		(unit 5)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3aa8e4ae-9c83-41df-8b09-4187d38dc07c")
 		(property "Reference" "U3"
 			(at 144.78 176.5299 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9005,6 +9788,8 @@
 		)
 		(property "Value" "LM339B"
 			(at 144.78 179.0699 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9014,29 +9799,35 @@
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 144.78 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.st.com/resource/en/datasheet/lm139.pdf"
 			(at 147.32 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Quad Differential Comparators, SOIC-14/TSSOP-14"
 			(at 146.05 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "4"
@@ -9094,13 +9885,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 454.66 146.05 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "3ec2dc14-be52-4266-ae9b-4bec984528f6")
 		(property "Reference" "TP26"
 			(at 452.12 144.018 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9109,38 +9904,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 451.358 143.51 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 454.66 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 454.66 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 454.66 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9159,13 +9962,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 454.66 113.03 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "416a47c2-ec54-48b0-afe5-822ba8d00dae")
 		(property "Reference" "TP25"
 			(at 451.358 111.252 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9174,38 +9981,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 451.358 110.49 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 454.66 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 454.66 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 454.66 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9224,13 +10039,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 454.66 299.72 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "42751f94-5808-4618-90d1-6b6937c7c0d5")
 		(property "Reference" "TP28"
 			(at 452.12 297.688 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9239,38 +10058,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 451.358 297.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 454.66 294.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 454.66 294.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 454.66 299.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9289,13 +10116,17 @@
 		(lib_id "Device:R")
 		(at 427.99 107.95 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "42d9bfce-e05b-4462-bdd4-44b214c209fe")
 		(property "Reference" "R27"
 			(at 429.768 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9305,6 +10136,8 @@
 		)
 		(property "Value" "1k 1%"
 			(at 429.768 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9314,29 +10147,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 426.212 107.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 427.99 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 427.99 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9358,13 +10197,17 @@
 		(lib_id "Device:R")
 		(at 332.74 300.99 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "46b54a39-3d30-46e6-a832-7063862a1340")
 		(property "Reference" "R20"
 			(at 334.518 299.72 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9372,8 +10215,10 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1.6k 1%"
+		(property "Value" "825 1%"
 			(at 334.518 302.26 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9383,29 +10228,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 330.962 300.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 332.74 300.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 332.74 300.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9428,13 +10279,17 @@
 		(at 236.22 327.66 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "4a9a48db-9f9e-4653-b979-435f814751dd")
 		(property "Reference" "RS2"
 			(at 234.442 326.39 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9442,8 +10297,10 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10 0.5W 1%"
+		(property "Value" "15.0 0.5W 1%"
 			(at 234.442 328.93 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9453,29 +10310,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder"
 			(at 237.998 327.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 236.22 327.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 236.22 327.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9494,16 +10357,20 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
+		(lib_id "Amplifier_Operational:MCP6002-xSN")
 		(at 176.53 153.67 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "539c384b-ff72-45ea-8894-b67c83e0e8ce")
 		(property "Reference" "U2"
 			(at 174.752 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9512,6 +10379,8 @@
 		)
 		(property "Value" "MCP6242T-E/SN"
 			(at 174.752 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9520,29 +10389,35 @@
 		)
 		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 176.53 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
 			(at 176.53 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
 			(at 176.53 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "3"
@@ -9566,9 +10441,6 @@
 		(pin "4"
 			(uuid "19d646b9-9a4a-49c7-bb4f-f079b28dc258")
 		)
-		(pin "9"
-			(uuid "52c21ac7-711b-4e56-b0e9-aca410caaf36")
-		)
 		(pin "1"
 			(uuid "f08b1605-67ad-4393-993a-ab4f746f2b23")
 		)
@@ -9585,13 +10457,17 @@
 		(lib_id "Transistor_BJT:BC858W")
 		(at 233.68 271.78 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "53f3f8ab-4d83-4b77-83c1-693c015c6dba")
 		(property "Reference" "Q3"
 			(at 229.108 275.082 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9601,6 +10477,8 @@
 		)
 		(property "Value" "BC858BWT1G"
 			(at 239.268 278.13 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9610,32 +10488,38 @@
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
 			(at 238.76 273.685 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC857SERIES_BC858SERIES_BC859SERIES_BC860SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541da0e3a1661"
 			(at 233.68 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Description" "0.1A Ic, 30V Vce, PNP Small Signal Transistor, SOT-323"
 			(at 233.68 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "3"
@@ -9660,13 +10544,17 @@
 		(lib_id "Transistor_FET:IRLML0030")
 		(at 463.55 153.67 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "55139bc8-f590-41d4-9ab1-7513fef6eaba")
 		(property "Reference" "Q6"
 			(at 460.248 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9676,6 +10564,8 @@
 		)
 		(property "Value" "BSS806NH6327XTSA1"
 			(at 469.392 162.56 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9685,32 +10575,38 @@
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 468.63 155.575 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.infineon.com/dgdl/irlml0030pbf.pdf?fileId=5546d462533600a401535664773825df"
 			(at 468.63 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Description" "5.3A Id, 30V Vds, 27mOhm Rds, N-Channel HEXFET Power MOSFET, SOT-23"
 			(at 463.55 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9735,13 +10631,17 @@
 		(lib_id "Device:C")
 		(at 154.94 118.11 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "5a20a601-fd24-4d27-8b98-6f3b83abc7ce")
 		(property "Reference" "C9"
 			(at 157.988 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9751,6 +10651,8 @@
 		)
 		(property "Value" "10n"
 			(at 157.988 119.38 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9760,29 +10662,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 155.9052 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 154.94 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 154.94 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -9804,13 +10712,17 @@
 		(lib_id "Device:R")
 		(at 198.12 261.62 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "5a25a2a6-7916-4b12-9d69-6abacc84875b")
 		(property "Reference" "R12"
 			(at 199.898 260.35 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9820,6 +10732,8 @@
 		)
 		(property "Value" "1k 1%"
 			(at 199.898 262.89 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9829,29 +10743,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 196.342 261.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 198.12 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 198.12 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9870,17 +10790,21 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
+		(lib_id "Amplifier_Operational:MCP6002-xSN")
 		(at 406.4 153.67 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5b636dca-37a4-408e-a8b5-98ee0f64bc3f")
 		(property "Reference" "U4"
 			(at 406.4 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9889,6 +10813,8 @@
 		)
 		(property "Value" "MCP6242T-E/SN"
 			(at 406.4 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9897,29 +10823,35 @@
 		)
 		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 406.4 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
 			(at 406.4 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
 			(at 406.4 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "3"
@@ -9943,9 +10875,6 @@
 		(pin "4"
 			(uuid "19d646b9-9a4a-49c7-bb4f-f079b28dc259")
 		)
-		(pin "9"
-			(uuid "52c21ac7-711b-4e56-b0e9-aca410caaf37")
-		)
 		(pin "1"
 			(uuid "001a4365-b45a-4775-9f48-0e6c19ba287c")
 		)
@@ -9962,13 +10891,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 165.1 262.89 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "5e54bdd5-9088-4027-bab0-b2e82997066e")
 		(property "Reference" "TP2"
 			(at 162.56 260.858 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9977,38 +10910,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 161.798 260.35 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 165.1 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 165.1 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 165.1 262.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -10024,17 +10965,21 @@
 		)
 	)
 	(symbol
-		(lib_id "kml-custom:DF2S6.8MFS_L3M")
+		(lib_id "KMLib_Discrete_Semiconductors:DF2S6.8MFS_L3M_ESD-TVS_Diode")
 		(at 487.68 154.94 90)
 		(mirror x)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "5f6295c4-623e-4c8f-bb37-31a8f82d39fa")
 		(property "Reference" "D10"
 			(at 483.362 155.956 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -10044,6 +10989,8 @@
 		)
 		(property "Value" "DF2S6.8MFS_L3M"
 			(at 494.284 146.558 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -10053,31 +11000,37 @@
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-923"
 			(at 487.68 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "DF2S6.8MFS_L3M"
 			(at 487.68 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 487.68 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -10100,13 +11053,17 @@
 		(at 261.62 120.65 0)
 		(mirror x)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "6209dac7-4265-4c73-9f3e-4500f62ff1b0")
 		(property "Reference" "TP14"
 			(at 261.62 126.238 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10115,38 +11072,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 264.16 123.952 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 266.7 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 266.7 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 261.62 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -10165,13 +11130,17 @@
 		(lib_id "Device:R")
 		(at 177.8 285.75 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "6b9f3c23-8e50-4ce0-8a57-87d33f35ff8a")
 		(property "Reference" "R10"
 			(at 177.8 280.67 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10180,6 +11149,8 @@
 		)
 		(property "Value" "200k 1%"
 			(at 177.8 283.21 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10188,29 +11159,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 177.8 287.528 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 177.8 285.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 177.8 285.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -10232,13 +11209,17 @@
 		(lib_id "Device:R")
 		(at 325.12 285.75 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "70cb7b62-43c9-4872-9c44-00ed5aca5fcd")
 		(property "Reference" "R18"
 			(at 325.12 280.67 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10247,6 +11228,8 @@
 		)
 		(property "Value" "3.3k 1%"
 			(at 325.12 283.21 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10255,29 +11238,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 325.12 287.528 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 325.12 285.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 325.12 285.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -10300,13 +11289,17 @@
 		(at 236.22 173.99 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "7233d3ec-5191-4448-9615-2548edbf885a")
 		(property "Reference" "RS1"
 			(at 234.442 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10314,8 +11307,10 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10 0.5W 1%"
+		(property "Value" "15.0 0.5W 1%"
 			(at 234.442 175.26 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10325,29 +11320,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder"
 			(at 237.998 173.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 236.22 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 236.22 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -10369,13 +11370,17 @@
 		(lib_id "Device:R")
 		(at 95.25 132.08 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "731d4dce-31a1-4ef2-b33f-cfecea348695")
 		(property "Reference" "R1"
 			(at 95.25 127 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10384,6 +11389,8 @@
 		)
 		(property "Value" "3.3k 1%"
 			(at 95.25 129.54 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10392,29 +11399,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 95.25 133.858 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 95.25 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 95.25 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -10436,13 +11449,17 @@
 		(lib_id "Device:R")
 		(at 212.09 271.78 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "73836228-8663-4059-8de6-4c1d61624bf2")
 		(property "Reference" "R14"
 			(at 212.09 266.7 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10451,6 +11468,8 @@
 		)
 		(property "Value" "10k 1%"
 			(at 212.09 269.24 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10459,29 +11478,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 212.09 273.558 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 212.09 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 212.09 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -10503,13 +11528,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 189.23 146.05 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "742a7f23-36f1-4e7f-9a22-ae9423b605a6")
 		(property "Reference" "TP4"
 			(at 186.69 144.018 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10518,38 +11547,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 185.928 143.51 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 189.23 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 189.23 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 189.23 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -10568,13 +11605,17 @@
 		(lib_id "Device:R")
 		(at 427.99 261.62 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "78a8e517-fc4a-49a2-a2d1-90d61a3627fd")
 		(property "Reference" "R28"
 			(at 429.768 260.35 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10584,6 +11625,8 @@
 		)
 		(property "Value" "1k 1%"
 			(at 429.768 262.89 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10593,29 +11636,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 426.212 261.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 427.99 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 427.99 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -10637,13 +11686,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 224.79 146.05 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "7945ec69-6edf-472a-b257-40a4ad1a60ed")
 		(property "Reference" "TP10"
 			(at 222.25 144.018 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10652,38 +11705,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 221.488 143.51 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 224.79 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 224.79 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 224.79 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -10699,17 +11760,21 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
+		(lib_id "Amplifier_Operational:MCP6002-xSN")
 		(at 406.4 307.34 0)
 		(unit 2)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "797b13b8-5107-4c6b-9fa0-19276713d2f9")
 		(property "Reference" "U4"
 			(at 406.4 297.18 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10718,6 +11783,8 @@
 		)
 		(property "Value" "MCP6242T-E/SN"
 			(at 406.4 299.72 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10726,29 +11793,35 @@
 		)
 		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 406.4 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
 			(at 406.4 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
 			(at 406.4 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "3"
@@ -10775,9 +11848,6 @@
 		(pin "8"
 			(uuid "1b5a3828-7df1-4b97-aef4-b501926091c0")
 		)
-		(pin "9"
-			(uuid "2f6963a5-9b83-4756-bfe4-0c142d7cba26")
-		)
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
@@ -10791,13 +11861,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 419.1 317.5 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "799e33f7-e615-455c-8b2a-e76a4f635bbf")
 		(property "Reference" "TP24"
 			(at 418.846 312.42 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10806,38 +11880,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 421.64 314.198 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 424.18 317.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 424.18 317.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 419.1 317.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -10856,13 +11938,17 @@
 		(lib_id "Device:R")
 		(at 217.17 307.34 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "79d00b9c-08ee-434f-beb2-0c7b2bd9cd20")
 		(property "Reference" "R16"
 			(at 217.17 302.26 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10871,6 +11957,8 @@
 		)
 		(property "Value" "10k 1%"
 			(at 217.17 304.8 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10879,29 +11967,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 217.17 309.118 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 217.17 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 217.17 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -10923,13 +12017,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 189.23 163.83 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "7ed02d83-f608-43a4-9bd4-b6b06eafe720")
 		(property "Reference" "TP5"
 			(at 188.976 158.75 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10938,38 +12036,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 191.77 160.528 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 194.31 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 194.31 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 189.23 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -10989,13 +12095,17 @@
 		(at 491.49 120.65 0)
 		(mirror x)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "80babcd1-a573-4bb8-9bd5-a39b8c68e8a3")
 		(property "Reference" "TP30"
 			(at 491.49 126.238 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11004,38 +12114,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 494.03 123.952 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 496.57 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 496.57 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 491.49 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -11051,17 +12169,21 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
+		(lib_id "Amplifier_Operational:MCP6002-xSN")
 		(at 146.05 153.67 0)
 		(unit 3)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "824e4a03-fc56-48fa-855a-4c6485032e76")
 		(property "Reference" "U2"
 			(at 144.78 152.3999 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11071,6 +12193,8 @@
 		)
 		(property "Value" "MCP6242T-E/SN"
 			(at 144.78 154.9399 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11080,29 +12204,35 @@
 		)
 		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 146.05 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
 			(at 146.05 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
 			(at 146.05 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -11129,9 +12259,6 @@
 		(pin "4"
 			(uuid "a5249253-a6cb-489f-84af-29825aebbf22")
 		)
-		(pin "9"
-			(uuid "0b2b163a-308b-4b9b-80da-05573e4508fd")
-		)
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
@@ -11145,13 +12272,17 @@
 		(lib_id "Device:R")
 		(at 441.96 271.78 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "82cbff6b-2e99-4706-9197-a132e9b35861")
 		(property "Reference" "R30"
 			(at 441.96 266.7 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11160,6 +12291,8 @@
 		)
 		(property "Value" "10k 1%"
 			(at 441.96 269.24 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11168,29 +12301,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 441.96 273.558 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 441.96 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 441.96 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -11209,16 +12348,20 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
+		(lib_id "Amplifier_Operational:MCP6002-xSN")
 		(at 176.53 307.34 0)
 		(unit 2)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "833124d2-80d7-4320-b0cf-72069913b8d1")
 		(property "Reference" "U2"
 			(at 178.054 302.514 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11227,6 +12370,8 @@
 		)
 		(property "Value" "MCP6242T-E/SN"
 			(at 176.53 299.72 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11235,29 +12380,35 @@
 		)
 		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 176.53 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
 			(at 176.53 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
 			(at 176.53 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "3"
@@ -11284,9 +12435,6 @@
 		(pin "8"
 			(uuid "1b5a3828-7df1-4b97-aef4-b501926091bf")
 		)
-		(pin "9"
-			(uuid "2f6963a5-9b83-4756-bfe4-0c142d7cba25")
-		)
 		(instances
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
@@ -11300,13 +12448,17 @@
 		(lib_id "Device:R")
 		(at 372.11 118.11 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "8415cf90-877a-4d16-94ee-617809e1ea5c")
 		(property "Reference" "R22"
 			(at 373.634 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11316,6 +12468,8 @@
 		)
 		(property "Value" "430 1%"
 			(at 373.634 119.38 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11325,29 +12479,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 370.332 118.11 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 372.11 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 372.11 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -11369,13 +12529,17 @@
 		(lib_id "Device:R")
 		(at 332.74 147.32 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "8486a884-2541-4c67-a4af-4fe99ecf59bc")
 		(property "Reference" "R19"
 			(at 334.518 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11383,8 +12547,10 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1.6k 1%"
+		(property "Value" "825 1%"
 			(at 334.518 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11394,29 +12560,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 330.962 147.32 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 332.74 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 332.74 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -11438,13 +12610,17 @@
 		(lib_id "Transistor_FET:IRLML0030")
 		(at 463.55 307.34 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "84da303a-64b7-4956-bc1d-c7f570f2afc7")
 		(property "Reference" "Q8"
 			(at 460.248 311.15 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11454,6 +12630,8 @@
 		)
 		(property "Value" "BSS806NH6327XTSA1"
 			(at 469.392 316.23 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11463,32 +12641,38 @@
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 468.63 309.245 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.infineon.com/dgdl/irlml0030pbf.pdf?fileId=5546d462533600a401535664773825df"
 			(at 468.63 311.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Description" "5.3A Id, 30V Vds, 27mOhm Rds, N-Channel HEXFET Power MOSFET, SOT-23"
 			(at 463.55 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -11514,13 +12698,17 @@
 		(at 491.49 274.32 0)
 		(mirror x)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "879d48a1-ff15-42ff-b0d9-871fe9a8e62d")
 		(property "Reference" "TP32"
 			(at 491.49 279.908 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11529,38 +12717,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 494.03 277.622 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 496.57 274.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 496.57 274.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 491.49 274.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -11579,13 +12775,17 @@
 		(lib_id "Device:R")
 		(at 447.04 153.67 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "87fa5671-1481-493a-ab31-fcb7e90eae6f")
 		(property "Reference" "R31"
 			(at 447.04 148.59 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11594,6 +12794,8 @@
 		)
 		(property "Value" "10k 1%"
 			(at 447.04 151.13 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11602,29 +12804,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 447.04 155.448 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 447.04 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 447.04 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -11646,13 +12854,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 165.1 109.22 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "88ec200c-0629-45cd-91ef-52959e2b670e")
 		(property "Reference" "TP1"
 			(at 162.56 107.188 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11661,38 +12873,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 161.798 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 165.1 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 165.1 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 165.1 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -11711,13 +12931,17 @@
 		(lib_id "Device:C")
 		(at 345.44 147.32 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "8bdcb5e3-2b37-49ef-bf3b-b4380d138c56")
 		(property "Reference" "C11"
 			(at 348.742 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11725,8 +12949,10 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "10u X5R"
 			(at 348.742 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11736,29 +12962,46 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 346.4052 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C106M8PACTU?lang=en"
 			(at 345.44 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 345.44 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "MPN" "C0603C106M8PACTU"
+			(at 345.44 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -11780,13 +13023,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 491.49 264.16 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "8f507c23-b7ca-4a5c-a037-5525776a7b2f")
 		(property "Reference" "TP31"
 			(at 491.49 258.826 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11795,38 +13042,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 494.03 260.858 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 496.57 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 496.57 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 491.49 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -11845,13 +13100,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 261.62 110.49 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "949690fb-80cf-4e30-8dd3-2e9051d98b2a")
 		(property "Reference" "TP13"
 			(at 261.62 105.156 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11860,38 +13119,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 264.16 107.188 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 266.7 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 266.7 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 261.62 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -11910,13 +13177,17 @@
 		(lib_id "Device:C")
 		(at 355.6 300.99 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "956f9459-da31-4443-8968-5e32d88145e4")
 		(property "Reference" "C14"
 			(at 358.902 299.72 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11926,6 +13197,8 @@
 		)
 		(property "Value" "0.22u"
 			(at 358.902 302.26 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11935,29 +13208,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 356.5652 304.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 355.6 300.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 355.6 300.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -11979,13 +13258,17 @@
 		(lib_id "Device:R")
 		(at 177.8 132.08 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "9aa897dc-34f1-4d05-acfd-6ce5ac45ddff")
 		(property "Reference" "R9"
 			(at 177.8 127 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11994,6 +13277,8 @@
 		)
 		(property "Value" "200k 1%"
 			(at 177.8 129.54 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12002,29 +13287,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 177.8 133.858 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 177.8 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 177.8 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -12046,13 +13337,17 @@
 		(lib_id "Transistor_BJT:BC858W")
 		(at 463.55 118.11 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "9ad9b1de-d1c0-4e40-989b-e10edf8fd8d1")
 		(property "Reference" "Q5"
 			(at 458.978 121.412 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12062,6 +13357,8 @@
 		)
 		(property "Value" "BC858BWT1G"
 			(at 469.138 124.46 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12071,32 +13368,38 @@
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
 			(at 468.63 120.015 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC857SERIES_BC858SERIES_BC859SERIES_BC860SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541da0e3a1661"
 			(at 463.55 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Description" "0.1A Ic, 30V Vce, PNP Small Signal Transistor, SOT-323"
 			(at 463.55 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "3"
@@ -12122,13 +13425,17 @@
 		(at 142.24 259.08 0)
 		(mirror x)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "9f1e6e17-5204-43b4-84da-67a709cdba16")
 		(property "Reference" "R7"
 			(at 145.288 257.81 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12137,6 +13444,8 @@
 		)
 		(property "Value" "64.9k 1%"
 			(at 148.336 260.35 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12145,29 +13454,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 140.462 259.08 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 142.24 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 142.24 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -12189,13 +13504,17 @@
 		(lib_id "Device:R")
 		(at 212.09 118.11 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "a0096a9c-5bfa-4735-9a91-56138c10b596")
 		(property "Reference" "R13"
 			(at 212.09 113.03 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12204,6 +13523,8 @@
 		)
 		(property "Value" "10k 1%"
 			(at 212.09 115.57 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12212,29 +13533,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 212.09 119.888 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 212.09 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 212.09 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -12256,13 +13583,17 @@
 		(lib_id "Device:R")
 		(at 142.24 271.78 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "a3025bb1-3fac-4990-b0ee-7772be88283b")
 		(property "Reference" "R8"
 			(at 143.764 270.51 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12272,6 +13603,8 @@
 		)
 		(property "Value" "430 1%"
 			(at 143.764 273.05 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12281,29 +13614,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 140.462 271.78 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 142.24 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 142.24 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -12325,13 +13664,17 @@
 		(lib_id "Transistor_BJT:BC858W")
 		(at 463.55 271.78 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "a30dacde-3872-453b-9c01-65677c7cb104")
 		(property "Reference" "Q7"
 			(at 458.978 275.082 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12341,6 +13684,8 @@
 		)
 		(property "Value" "BC858BWT1G"
 			(at 469.138 278.13 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12350,32 +13695,38 @@
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
 			(at 468.63 273.685 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC857SERIES_BC858SERIES_BC859SERIES_BC860SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541da0e3a1661"
 			(at 463.55 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Description" "0.1A Ic, 30V Vce, PNP Small Signal Transistor, SOT-323"
 			(at 463.55 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "3"
@@ -12401,13 +13752,17 @@
 		(at 466.09 173.99 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "a3b83a0a-b72c-41f3-8d9a-d063a2d5a7e1")
 		(property "Reference" "RS3"
 			(at 464.312 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12415,8 +13770,10 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10 0.5W 1%"
+		(property "Value" "15.0 0.5W 1%"
 			(at 464.312 175.26 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12426,29 +13783,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder"
 			(at 467.868 173.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 466.09 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 466.09 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -12470,13 +13833,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 224.79 299.72 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "abe9233b-ee2c-4fc9-bafa-0e6452572388")
 		(property "Reference" "TP12"
 			(at 222.25 297.688 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12485,38 +13852,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 221.488 297.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 224.79 294.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 224.79 294.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 224.79 299.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -12535,13 +13910,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 454.66 266.7 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "ad326b0e-3fdb-4ba5-9fae-779a997959f5")
 		(property "Reference" "TP27"
 			(at 451.358 264.922 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12550,38 +13929,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 451.358 264.16 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 454.66 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 454.66 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 454.66 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -12600,13 +13987,17 @@
 		(lib_id "Device:C")
 		(at 384.81 118.11 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "b0c5752e-759a-4474-a826-1e4b05a3c966")
 		(property "Reference" "C15"
 			(at 387.858 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12616,6 +14007,8 @@
 		)
 		(property "Value" "10n"
 			(at 387.858 119.38 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12625,29 +14018,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 385.7752 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 384.81 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 384.81 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -12669,13 +14068,17 @@
 		(lib_id "Device:R")
 		(at 407.67 285.75 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "b5308754-0c27-43a7-95a2-74700cc9da1f")
 		(property "Reference" "R26"
 			(at 407.67 280.67 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12684,6 +14087,8 @@
 		)
 		(property "Value" "200k 1%"
 			(at 407.67 283.21 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12692,29 +14097,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 407.67 287.528 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 407.67 285.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 407.67 285.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -12736,13 +14147,17 @@
 		(lib_id "Device:R")
 		(at 198.12 107.95 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "b680e274-1f90-42a3-a1d3-9c45e1f05855")
 		(property "Reference" "R11"
 			(at 199.898 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12752,6 +14167,8 @@
 		)
 		(property "Value" "1k 1%"
 			(at 199.898 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12761,29 +14178,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 196.342 107.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 198.12 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 198.12 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -12805,13 +14228,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 189.23 262.89 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "b6ece4ab-ccec-4a42-8986-9423c61e45e4")
 		(property "Reference" "TP6"
 			(at 186.69 260.858 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12820,38 +14247,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 185.928 260.35 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 189.23 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 189.23 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 189.23 262.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -12867,17 +14302,21 @@
 		)
 	)
 	(symbol
-		(lib_id "kml-custom:DF2S6.8MFS_L3M")
+		(lib_id "KMLib_Discrete_Semiconductors:DF2S6.8MFS_L3M_ESD-TVS_Diode")
 		(at 487.68 308.61 90)
 		(mirror x)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "b78e9cd7-de35-432b-83cd-0aa62a29974c")
 		(property "Reference" "D11"
 			(at 483.362 309.626 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -12887,6 +14326,8 @@
 		)
 		(property "Value" "DF2S6.8MFS_L3M"
 			(at 494.284 300.228 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -12896,31 +14337,37 @@
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-923"
 			(at 487.68 308.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "DF2S6.8MFS_L3M"
 			(at 487.68 308.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 487.68 308.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -12939,17 +14386,21 @@
 		)
 	)
 	(symbol
-		(lib_id "kml-custom:DF2S6.8MFS_L3M")
+		(lib_id "KMLib_Discrete_Semiconductors:DF2S6.8MFS_L3M_ESD-TVS_Diode")
 		(at 257.81 308.61 90)
 		(mirror x)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "bbe6f3d4-bf85-4959-bdc9-5ff5e209dabf")
 		(property "Reference" "D9"
 			(at 253.492 309.626 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -12959,6 +14410,8 @@
 		)
 		(property "Value" "DF2S6.8MFS_L3M"
 			(at 264.414 300.228 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -12968,31 +14421,37 @@
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-923"
 			(at 257.81 308.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "DF2S6.8MFS_L3M"
 			(at 257.81 308.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" ""
 			(at 257.81 308.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -13014,13 +14473,17 @@
 		(lib_id "Device:C")
 		(at 345.44 300.99 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "bcef5f66-8c05-490f-9bb7-fb47698df144")
 		(property "Reference" "C12"
 			(at 348.742 299.72 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13028,8 +14491,10 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "10u X5R"
 			(at 348.742 302.26 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13039,29 +14504,46 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 346.4052 304.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C106M8PACTU?lang=en"
 			(at 345.44 300.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 345.44 300.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "MPN" "C0603C106M8PACTU"
+			(at 345.44 300.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -13084,13 +14566,17 @@
 		(at 372.11 259.08 0)
 		(mirror x)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "bd6d2bad-06bc-40ed-993a-6cf241b1d79e")
 		(property "Reference" "R23"
 			(at 375.158 257.81 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13099,6 +14585,8 @@
 		)
 		(property "Value" "64.9k 1%"
 			(at 378.206 260.35 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13107,29 +14595,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 370.332 259.08 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 372.11 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 372.11 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -13151,13 +14645,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 189.23 109.22 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "bfa03dbf-4cfe-49bb-9a9b-8c2a5fdfecbf")
 		(property "Reference" "TP3"
 			(at 186.69 107.188 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13166,38 +14664,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 185.928 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 189.23 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 189.23 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 189.23 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -13216,13 +14722,17 @@
 		(lib_id "Device:C")
 		(at 154.94 271.78 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "c2f9e9c2-347f-4cb0-8afc-1106453d3e49")
 		(property "Reference" "C10"
 			(at 157.988 270.51 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13232,6 +14742,8 @@
 		)
 		(property "Value" "10n"
 			(at 157.988 273.05 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13241,29 +14753,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 155.9052 275.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 154.94 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 154.94 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -13286,13 +14804,17 @@
 		(at 176.53 267.97 0)
 		(mirror x)
 		(unit 2)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "c3e9c16f-074b-4e01-abe4-d729fce53945")
 		(property "Reference" "U3"
 			(at 177.292 272.796 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13301,6 +14823,8 @@
 		)
 		(property "Value" "LM339B"
 			(at 178.054 262.636 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13309,29 +14833,35 @@
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 175.26 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.st.com/resource/en/datasheet/lm139.pdf"
 			(at 177.8 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Quad Differential Comparators, SOIC-14/TSSOP-14"
 			(at 176.53 267.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "6"
@@ -13389,13 +14919,17 @@
 		(lib_id "Device:R")
 		(at 441.96 118.11 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "c56f5339-15cf-4651-99db-6419be064101")
 		(property "Reference" "R29"
 			(at 441.96 113.03 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13404,6 +14938,8 @@
 		)
 		(property "Value" "10k 1%"
 			(at 441.96 115.57 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13412,29 +14948,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 441.96 119.888 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 441.96 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 441.96 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -13456,13 +14998,17 @@
 		(lib_id "Device:C")
 		(at 115.57 147.32 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "c5f2c100-e52c-4a93-8994-f151f0d324e9")
 		(property "Reference" "C5"
 			(at 118.872 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13470,8 +15016,10 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "10u X5R"
 			(at 118.872 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13481,29 +15029,46 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 116.5352 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C106M8PACTU?lang=en"
 			(at 115.57 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 115.57 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "MPN" "C0603C106M8PACTU"
+			(at 115.57 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -13525,13 +15090,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 224.79 266.7 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "cf80fbcc-71b7-47b6-a38b-f0e7d30b0af8")
 		(property "Reference" "TP11"
 			(at 221.488 264.922 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13540,38 +15109,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 221.488 264.16 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 224.79 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 224.79 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 224.79 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -13590,13 +15167,17 @@
 		(lib_id "Device:C")
 		(at 125.73 147.32 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "d0696538-ee83-4c91-b3c8-088174b54982")
 		(property "Reference" "C7"
 			(at 129.032 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13606,6 +15187,8 @@
 		)
 		(property "Value" "0.22u"
 			(at 129.032 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13615,29 +15198,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 126.6952 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 125.73 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 125.73 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -13659,13 +15248,17 @@
 		(lib_id "Device:R")
 		(at 325.12 132.08 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "d4f1c26f-c0e8-4af7-8551-48670422610f")
 		(property "Reference" "R17"
 			(at 325.12 127 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13674,6 +15267,8 @@
 		)
 		(property "Value" "3.3k 1%"
 			(at 325.12 129.54 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13682,29 +15277,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 325.12 133.858 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 325.12 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 325.12 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -13726,13 +15327,17 @@
 		(lib_id "Device:R")
 		(at 95.25 285.75 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "d71a8548-3424-4796-a877-8903b97dc951")
 		(property "Reference" "R2"
 			(at 95.25 280.67 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13741,6 +15346,8 @@
 		)
 		(property "Value" "3.3k 1%"
 			(at 95.25 283.21 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13749,29 +15356,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 95.25 287.528 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 95.25 285.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 95.25 285.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -13793,13 +15406,17 @@
 		(lib_id "Device:C")
 		(at 125.73 300.99 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "d8737e69-ee06-444b-9c4a-c13eda3de501")
 		(property "Reference" "C8"
 			(at 129.032 299.72 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13809,6 +15426,8 @@
 		)
 		(property "Value" "0.22u"
 			(at 129.032 302.26 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13818,29 +15437,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 126.6952 304.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 125.73 300.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 125.73 300.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -13863,13 +15488,17 @@
 		(at 261.62 274.32 0)
 		(mirror x)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "d8e10709-2d29-48a9-a4f0-67c8d445d2d9")
 		(property "Reference" "TP16"
 			(at 261.62 279.908 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13878,38 +15507,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 264.16 277.622 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 266.7 274.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 266.7 274.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 261.62 274.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -13928,13 +15565,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 261.62 264.16 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "daa938c7-b8dc-45a3-8dec-cbef777a3668")
 		(property "Reference" "TP15"
 			(at 261.62 258.826 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13943,38 +15584,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 264.16 260.858 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 266.7 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 266.7 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 261.62 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -13993,13 +15642,17 @@
 		(lib_id "Transistor_FET:IRLML0030")
 		(at 233.68 153.67 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "de91c047-374b-4378-8436-dc0000cd3a23")
 		(property "Reference" "Q2"
 			(at 230.378 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14009,6 +15662,8 @@
 		)
 		(property "Value" "BSS806NH6327XTSA1"
 			(at 239.522 162.56 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14018,32 +15673,38 @@
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 238.76 155.575 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.infineon.com/dgdl/irlml0030pbf.pdf?fileId=5546d462533600a401535664773825df"
 			(at 238.76 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Description" "5.3A Id, 30V Vds, 27mOhm Rds, N-Channel HEXFET Power MOSFET, SOT-23"
 			(at 233.68 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -14068,13 +15729,17 @@
 		(lib_id "Device:R")
 		(at 102.87 147.32 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "df9a78be-afbc-47b1-9793-4fbde731d8c4")
 		(property "Reference" "R3"
 			(at 104.648 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14082,8 +15747,10 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1.6k 1%"
+		(property "Value" "825 1%"
 			(at 104.648 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14093,29 +15760,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 101.092 147.32 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 102.87 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 102.87 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -14137,13 +15810,17 @@
 		(lib_id "Device:R")
 		(at 102.87 300.99 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "e1916f24-97f2-45a0-a7f0-a4eba3b14001")
 		(property "Reference" "R4"
 			(at 104.648 299.72 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14151,8 +15828,10 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1.6k 1%"
+		(property "Value" "825 1%"
 			(at 104.648 302.26 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14162,29 +15841,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 101.092 300.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 102.87 300.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 102.87 300.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -14206,13 +15891,17 @@
 		(lib_id "Device:R")
 		(at 372.11 271.78 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "e42ed603-4741-4e33-b12f-75bed1a8d236")
 		(property "Reference" "R24"
 			(at 373.634 270.51 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14222,6 +15911,8 @@
 		)
 		(property "Value" "430 1%"
 			(at 373.634 273.05 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14231,29 +15922,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 370.332 271.78 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 372.11 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 372.11 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -14275,13 +15972,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 224.79 113.03 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "e4e21489-37bf-4680-901e-a0093e3dad50")
 		(property "Reference" "TP9"
 			(at 221.488 111.252 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14290,38 +15991,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 221.488 110.49 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 224.79 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 224.79 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 224.79 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -14340,13 +16049,17 @@
 		(lib_id "Device:R")
 		(at 447.04 307.34 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "e5cbaa9e-abc6-4880-9e4f-9dbb468216a0")
 		(property "Reference" "R32"
 			(at 447.04 302.26 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14355,6 +16068,8 @@
 		)
 		(property "Value" "10k 1%"
 			(at 447.04 304.8 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14363,29 +16078,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 447.04 309.118 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 447.04 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 447.04 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -14408,13 +16129,17 @@
 		(at 142.24 105.41 0)
 		(mirror x)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "e6680c14-4b28-4e57-9c64-bb2d4f98c0c0")
 		(property "Reference" "R5"
 			(at 145.288 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14423,6 +16148,8 @@
 		)
 		(property "Value" "64.9k 1%"
 			(at 148.336 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14431,29 +16158,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 140.462 105.41 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 142.24 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 142.24 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -14476,13 +16209,17 @@
 		(at 406.4 267.97 0)
 		(mirror x)
 		(unit 4)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "e690927c-2280-416d-b03b-7527c04a6ade")
 		(property "Reference" "U3"
 			(at 407.67 272.542 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14491,6 +16228,8 @@
 		)
 		(property "Value" "LM339B"
 			(at 407.416 262.89 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14499,29 +16238,35 @@
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 405.13 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.st.com/resource/en/datasheet/lm139.pdf"
 			(at 407.67 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Quad Differential Comparators, SOIC-14/TSSOP-14"
 			(at 406.4 267.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "7"
@@ -14580,13 +16325,17 @@
 		(at 372.11 105.41 0)
 		(mirror x)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "ec06d379-8963-4e9b-8555-a60585cbf9ba")
 		(property "Reference" "R21"
 			(at 375.158 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14595,6 +16344,8 @@
 		)
 		(property "Value" "64.9k 1%"
 			(at 378.206 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14603,29 +16354,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 370.332 105.41 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 372.11 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 372.11 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -14647,13 +16404,17 @@
 		(lib_id "Device:R")
 		(at 217.17 153.67 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "ed8332bd-0cd6-4a21-b58a-0987aa96c77d")
 		(property "Reference" "R15"
 			(at 217.17 148.59 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14662,6 +16423,8 @@
 		)
 		(property "Value" "10k 1%"
 			(at 217.17 151.13 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14670,29 +16433,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 217.17 155.448 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 217.17 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
 			(at 217.17 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -14714,13 +16483,17 @@
 		(lib_id "Transistor_BJT:BC858W")
 		(at 233.68 118.11 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "ee45b322-2e58-4c5f-bd8f-cde7940713f9")
 		(property "Reference" "Q1"
 			(at 229.108 121.412 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14730,6 +16503,8 @@
 		)
 		(property "Value" "BC858BWT1G"
 			(at 239.268 124.46 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14739,32 +16514,38 @@
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
 			(at 238.76 120.015 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BC857SERIES_BC858SERIES_BC859SERIES_BC860SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541da0e3a1661"
 			(at 233.68 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Description" "0.1A Ic, 30V Vce, PNP Small Signal Transistor, SOT-323"
 			(at 233.68 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "3"
@@ -14789,13 +16570,17 @@
 		(lib_id "Connector:TestPoint")
 		(at 419.1 109.22 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "f95773e1-d935-4473-9afe-b91393720719")
 		(property "Reference" "TP19"
 			(at 416.56 107.188 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14804,38 +16589,46 @@
 		)
 		(property "Value" "TestPoint"
 			(at 415.798 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 419.1 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 419.1 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "test point"
 			(at 419.1 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -14845,6 +16638,930 @@
 			(project "BREAD_Slice"
 				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
 					(reference "TP19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 165.1 167.64) (xy 168.91 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95a77057-8dfa-4c92-9f06-36015b06d41c")
+	)
+	(wire
+		(pts
+			(xy 176.53 167.64) (xy 189.23 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7bf17172-093f-47e4-aa22-90c8ea3a58a0")
+	)
+	(wire
+		(pts
+			(xy 165.1 162.56) (xy 175.26 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b35333eb-494d-4668-a211-3145ad6ba83e")
+	)
+	(wire
+		(pts
+			(xy 182.88 162.56) (xy 186.69 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf34d481-f70f-4058-ba01-e352387ac28e")
+	)
+	(wire
+		(pts
+			(xy 186.69 162.56) (xy 186.69 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0c84b12-7797-426a-bb97-8e53a2c30cc4")
+	)
+	(junction
+		(at 165.1 162.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fd90ad6e-e5bb-435c-82b3-e4f1dd94ecec")
+	)
+	(junction
+		(at 186.69 153.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2fa7d662-57ec-441d-821e-4e2f1c1bd58e")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 172.72 167.64 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a12c29e8-aa16-444b-80c7-8e0b801e71a3")
+		(property "Reference" "R52"
+			(at 169.545 165.405 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k 1%"
+			(at 176.53 165.405 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 172.72 169.418 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 172.72 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 172.72 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "74bd0265-42e4-43cf-b9b0-8f3292a654a4")
+		)
+		(pin "2"
+			(uuid "b7982a62-8f3f-47a6-a782-cff459f7a5b4")
+		)
+		(instances
+			(project "BREAD_Slice"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
+					(reference "R52")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 179.07 162.56 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d6d4944b-3a3b-429d-9bb4-eccdf2e4cffe")
+		(property "Reference" "C36"
+			(at 179.07 158.115 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2.2n C0G"
+			(at 179.07 160.274 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 179.07 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C222J5GACTU?lang=en"
+			(at 179.07 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 179.07 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C0603C222J5GACTU"
+			(at 179.07 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5f410195-892e-44d2-be06-2ee9efcf2730")
+		)
+		(pin "2"
+			(uuid "625db5bd-bdfe-4887-bd63-a1cafc7c61f4")
+		)
+		(instances
+			(project "BREAD_Slice"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
+					(reference "C36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 165.1 321.31) (xy 168.91 321.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "759c60c1-4ec7-4f7e-86b6-571168d9525d")
+	)
+	(wire
+		(pts
+			(xy 176.53 321.31) (xy 189.23 321.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4eb1a4f9-fa26-4fd6-b814-94d0ee0711d3")
+	)
+	(wire
+		(pts
+			(xy 165.1 316.23) (xy 175.26 316.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec51d048-c9d8-4242-a0d8-7f0003415f9f")
+	)
+	(wire
+		(pts
+			(xy 182.88 316.23) (xy 186.69 316.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46572881-610e-43a5-8a9d-f3e1c95243de")
+	)
+	(wire
+		(pts
+			(xy 186.69 316.23) (xy 186.69 307.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89a71f92-a239-474e-90b4-2d16a4350615")
+	)
+	(junction
+		(at 165.1 316.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "25116c73-ec35-434f-b178-bcd1e01dadd4")
+	)
+	(junction
+		(at 186.69 307.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f9fe1b5d-ac15-4270-aa82-054a8cd91940")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 172.72 321.31 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7b7a7f65-1398-4561-8217-3bf18f0dcc56")
+		(property "Reference" "R53"
+			(at 169.545 319.075 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k 1%"
+			(at 176.53 319.075 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 172.72 323.088 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 172.72 321.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 172.72 321.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "873a27e1-9db0-430f-b3a1-d34fe58eb8a2")
+		)
+		(pin "2"
+			(uuid "79bd5507-ce02-4b49-a54f-bddee2acf852")
+		)
+		(instances
+			(project "BREAD_Slice"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
+					(reference "R53")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 179.07 316.23 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "db70da41-ebbb-4961-9d9d-4241b43b481f")
+		(property "Reference" "C37"
+			(at 179.07 311.785 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2.2n C0G"
+			(at 179.07 313.944 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 179.07 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C222J5GACTU?lang=en"
+			(at 179.07 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 179.07 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C0603C222J5GACTU"
+			(at 179.07 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e23c18ce-551e-4ffd-9767-23e7778a009d")
+		)
+		(pin "2"
+			(uuid "2125fcbd-a197-416f-a302-de7ffe2cead4")
+		)
+		(instances
+			(project "BREAD_Slice"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
+					(reference "C37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 394.97 167.64) (xy 398.78 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee7c4906-7b85-4e1b-a059-3275d3253848")
+	)
+	(wire
+		(pts
+			(xy 406.4 167.64) (xy 419.1 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d98d8aa0-1b96-44e3-bf81-15caed415285")
+	)
+	(wire
+		(pts
+			(xy 394.97 162.56) (xy 405.13 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db846115-29e8-4b33-a957-5b7f00502a1c")
+	)
+	(wire
+		(pts
+			(xy 412.75 162.56) (xy 416.56 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93e7c5c1-50cf-4b36-a7e2-e9d596173b5d")
+	)
+	(wire
+		(pts
+			(xy 416.56 162.56) (xy 416.56 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40144a9c-9dca-426d-9d52-cfe90d3d1e20")
+	)
+	(junction
+		(at 394.97 162.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "591a62a8-efc9-4673-9433-83dd02886af2")
+	)
+	(junction
+		(at 416.56 153.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "86bb06d8-662f-4d44-ada6-b87604555dac")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 402.59 167.64 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "282dd7e1-4871-4085-b82b-9680b1b81902")
+		(property "Reference" "R54"
+			(at 399.415 165.405 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k 1%"
+			(at 406.4 165.405 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 402.59 169.418 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 402.59 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 402.59 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f942ea82-e17f-46df-b2dc-4454e48807d6")
+		)
+		(pin "2"
+			(uuid "6b8dcde6-1e29-4735-9cdb-79fb32e68388")
+		)
+		(instances
+			(project "BREAD_Slice"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
+					(reference "R54")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 408.94 162.56 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cc7cc0b8-346f-413c-82c4-3c2dccfe2f05")
+		(property "Reference" "C38"
+			(at 408.94 158.115 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2.2n C0G"
+			(at 408.94 160.274 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 408.94 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C222J5GACTU?lang=en"
+			(at 408.94 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 408.94 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C0603C222J5GACTU"
+			(at 408.94 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "02cc5597-3ee1-4664-baff-35942366c534")
+		)
+		(pin "2"
+			(uuid "6de4d726-d464-4ae4-a82e-4f2546e5aed2")
+		)
+		(instances
+			(project "BREAD_Slice"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
+					(reference "C38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 394.97 321.31) (xy 398.78 321.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f276ee5-f5cb-4ab1-b082-5fd2630bd219")
+	)
+	(wire
+		(pts
+			(xy 406.4 321.31) (xy 419.1 321.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4990554c-932c-4969-96b4-03a8c1072644")
+	)
+	(wire
+		(pts
+			(xy 394.97 316.23) (xy 405.13 316.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fdbedaa3-3208-4a06-913c-61321d490c73")
+	)
+	(wire
+		(pts
+			(xy 412.75 316.23) (xy 416.56 316.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3e7936b-4c65-47c7-a1c1-adabc0ce2460")
+	)
+	(wire
+		(pts
+			(xy 416.56 316.23) (xy 416.56 307.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba37f0da-9d11-4307-a592-0fc2cfeda86a")
+	)
+	(junction
+		(at 394.97 316.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "80a2e725-5655-4b67-8ca9-3ee4b7829ad4")
+	)
+	(junction
+		(at 416.56 307.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c0bda1e7-a7de-419c-8d1c-f80999033e61")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 402.59 321.31 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "98ed935a-79e1-48dd-bcbe-78b7fbf55017")
+		(property "Reference" "R55"
+			(at 399.415 319.075 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k 1%"
+			(at 406.4 319.075 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 402.59 323.088 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 402.59 321.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 402.59 321.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "367d0d54-4f06-4782-baaa-8f4a6b41677f")
+		)
+		(pin "2"
+			(uuid "843ba807-1e5f-47e5-ab1b-71851632b4da")
+		)
+		(instances
+			(project "BREAD_Slice"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
+					(reference "R55")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 408.94 316.23 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a0e0473d-485f-4c77-b6b8-d2061ecc95f7")
+		(property "Reference" "C39"
+			(at 408.94 311.785 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2.2n C0G"
+			(at 408.94 313.944 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 408.94 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C222J5GACTU?lang=en"
+			(at 408.94 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 408.94 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C0603C222J5GACTU"
+			(at 408.94 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b2e1a991-777b-4a56-a003-82e1861b6f8b")
+		)
+		(pin "2"
+			(uuid "70eb734f-4573-44d8-97ec-fc3aae54cc81")
+		)
+		(instances
+			(project "BREAD_Slice"
+				(path "/66043bca-a260-4915-9fce-8a51d324c687/90b4483d-6b39-4313-b183-b0f1c023a5be"
+					(reference "C39")
 					(unit 1)
 				)
 			)
