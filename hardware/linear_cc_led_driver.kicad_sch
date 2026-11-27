@@ -2231,7 +2231,7 @@
 		)
 		(uuid "f980346d-0f1b-4e63-9c33-1c740aef5987")
 	)
-	(text "Rf R52-R55 10k FEEDBACK -> IN-, Cf C36-C39\n1n C0G OUT -> IN-: the op-amp closes its fast\nloop through Cf; FET + R15 10k sit in the slow\nouter loop. Vendor MCP6241/BSS806N models, RS\n15.0, 5 and 67 mA, 0-85 C, Vth +/-0.2 V, C +33-50 %:\nouter loop PM >= 78 deg, GM >= 24 dB, BW 8-15 kHz;\nat OUT PM >= 68 deg, GM >= 26 dB; step overshoot\n0-3 % (5 % at C +33-50 %). 10k alone: PM 13-20 deg"
+	(text "Rf R52-R55 10k FEEDBACK -> IN-, Cf C36-C39\n2.2n C0G OUT -> IN-: the op-amp closes its fast\nloop through Cf; FET + R15 10k sit in the slow\nouter loop. Vendor MCP6241/BSS806N models, RS\n15.0, 5 and 67 mA, 0-85 C, Vth +/-0.2 V, C +33-50 %:\nouter loop PM >= 84 deg, GM >= 26 dB, BW 4-7 kHz;\nat OUT PM >= 67 deg, GM >= 25 dB; step overshoot\n<= 0.2 % at 67 mA, <= 0.9 % at 5 mA. 10k alone: PM 13-20 deg"
 		(exclude_from_sim no)
 		(at 191.77 165.735 0)
 		(effects
@@ -16805,7 +16805,7 @@
 				)
 			)
 		)
-		(property "Value" "1n C0G"
+		(property "Value" "2.2n C0G"
 			(at 179.07 160.274 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16826,7 +16826,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C102J5GACTU?lang=en"
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C222J5GACTU?lang=en"
 			(at 179.07 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -16848,7 +16848,7 @@
 				)
 			)
 		)
-		(property "MPN" "C0603C102J5GACTU"
+		(property "MPN" "C0603C222J5GACTU"
 			(at 179.07 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -17036,7 +17036,7 @@
 				)
 			)
 		)
-		(property "Value" "1n C0G"
+		(property "Value" "2.2n C0G"
 			(at 179.07 313.944 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17057,7 +17057,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C102J5GACTU?lang=en"
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C222J5GACTU?lang=en"
 			(at 179.07 316.23 0)
 			(hide yes)
 			(show_name no)
@@ -17079,7 +17079,7 @@
 				)
 			)
 		)
-		(property "MPN" "C0603C102J5GACTU"
+		(property "MPN" "C0603C222J5GACTU"
 			(at 179.07 316.23 0)
 			(hide yes)
 			(show_name no)
@@ -17267,7 +17267,7 @@
 				)
 			)
 		)
-		(property "Value" "1n C0G"
+		(property "Value" "2.2n C0G"
 			(at 408.94 160.274 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17288,7 +17288,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C102J5GACTU?lang=en"
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C222J5GACTU?lang=en"
 			(at 408.94 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -17310,7 +17310,7 @@
 				)
 			)
 		)
-		(property "MPN" "C0603C102J5GACTU"
+		(property "MPN" "C0603C222J5GACTU"
 			(at 408.94 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -17498,7 +17498,7 @@
 				)
 			)
 		)
-		(property "Value" "1n C0G"
+		(property "Value" "2.2n C0G"
 			(at 408.94 313.944 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17519,7 +17519,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C102J5GACTU?lang=en"
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/C0603C222J5GACTU?lang=en"
 			(at 408.94 316.23 0)
 			(hide yes)
 			(show_name no)
@@ -17541,7 +17541,7 @@
 				)
 			)
 		)
-		(property "MPN" "C0603C102J5GACTU"
+		(property "MPN" "C0603C222J5GACTU"
 			(at 408.94 316.23 0)
 			(hide yes)
 			(show_name no)
