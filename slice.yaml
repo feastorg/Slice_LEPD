@@ -5,7 +5,7 @@ name: LED-Photodiode Photometer
 summary: LED-photodiode optical density / photometer slice with constant-current LED driver and transimpedance
   amplifier.
 category: sensing
-status: concept
+status: development
 hardware:
   hw_gen_current: 3
   interface: SI1
